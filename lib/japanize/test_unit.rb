@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-require 'japanize'
+require 'japanize/core'
 require 'test/unit'
 
 部の定義(日本語化) {

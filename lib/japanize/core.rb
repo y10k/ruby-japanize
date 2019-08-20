@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-require 'japanize/version'
-
 class Module
   alias 別名 alias_method
 
