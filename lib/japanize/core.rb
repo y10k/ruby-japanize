@@ -43,19 +43,27 @@ include J
 Japanize = J unless (defined? Japanize)
 Japanize::TOP_LEVEL = self
 
+module Japanize
+  module Japanizable
+    定義(:日本語の定義) {|名前, 値|
+      定数 = "J#{名前}".to_sym
+      if (self == Japanize || self ==  Japanize::TOP_LEVEL) then
+        Japanize.定数を設定(定数, 値)
+        Japanize.定義(名前) { 値 }
+      else
+        定数を設定(定数, 値)
+        特異組の定義{
+          定義(名前) { 値 }
+        }
+      end
+    }
+  end
+end
+
+include Japanize::Japanizable
+
 class Module
-  定義(:日本語の定義) {|名前, 値|
-    定数 = "J#{名前}".to_sym
-    if (self == Japanize || self ==  Japanize::TOP_LEVEL) then
-      Japanize.定数を設定(定数, 値)
-      Japanize.定義(名前) { 値 }
-    else
-      定数を設定(定数, 値)
-      特異組の定義{
-        定義(名前) { 値 }
-      }
-    end
-  }
+  extend Japanize::Japanizable
 end
 
 module Japanize
