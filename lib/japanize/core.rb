@@ -9,6 +9,17 @@ class Module
   別名(:定数を設定, :const_set)
   別名(:部で評価, :module_eval)
   別名(:組で評価, :class_eval)
+  別名(:部の関数, :module_function)
+end
+
+module Kernel
+  # requireはRubygemsが再定義するかもしれないので別名にしない
+  定義(:要求) {|機能| require(機能) }
+  部の関数 :要求
+
+  # require_relativeはRubygemsが再定義するかもしれないので別名にしない
+  定義(:相対位置で要求) {|相対位置の機能| require_relative(相対位置の機能) }
+  部の関数 :相対位置で要求
 end
 
 class Object

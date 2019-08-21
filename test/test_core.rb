@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 require 'japanize/core'
-require 'japanize/test_unit'
+
+要求 'japanize/test_unit'
 
 部(日本語化) {
   部(:試験) {

@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 require 'japanize/core'
-require 'test/unit'
+
+要求 'test/unit'
 
 部(日本語化) {
   日本語の定義(:試験単位, Test::Unit)

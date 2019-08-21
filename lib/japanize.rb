@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 require 'japanize/core'
-require 'japanize/version'
+
+要求 'japanize/version'
 
 # Local Variables:
 # mode: Ruby
