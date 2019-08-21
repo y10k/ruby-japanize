@@ -46,10 +46,11 @@ Japanize::TOP_LEVEL = self
 class Module
   定義(:日本語の定義) {|名前, 値|
     定数 = "J#{名前}".to_sym
-    定数を設定(定数, 値)
     if (self == Japanize || self ==  Japanize::TOP_LEVEL) then
+      Japanize.定数を設定(定数, 値)
       Japanize.定義(名前) { 値 }
     else
+      定数を設定(定数, 値)
       特異組の定義{
         定義(名前) { 値 }
       }
