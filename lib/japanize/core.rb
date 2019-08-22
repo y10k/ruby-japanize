@@ -9,6 +9,7 @@ class Module
   別名(:定数を設定,        :const_set)
   別名(:部で評価,          :module_eval)
   別名(:組で評価,          :class_eval)
+  別名(:秘密,              :private)
   別名(:部の関数,          :module_function)
 end
 
@@ -34,6 +35,7 @@ class Object
   定義(:特異組の定義) {|&塊|
     特異組.組で評価(&塊)
   }
+  秘密 :特異組の定義
 end
 
 module J
@@ -68,6 +70,8 @@ end
 
 module Japanize
   定義(:自分) { self }
+  秘密 :自分
+
   定義(:最上位) { TOP_LEVEL }
 
   最上位.特異組{
@@ -109,6 +113,7 @@ module Japanize
     end
     部.部で評価(&塊)
   }
+  秘密 :部の定義
 
   定義(:組の定義) {|組, 原型: nil, &塊|
     case (組)
@@ -131,6 +136,7 @@ module Japanize
     end
     組.組で評価(&塊)
   }
+  秘密 :組の定義
 
   定義(:部) {|*引数, &塊|
     if (塊) then
