@@ -50,6 +50,16 @@ module Japanize
   定義(:自分) { self }
   定義(:最上位) { TOP_LEVEL }
 
+  最上位.特異組{
+    定義(:定義) {|名前, &塊|
+      define_method(名前, &塊)
+      private 名前
+    }
+
+    別名(:付加, :include)
+    別名(:限定拡張を使用, :using)
+  }
+
   日本語の定義(:日本語化, ::Japanize)
   日本語の定義(:核, ::Kernel)
   日本語の定義(:部, ::Module)
