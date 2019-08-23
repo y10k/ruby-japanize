@@ -12,7 +12,14 @@ class Module
 end
 
 class Object
-  別名(:特異組, :singleton_class)
+  定義(:特異組) {|&塊|
+    if (塊) then
+      特異組の定義(&塊)
+    else
+      singleton_class
+    end
+  }
+
   定義(:特異組の定義) {|&塊|
     特異組.組で評価(&塊)
   }
@@ -93,6 +100,22 @@ module Japanize
       end
     end
     組.組で評価(&塊)
+  }
+
+  定義(:部) {|*引数, &塊|
+    if (塊) then
+      部の定義(*引数, &塊)
+    else
+      ::Module
+    end
+  }
+
+  定義(:組) {|*引数, &塊|
+    if (塊) then
+      組の定義(*引数, &塊)
+    else
+      ::Class
+    end
   }
 end
 
