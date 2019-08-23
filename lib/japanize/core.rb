@@ -47,7 +47,7 @@ Japanize::TOP_LEVEL = self
 
 module Japanize
   module Japanizable
-    定義(:日本語の定義) {|名前, 値|
+    定義(:日本語の定数) {|名前, 値|
       定数 = "J#{名前}".to_sym
       if (self == Japanize || self ==  Japanize::TOP_LEVEL) then
         Japanize.定数を設定(定数, 値)
@@ -84,13 +84,13 @@ module Japanize
     別名(:限定拡張を使用, :using)
   }
 
-  日本語の定義(:日本語化, ::Japanize)
-  日本語の定義(:核,       ::Kernel)
-  日本語の定義(:部,       ::Module)
-  日本語の定義(:組,       ::Class)
-  日本語の定義(:物,       ::Object)
-  日本語の定義(:記号,     ::Symbol)
-  日本語の定義(:文字列,   ::String)
+  日本語の定数(:日本語化, ::Japanize)
+  日本語の定数(:核,       ::Kernel)
+  日本語の定数(:部,       ::Module)
+  日本語の定数(:組,       ::Class)
+  日本語の定数(:物,       ::Object)
+  日本語の定数(:記号,     ::Symbol)
+  日本語の定数(:文字列,   ::String)
 
   定義(:部の定義) {|部, &塊|
     case (部)
