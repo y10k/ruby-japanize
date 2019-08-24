@@ -57,6 +57,8 @@ module Japanize
         定義(名前) { 値 }
       }
     end
+
+    値
   }
 end
 
@@ -104,6 +106,8 @@ module Japanize
       end
     end
     部.部で評価(&塊)
+
+    部
   }
   秘密 :部の定義
 
@@ -127,6 +131,8 @@ module Japanize
       end
     end
     組.組で評価(&塊)
+
+    組
   }
   秘密 :組の定義
 
