@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 
-module Japanize
+module J
   VERSION = '0.1.0'
 end
+
+Japanize = J unless (defined? Japanize)
 
 # Local Variables:
 # mode: Ruby

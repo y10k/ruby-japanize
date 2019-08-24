@@ -18,11 +18,11 @@ class Object
   }
 end
 
-module Japanize
+module J
 end
-include Japanize
+include J
 
-J = Japanize
+Japanize = J unless (defined? Japanize)
 Japanize::TOP_LEVEL = self
 
 class Module
