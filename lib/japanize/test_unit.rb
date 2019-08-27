@@ -14,7 +14,7 @@ require 'test/unit'
       別名(:等しいことを確認, :assert_equal)
     }
 
-    組の定義(:試験事例, 上位: Test::Unit::TestCase) {
+    組の定義(:試験事例, 原型: Test::Unit::TestCase) {
       定義(:setup) { 準備 }
       定義(:teardown) { 破棄 }
       定義(:準備) {}
