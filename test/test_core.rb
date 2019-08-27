@@ -23,8 +23,8 @@ require 'japanize/core'
         確認(試験単位::試験事例 < Test::Unit::TestCase)
       }
 
-      資料('自分'     => [ self,                自分 ],
-           '最上位'   => [ Japanize::TOP_LEVEL, 最上位 ],
+      資料('自分'   => [ self,                自分 ],
+           '最上位' => [ Japanize::TOP_LEVEL, 最上位 ],
 
            '日本語化' => [ Japanize, 日本語化 ],
            '核'       => [ Kernel,   核 ],

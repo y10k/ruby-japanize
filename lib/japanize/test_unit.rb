@@ -11,7 +11,7 @@ require 'japanize/core'
     日本語の定義(:確認手段, Test::Unit::Assertions)
 
     部(確認手段) {
-      別名(:確認, :assert)
+      別名(:確認,             :assert)
       別名(:等しいことを確認, :assert_equal)
     }
 

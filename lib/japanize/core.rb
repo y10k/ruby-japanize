@@ -3,13 +3,13 @@
 class Module
   alias 別名 alias_method
 
-  別名(:定義, :define_method)
+  別名(:定義,              :define_method)
   別名(:定数は定義済みか?, :const_defined?)
-  別名(:定数を取得, :const_get)
-  別名(:定数を設定, :const_set)
-  別名(:部で評価, :module_eval)
-  別名(:組で評価, :class_eval)
-  別名(:部の関数, :module_function)
+  別名(:定数を取得,        :const_get)
+  別名(:定数を設定,        :const_set)
+  別名(:部で評価,          :module_eval)
+  別名(:組で評価,          :class_eval)
+  別名(:部の関数,          :module_function)
 end
 
 module Kernel
@@ -76,17 +76,17 @@ module Japanize
       private 名前
     }
 
-    別名(:付加, :include)
+    別名(:付加,           :include)
     別名(:限定拡張を使用, :using)
   }
 
   日本語の定義(:日本語化, ::Japanize)
-  日本語の定義(:核, ::Kernel)
-  日本語の定義(:部, ::Module)
-  日本語の定義(:組, ::Class)
-  日本語の定義(:物, ::Object)
-  日本語の定義(:記号, ::Symbol)
-  日本語の定義(:文字列, ::String)
+  日本語の定義(:核,       ::Kernel)
+  日本語の定義(:部,       ::Module)
+  日本語の定義(:組,       ::Class)
+  日本語の定義(:物,       ::Object)
+  日本語の定義(:記号,     ::Symbol)
+  日本語の定義(:文字列,   ::String)
 
   定義(:部の定義) {|部, &塊|
     case (部)
