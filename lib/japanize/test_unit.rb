@@ -5,14 +5,14 @@ require 'japanize/core'
 要求 'test/unit'
 
 部(日本語化) {
-  日本語の定数(:試験単位, Test::Unit)
+  日本語の定数 :試験単位, Test::Unit
 
   部(試験単位) {
-    日本語の定数(:確認手段, Test::Unit::Assertions)
+    日本語の定数 :確認手段, Test::Unit::Assertions
 
     部(確認手段) {
-      別名(:確認,             :assert)
-      別名(:等しいことを確認, :assert_equal)
+      別名 :確認,             :assert
+      別名 :等しいことを確認, :assert_equal
     }
 
     組(:試験事例, 原型: Test::Unit::TestCase) {
@@ -22,8 +22,8 @@ require 'japanize/core'
       定義(:破棄) {}
 
       特異組{
-        別名(:資料, :data)
-        別名(:試験, :test)
+        別名 :資料, :data
+        別名 :試験, :test
       }
     }
   }
