@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-module J
+module JA
   VERSION = '0.1.0'
 end
 
-Japanize = J unless (defined? Japanize)
+Japanize = JA unless (defined? Japanize)
 
 # Local Variables:
 # mode: Ruby

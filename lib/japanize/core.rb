@@ -38,16 +38,16 @@ class Object
   秘密 :特異組の定義
 end
 
-module J
+module JA
 end
-include J
+include JA
 
-Japanize = J unless (defined? Japanize)
+Japanize = JA unless (defined? Japanize)
 Japanize::TOP_LEVEL = self
 
 module Japanize
   定義(:日本語の定数) {|名前, 値|
-    定数 = "J#{名前}".to_sym
+    定数 = "JA#{名前}".to_sym
     if (self == Japanize || self ==  Japanize::TOP_LEVEL) then
       Japanize.定数を設定(定数, 値)
       Japanize.定義(名前) { 値 }
@@ -90,7 +90,7 @@ module Japanize
     case (部)
     when 記号, 文字列
       名前 = 部
-      定数名 = "J#{名前}".to_sym
+      定数名 = "JA#{名前}".to_sym
       if (定数は定義済みか? 定数名) then
         部 = 定数を取得(定数名)
       else
@@ -115,7 +115,7 @@ module Japanize
     case (組)
     when 記号, 文字列
       名前 = 組
-      定数名 = "J#{名前}".to_sym
+      定数名 = "JA#{名前}".to_sym
       if ((定数は定義済みか? 定数名) && ! 原型) then
         組 = 定数を取得(定数名)
       else

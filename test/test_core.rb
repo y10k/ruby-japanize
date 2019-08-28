@@ -41,16 +41,16 @@ require 'japanize/core'
       }
 
       試験('日本語名称の絶対パスの確認') {
-        等しいことを確認(Japanize, ::J::日本語化)
-        等しいことを確認(Kernel,   ::J::核)
-        等しいことを確認(Module,   ::J::部)
-        等しいことを確認(Class,    ::J::組)
-        等しいことを確認(Object,   ::J::物)
-        等しいことを確認(Symbol,   ::J::記号)
-        等しいことを確認(String,   ::J::文字列)
+        等しいことを確認(Japanize, ::JA::日本語化)
+        等しいことを確認(Kernel,   ::JA::核)
+        等しいことを確認(Module,   ::JA::部)
+        等しいことを確認(Class,    ::JA::組)
+        等しいことを確認(Object,   ::JA::物)
+        等しいことを確認(Symbol,   ::JA::記号)
+        等しいことを確認(String,   ::JA::文字列)
 
-        等しいことを確認(Test::Unit, ::J::試験単位)
-        確認(::J::試験単位::試験事例 < Test::Unit::TestCase)
+        等しいことを確認(Test::Unit, ::JA::試験単位)
+        確認(::JA::試験単位::試験事例 < Test::Unit::TestCase)
       }
     }
   }
