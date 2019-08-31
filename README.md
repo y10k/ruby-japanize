@@ -1,39 +1,72 @@
-# Ruby::Japanize
+ruby-japanize
+=============
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ruby/japanize`. To experiment with that code, run `bin/console` for an interactive prompt.
+日本語のキーワードや構文を定義して、日本語でRubyを書けるようにする。
 
-TODO: Delete this and the text above, and describe your gem
+導入
+----
 
-## Installation
-
-Add this line to your application's Gemfile:
+`Gemfile`に次の行を追加します。
 
 ```ruby
 gem 'ruby-japanize'
 ```
 
-And then execute:
+そして次のコマンドを実行します。
 
     $ bundle
 
-Or install it yourself as:
+または次のようにします。
 
     $ gem install ruby-japanize
 
-## Usage
+なぜRubyを日本語化しようと思ったのかについて
+--------------------------------------------
 
-TODO: Write usage instructions here
+Rubyを日本語化しようと思ったきっかけは二つあります。一つはRubyの識別子
+(変数名やメソッド名)にUTF-8が使えるため、その気になれば日本語だけで
+Rubyのスクリプトを書けるのではないかと思いついたことです。唯一、クラス
+名(≒定数名)はアルファベットの大文字で始まる必要があるため単純に日本語
+化できないのですが、試しにプロトタイプを作ってみたところちょっとした制
+限と工夫でなんとかなりそうだという感触を得ました。
 
-## Development
+もう一つのきっかけは、日本語で実用的なプログラミングを表現し切ることは、
+はたして可能なのだろうかと疑問に思ったことです。現在、Rubyを含む一般に
+広く普及している実用的なプログラミング言語は英語がベースになっていると
+言っていいと思います。日本語ベースのプログラミング言語も無くはないよう
+ですが、実用言語として広く普及しているとは言いがたい状況でしょう。Ruby
+を実用言語たらしめている要素は大きく二つあると思っていて、一つは見ため
+に分かりやすい構文で、もう一つは豊富なクラスライブラリ(≒語彙)です。実
+用的なプログラミングのためには特に後者が重要だと個人的には思っていて、
+Rubyは英語ベースなのでRubyが持つ語彙もすべて英語で表現されているわけで、
+日本語で実用的なプログラミングをするためにはこの語彙をすべて日本語で表
+現し切る必要があるのですが、はたしてそんなことは本当に可能なのでしょう
+か？
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+この疑問を解くためには、実際に作ってみるのが手っ取り早いということで、
+作ってみたのがこのgemです。
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+日本語化の基本方針
+------------------
 
-## Contributing
+- 外付けのライブラリにまで手を出すときりがないので、日本語化の範囲は組
+  み込みライブラリまでにする。
+- `Test::Unit`はテストのために使うので例外的に日本語化の対象とする。
+- 日本語の名前付けの規則は次のとおり。
+    1. よく使うメソッドは短く完結な名前にする。
+    2. 使用頻度が低いメソッドや注意深く使う必要があるメソッドは冗長で
+       分かりやすい名前にする。
+    3. カタカナ語はできるだけ使わない。どうしても日本語に該当する概念
+       や言葉が無いときだけカタカナを使う。
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ruby-japanize.
+貢献方法
+--------
 
-## License
+問題報告やプルリクはGithubの<https://github.com/y10k/ruby-japanize>で
+受け付けています。
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+ライセンス
+----------
+
+このgemは[MIT License](https://opensource.org/licenses/MIT)ライセンス
+の元でオープンソースとして提供されます。
