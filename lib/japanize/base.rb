@@ -154,8 +154,8 @@ require 'japanize/core'
 組(物) {
   別名 :送信,                      :send
   別名 :生成元,                    :class
-  別名 :複写,                      :clone
-  別名 :複製,                      :dup
+  定義(:複写) { clone }                                        # cloneを継承先で再定義するかもしれないので別名にしない
+  定義(:複製) { dup}                                           # dupを継承先で再定義するかもしれないので別名にしない
   別名 :特異操作の定義,            :define_singleton_method
   別名 :表示する,                  :display
   別名 :列挙する,                  :enum_for
@@ -190,7 +190,7 @@ require 'japanize/core'
   別名 :汚染されているか?,         :tainted?
   別名 :蛇口,                      :tap
   別名 :自分を渡す,                :yield_self
-  別名 :文字列に変換,              :to_s
+  定義(:文字列に変換) {|*引数| to_s(*引数) }                   # to_sを継承先で再定義するかもしれないので別名にしない
   別名 :汚染を除去する,            :untaint
 
   別名 :初期化,        :initialize
