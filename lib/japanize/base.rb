@@ -428,10 +428,10 @@ require 'japanize/core'
   }.凍結する
 
   繰り返し操作の日本語化対応表 = {
-    個別に:         :each,
-    キー毎に:       :each_key,
-    値毎に:         :each_value,
-    組み合わせ毎に: :each_pair
+    個別に:   :each,
+    キー毎に: :each_key,
+    値毎に:   :each_value,
+    対毎に:   :each_pair
   }.凍結する
 
   入れ物の操作の日本語化対応表 = {
