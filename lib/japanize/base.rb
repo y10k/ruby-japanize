@@ -401,6 +401,22 @@ require 'japanize/core'
   end
 }
 
+組(例外) {
+  特異組{
+    別名 :例外を生成, :exception
+  }
+
+  別名 :実行履歴,             :backtrace
+  別名 :実行履歴の場所の一覧, :backtrace_locations
+  別名 :起因,                 :cause
+  別名 :例外を生成,           :exception
+  別名 :完全な伝文,           :full_message
+  # 別名 :検査,                 :inspect    # 物で定義済み
+  別名 :伝文,                 :message
+  # 別名 :文字列に変換,         :to_s       # 物で定義済み
+  別名 :実行履歴を設定,       :set_backtrace
+}
+
 部(日本語化) {
   部(:初期化を秘密にする) {
     定義(:操作が追加された時) {|名前|
