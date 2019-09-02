@@ -588,7 +588,7 @@ require 'japanize/core'
                 if (例外処理) then
                   戻り値 = 例外処理[発生した例外]
                 else
-                  戻り値 = 例外を発生
+                  例外を発生
                 end
               else
                 if (折り返し処理.例外が無い時の処理) then
