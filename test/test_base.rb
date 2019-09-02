@@ -311,6 +311,7 @@ require 'japanize/core'
            '生成元'                    => [ :生成元,                    :class ],
            '特異操作の定義'            => [ :特異操作の定義,            :define_singleton_method ],
            '表示する'                  => [ :表示する,                  :display ],
+           '列挙に変換'                => [ :列挙に変換,                :to_enum ],
            '列挙する'                  => [ :列挙する,                  :enum_for ],
            '拡張'                      => [ :拡張,                      :extend ],
            '凍結する'                  => [ :凍結する,                  :freeze ],

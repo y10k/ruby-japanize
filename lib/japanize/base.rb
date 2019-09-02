@@ -158,6 +158,7 @@ require 'japanize/core'
   定義(:複製) {|*引数, &塊| dup(*引数, &塊) }                  # dupを継承先で再定義するかもしれないので別名にしない
   別名 :特異操作の定義,            :define_singleton_method
   別名 :表示する,                  :display
+  別名 :列挙に変換,                :to_enum
   別名 :列挙する,                  :enum_for
   定義(:等しいか?) {|他の物| eql?(他の物) }                    # eql?を継承先で再定義するかもしれないので別名にしない
   別名 :拡張,                      :extend
