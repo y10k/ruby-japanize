@@ -46,9 +46,14 @@ Japanize = JA unless (defined? Japanize)
 Japanize::TOP_LEVEL = self
 
 module Japanize
+  定義(:自分) { self }
+  秘密 :自分
+
+  定義(:最上位) { TOP_LEVEL }
+
   定義(:日本語の定数) {|名前, 値|
     定数 = "JA#{名前}".to_sym
-    if (self == Japanize || self ==  Japanize::TOP_LEVEL) then
+    if (自分 == Japanize || 自分 ==  Japanize::最上位) then
       Japanize.定数を設定(定数, 値)
       Japanize.定義(名前) { 値 }
     else
@@ -58,13 +63,6 @@ module Japanize
 
     値
   }
-end
-
-module Japanize
-  定義(:自分) { self }
-  秘密 :自分
-
-  定義(:最上位) { TOP_LEVEL }
 
   最上位.特異組{
     定義(:定義) {|名前, &塊|
