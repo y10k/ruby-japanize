@@ -30,40 +30,40 @@ alias $標準入力             $stdin
 # 尚、以下の組は適切な日本語名称がないので定義しない。
 #   - RubyVM
 
-日本語の定数 :物の土台,       BasicObject
-# 日本語の定数 :物,             Object
-日本語の定数 :配列,           Array
-日本語の定数 :束縛,           Binding
-日本語の定数 :ディレクトリ,   Dir
-日本語の定数 :文字符号化方式, Encoding
-日本語の定数 :列挙,           Enumerator
-日本語の定数 :偽値の組,       FalseClass
-日本語の定数 :ファイバー,     Fiber
-日本語の定数 :連想配列,       Hash
-日本語の定数 :入出力,         IO
-日本語の定数 :ファイル,       File
-日本語の定数 :一致した結果,   MatchData
-日本語の定数 :操作,           Method
-# 日本語の定数 :部,             Module
-# 日本語の定数 :組,             Class
-日本語の定数 :無値の組,       NilClass
-日本語の定数 :数値,           Numeric
-日本語の定数 :複素数,         Complex
-日本語の定数 :浮動小数点,     Float
-日本語の定数 :整数,           Integer
-日本語の定数 :有理数,         Rational
-日本語の定数 :手続き型,       Proc
-日本語の定数 :疑似乱数生成器, Random
-日本語の定数 :範囲,           Range
-日本語の定数 :正規表現,       Regexp
-# 日本語の定数 :文字列,         String
-日本語の定数 :構造体,         Struct
-# 日本語の定数 :記号,           Symbol
-日本語の定数 :スレッド,       Thread
-日本語の定数 :スレッドの群れ, ThreadGroup
-日本語の定数 :時刻,           Time
-日本語の定数 :真値の組,       TrueClass
-日本語の定数 :未束縛の操作,   UnboundMethod
+日本語の定数 :物の土台,               BasicObject
+# 日本語の定数 :物,                     Object # japanize/coreで定義済み
+日本語の定数 :配列,                   Array
+日本語の定数 :束縛,                   Binding
+日本語の定数 :ディレクトリ,           Dir
+日本語の定数 :文字符号化方式,         Encoding
+日本語の定数 :列挙,                   Enumerator
+日本語の定数 :偽値の組,               FalseClass
+日本語の定数 :ファイバー,             Fiber
+日本語の定数 :連想配列,               Hash
+日本語の定数 :入出力,                 IO
+日本語の定数 :ファイル,               File
+日本語の定数 :正規表現が一致した結果, MatchData
+日本語の定数 :操作,                   Method
+# 日本語の定数 :部,                     Module # japanize/coreで定義済み
+# 日本語の定数 :組,                     Class  # japanize/coreで定義済み
+日本語の定数 :無値の組,               NilClass
+日本語の定数 :数値,                   Numeric
+日本語の定数 :複素数,                 Complex
+日本語の定数 :浮動小数点,             Float
+日本語の定数 :整数,                   Integer
+日本語の定数 :有理数,                 Rational
+日本語の定数 :手続き型,               Proc
+日本語の定数 :疑似乱数生成器,         Random
+日本語の定数 :範囲,                   Range
+日本語の定数 :正規表現,               Regexp
+# 日本語の定数 :文字列,                 String # japanize/coreで定義済み
+日本語の定数 :構造体,                 Struct
+# 日本語の定数 :記号,                   Symbol # japanize/coreで定義済み
+日本語の定数 :スレッド,               Thread
+日本語の定数 :スレッドの群れ,         ThreadGroup
+日本語の定数 :時刻,                   Time
+日本語の定数 :真値の組,               TrueClass
+日本語の定数 :未束縛の操作,           UnboundMethod
 
 
 # 最上位にある部の日本語名称を定義する。
