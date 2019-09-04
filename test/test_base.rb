@@ -709,7 +709,7 @@ require 'japanize/core'
            'キー?' => [
              真値,
              [ :甲 ],
-             :キー?,
+             :キーか?,
              :key?,
              { キーを持つか?: :has_key?, 含むか?: :include?, 一員か?: :member? }
            ])

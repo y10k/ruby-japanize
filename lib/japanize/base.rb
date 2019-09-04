@@ -442,7 +442,7 @@ require 'japanize/core'
     長さ:          :length,
     空か?:         :empty?,
     キーの一覧:    :keys,
-    キー?:         :key?,
+    キーか?:       :key?,
     キーを持つか?: :has_key?,
     含むか?:       :include?,
     一員か?:       :member?
