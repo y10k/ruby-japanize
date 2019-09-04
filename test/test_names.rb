@@ -59,6 +59,7 @@ require 'japanize/core'
         同一であることを確認(Thread,        スレッド)
         同一であることを確認(ThreadGroup,   スレッドの群れ)
         同一であることを確認(Time,          時刻)
+        同一であることを確認(TracePoint,    発生事象の追跡)
         同一であることを確認(TrueClass,     真値の組)
         同一であることを確認(UnboundMethod, 未束縛の操作)
 

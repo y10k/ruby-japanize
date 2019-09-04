@@ -62,6 +62,7 @@ alias $標準入力             $stdin
 日本語の定数 :スレッド,               Thread
 日本語の定数 :スレッドの群れ,         ThreadGroup
 日本語の定数 :時刻,                   Time
+日本語の定数 :発生事象の追跡,         TracePoint
 日本語の定数 :真値の組,               TrueClass
 日本語の定数 :未束縛の操作,           UnboundMethod
 
