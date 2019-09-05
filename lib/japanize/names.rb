@@ -163,7 +163,7 @@ alias $標準入力             $stdin
     日本語の定数 :場所,           Thread::Backtrace::Location
   }
   日本語の定数 :条件変数,         Thread::ConditionVariable
-  日本語の定数 :相互排他ロック,   Thread::Mutex
+  日本語の定数 :相互排他制御,     Thread::Mutex
   日本語の定数 :待ち行列,         Thread::Queue
   日本語の定数 :上限付き待ち行列, Thread::SizedQueue
 }

@@ -131,7 +131,7 @@ require 'japanize/core'
         同一であることを確認(Thread::Backtrace,              スレッド::実行履歴)
         同一であることを確認(Thread::Backtrace::Location,    スレッド::実行履歴::場所)
         同一であることを確認(Thread::ConditionVariable,      スレッド::条件変数)
-        同一であることを確認(Thread::Mutex,                  スレッド::相互排他ロック)
+        同一であることを確認(Thread::Mutex,                  スレッド::相互排他制御)
         同一であることを確認(Thread::Queue,                  スレッド::待ち行列)
         同一であることを確認(Thread::SizedQueue,             スレッド::上限付き待ち行列)
 
