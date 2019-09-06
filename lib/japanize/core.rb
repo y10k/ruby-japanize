@@ -51,14 +51,41 @@ module Japanize
 
   定義(:最上位) { TOP_LEVEL }
 
-  定義(:日本語の定数) {|名前, 値|
+  定義(:日本語の定数) {|名前, *引数, &塊|
+    if (引数.empty?) then
+      unless (塊) then
+        raise ArgumentError, '定数値か手続きが必要です'
+      end
+      unless (塊.parameters.empty?) then
+        raise ArgumentError, '手続きは引数を受け取るべきではありません'
+      end
+    else
+      if (塊) then
+        raise ArgumentError, '定数値と手続きを同時に渡してはいけません'
+      end
+      if (引数.length != 1) then
+        raise ArgumentError, "引数の数が不正です(与えられた引数は#{引数.length}個, 期待される引数は1個)"
+      end
+      値 = 引数[0]
+    end
+
     定数 = "JA#{名前}".to_sym
     if (自分 == Japanize || 自分 ==  Japanize::最上位) then
-      Japanize.定数を設定(定数, 値)
-      Japanize.定義(名前) { 値 }
+      if (塊) then
+        Japanize.定数を設定(定数, 塊)
+        Japanize.定義(名前, &塊)
+      else
+        Japanize.定数を設定(定数, 値)
+        Japanize.定義(名前) { 値 }
+      end
     else
-      定数を設定(定数, 値)
-      特異組.定義(名前) { 値 }
+      if (塊) then
+        定数を設定(定数, 塊)
+        特異組.定義(名前, &塊)
+      else
+        定数を設定(定数, 値)
+        特異組.定義(名前) { 値 }
+      end
     end
 
     値
