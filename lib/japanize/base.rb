@@ -12,46 +12,46 @@ require 'japanize/core'
     別名 :使用中の部の一覧, :used_modules
   }
 
-  # 別名 :別名,                                      :alias_method
-  別名 :原型の一覧,                                :ancestors
-  別名 :属性,                                      :attr
-  別名 :読み書き属性,                              :attr_accessor
-  別名 :読み取り属性,                              :attr_reader
-  別名 :書き込み属性,                              :attr_writer
-  別名 :自動配置,                                  :autoload
-  別名 :自動配置か?,                               :autoload?
-  # 別名 :部で評価,                                  :module_eval
-  # 別名 :組で評価,                                  :class_eval
-  別名 :組の変数は定義済みか?,                     :class_variable_defined?
-  別名 :組の変数の一覧,                            :class_variables
-  # 別名 :定数は定義済みか?,                         :const_defined?
-  # 別名 :定数を取得,                                :const_get
-  別名 :不明な定数,                                :const_missing
+  # 別名 :別名,                           :alias_method
+  別名 :原型の一覧,                       :ancestors
+  別名 :属性,                             :attr
+  別名 :読み書き属性,                     :attr_accessor
+  別名 :読み取り属性,                     :attr_reader
+  別名 :書き込み属性,                     :attr_writer
+  別名 :自動配置,                         :autoload
+  別名 :自動配置か?,                      :autoload?
+  # 別名 :部で評価,                       :module_eval
+  # 別名 :組で評価,                       :class_eval
+  別名 :組の変数は定義済みか?,            :class_variable_defined?
+  別名 :組の変数の一覧,                   :class_variables
+  # 別名 :定数は定義済みか?,              :const_defined?
+  # 別名 :定数を取得,                     :const_get
+  別名 :不明な定数,                       :const_missing
   定義(:const_missing) {|名前| 不明な定数(名前) }
-  # 別名 :定数を設定,                                :const_set
-  別名 :定数の一覧,                                :constants
-  # 別名 :定義,                                      :define_method
-  別名 :凍結,                                      :freeze
-  別名 :付加,                                      :include
-  別名 :付加済みか?,                               :include?
-  別名 :含まれる部の一覧,                          :included_modules
-  別名 :名前,                                      :name
-  別名 :生成物が持つ操作を取得,                    :instance_method
-  別名 :生成物が持つ操作の一覧,                    :instance_methods
-  別名 :操作は定義済みか?,                         :method_defined?
-  別名 :付与,                                      :prepend
-  別名 :組が持つ操作を秘密にする,                  :private_class_method
-  別名 :生成物が持つ秘密の操作の一覧,              :private_instance_methods
-  別名 :秘密の操作は定義済みか?,                   :private_method_defined?
-  別名 :生成物が持つ保護された操作の一覧,          :protected_instance_methods
-  別名 :保護された操作は定義済みか?,               :protected_method_defined?
-  別名 :組が持つ操作を公開する,                    :public_class_method
-  別名 :生成物が持つ公開された操作を取得,          :public_instance_method
-  別名 :生成物が持つ公開された操作の一覧,          :public_instance_methods
-  別名 :公開された操作は定義済みか?,               :public_method_defined?
-  別名 :組の変数を除去する,                        :remove_class_variable
-  別名 :操作を除去する,                            :remove_method
-  別名 :操作を未定義にする,                        :undef_method
+  # 別名 :定数を設定,                     :const_set
+  別名 :定数の一覧,                       :constants
+  # 別名 :定義,                           :define_method
+  別名 :凍結,                             :freeze
+  別名 :付加,                             :include
+  別名 :付加済みか?,                      :include?
+  別名 :含まれる部の一覧,                 :included_modules
+  別名 :名前,                             :name
+  別名 :生成物が持つ操作を取得,           :instance_method
+  別名 :生成物が持つ操作の一覧,           :instance_methods
+  別名 :操作は定義済みか?,                :method_defined?
+  別名 :付与,                             :prepend
+  別名 :組が持つ操作を秘密にする,         :private_class_method
+  別名 :生成物が持つ秘密の操作の一覧,     :private_instance_methods
+  別名 :秘密の操作は定義済みか?,          :private_method_defined?
+  別名 :生成物が持つ保護された操作の一覧, :protected_instance_methods
+  別名 :保護された操作は定義済みか?,      :protected_method_defined?
+  別名 :組が持つ操作を公開する,           :public_class_method
+  別名 :生成物が持つ公開された操作を取得, :public_instance_method
+  別名 :生成物が持つ公開された操作の一覧, :public_instance_methods
+  別名 :公開された操作は定義済みか?,      :public_method_defined?
+  別名 :組の変数を除去する,               :remove_class_variable
+  別名 :操作を除去する,                   :remove_method
+  別名 :操作を未定義にする,               :undef_method
 
   別名 :機能を付加する,         :append_features
   別名 :部で実行,               :module_exec
@@ -70,11 +70,11 @@ require 'japanize/core'
   定義(:method_removed) {|名前| 操作が除去された時(名前) }
   別名 :操作が未定義にされた時, :method_undefined
   定義(:method_undefined) {|名前| 操作が未定義にされた時(名前) }
-  # 別名 :部の関数,               :module_function
+  # 別名 :部の関数,             :module_function
   別名 :機能を付与する,         :prepend_features
   別名 :付与された時,           :prepended
   定義(:prepended) {|組または部| 付与された時(組または部) }
-  # 別名 :秘密,                   :private
+  # 別名 :秘密,                 :private
   別名 :秘密の定数,             :private_constant
   別名 :保護,                   :protected
   別名 :公開,                   :public
@@ -183,15 +183,15 @@ require 'japanize/core'
   別名 :公開された操作の一覧,      :public_methods
   別名 :公開された範囲で送信,      :public_send
   別名 :生成物の変数を除去する,    :remove_instance_variable
-  別名 :応答するか?,                 :respond_to?
-  # 別名 :特異組,                    :singleton_class
+  別名 :応答するか?,               :respond_to?
+  # 別名 :特異組,                  :singleton_class
   別名 :特異操作を取得,            :singleton_method
   別名 :特異操作の一覧,            :singleton_methods
   別名 :汚染させる,                :taint
   別名 :汚染されているか?,         :tainted?
   別名 :蛇口,                      :tap
   別名 :自分を渡す,                :yield_self
-  定義(:文字列に変換) {|*引数, &塊| to_s(*引数, &塊) }         # to_sを継承先で再定義するかもしれないので別名にしない
+  定義(:文字列に変換) {|*引数, &塊| to_s(*引数,    &塊) }         # to_sを継承先で再定義するかもしれないので別名にしない
   別名 :汚染を除去する,            :untaint
 
   別名 :初期化,        :initialize
@@ -325,8 +325,8 @@ require 'japanize/core'
   別名 :乱数,                             :rand
   別名 :行を読む,                         :readline
   別名 :全行を読む,                       :readlines
-  # 別名 :要求,                             :require
-  # 別名 :相対位置で要求,                   :require_relative
+  # 別名 :要求,                           :require
+  # 別名 :相対位置で要求,                 :require_relative
   別名 :入出力を選択,                     :select
   別名 :追跡関数を設定,                   :set_trace_func
   別名 :待機,                             :sleep
@@ -413,7 +413,7 @@ require 'japanize/core'
   別名 :連想配列に変換,   :to_h
   別名 :整数に変換,       :to_i
   別名 :有理数に変換,     :to_r
-  # 別名 :文字列に変換,     :to_s    # 物で定義済み
+  # 別名 :文字列に変換,   :to_s    # 物で定義済み
 }
 
 組(例外) {
@@ -426,9 +426,9 @@ require 'japanize/core'
   別名 :起因,                 :cause
   別名 :例外を生成,           :exception
   別名 :完全な伝文,           :full_message
-  # 別名 :検査,                 :inspect    # 物で定義済み
+  # 別名 :検査,               :inspect    # 物で定義済み
   別名 :伝文,                 :message
-  # 別名 :文字列に変換,         :to_s       # 物で定義済み
+  # 別名 :文字列に変換,       :to_s       # 物で定義済み
   別名 :実行履歴を設定,       :set_backtrace
 }
 
