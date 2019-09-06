@@ -318,8 +318,8 @@ require 'japanize/core'
   別名 :目視点検,                         :pp
   別名 :印字,                             :print
   別名 :整形して印字,                     :printf
-  別名 :文字出力,                         :putc
-  別名 :行出力,                           :puts
+  別名 :文字を出力,                       :putc
+  別名 :行を出力,                         :puts
   別名 :乱数,                             :rand
   別名 :行を読み取る,                     :readline
   別名 :全行を読み取る,                   :readlines
@@ -370,8 +370,8 @@ require 'japanize/core'
            :目視点検,
            :印字,
            :整形して印字,
-           :文字出力,
-           :行出力,
+           :文字を出力,
+           :行を出力,
            :乱数,
            :行を読み取る,
            :全行を読み取る,
