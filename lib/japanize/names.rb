@@ -15,7 +15,7 @@ require 'japanize/core'
 # 大域変数の日本語名称を定義する.
 
 alias $配置された機能の一覧 $LOADED_FEATURES
-alias $配置対象の検索経路   $LOAD_PATH
+alias $配置対象の探索経路   $LOAD_PATH
 alias $点検中               $DEBUG
 alias $冗長                 $VERBOSE
 alias $プログラムの名前     $PROGRAM_NAME
