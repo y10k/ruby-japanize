@@ -76,11 +76,28 @@ module Japanize
 
   日本語の定数 :日本語化, ::Japanize
   日本語の定数 :核,       ::Kernel
-  日本語の定数 :部,       ::Module
-  日本語の定数 :組,       ::Class
   日本語の定数 :物,       ::Object
   日本語の定数 :記号,     ::Symbol
   日本語の定数 :文字列,   ::String
+
+  JA部 = ::Module
+  JA組 = ::Class
+
+  定義(:部) {|*引数, &塊|
+    if (塊) then
+      部の定義(*引数, &塊)
+    else
+      ::Module
+    end
+  }
+
+  定義(:組) {|*引数, &塊|
+    if (塊) then
+      組の定義(*引数, &塊)
+    else
+      ::Class
+    end
+  }
 
   定義(:部の定義) {|ある部, &塊|
     case (ある部)
@@ -139,22 +156,6 @@ module Japanize
     ある組
   }
   秘密 :組の定義
-
-  定義(:部) {|*引数, &塊|
-    if (塊) then
-      部の定義(*引数, &塊)
-    else
-      ::Module
-    end
-  }
-
-  定義(:組) {|*引数, &塊|
-    if (塊) then
-      組の定義(*引数, &塊)
-    else
-      ::Class
-    end
-  }
 end
 
 # Local Variables:
