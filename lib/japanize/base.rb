@@ -221,70 +221,72 @@ require 'japanize/core'
 }
 
 # 組の定義と被る変換関数を定義する。
-部(日本語化) {
-  定義(:配列) {|*引数|
-    if (引数.empty?) then
-      Array
-    else
-      Array(*引数)
-    end
-  }
-  部の関数 :配列
+部(核) {
+  部(:変換関数の日本語化) {
+    定義(:配列) {|*引数|
+      if (引数.empty?) then
+        Array
+      else
+        Array(*引数)
+      end
+    }
 
-  定義(:複素数) {|*引数|
-    if (引数.empty?) then
-      Complex
-    else
-      Complex(*引数)
-    end
-  }
-  部の関数 :複素数
+    定義(:複素数) {|*引数|
+      if (引数.empty?) then
+        Complex
+      else
+        Complex(*引数)
+      end
+    }
 
-  定義(:不動小数点) {|*引数|
-    if (引数.empty?) then
-      Float
-    else
-      Float(*引数)
-    end
-  }
-  部の関数 :浮動小数点
+    定義(:不動小数点) {|*引数|
+      if (引数.empty?) then
+        Float
+      else
+        Float(*引数)
+      end
+    }
 
-  定義(:連想配列) {|*引数|
-    if (引数.empty?) then
-      Hash
-    else
-      Hash(*引数)
-    end
-  }
-  部の関数 :連想配列
+    定義(:連想配列) {|*引数|
+      if (引数.empty?) then
+        Hash
+      else
+        Hash(*引数)
+      end
+    }
 
-  定義(:整数) {|*引数|
-    if (引数.empty?) then
-      Integer
-    else
-      Integer(*引数)
-    end
-  }
-  部の関数 :整数
+    定義(:整数) {|*引数|
+      if (引数.empty?) then
+        Integer
+      else
+        Integer(*引数)
+      end
+    }
 
-  定義(:有理数) {|*引数|
-    if (引数.empty?) then
-      Rational
-    else
-      Rational(*引数)
-    end
-  }
-  部の関数 :有理数
+    定義(:有理数) {|*引数|
+      if (引数.empty?) then
+        Rational
+      else
+        Rational(*引数)
+      end
+    }
 
-  定義(:文字列) {|*引数|
-    if (引数.empty?) then
-      String
-    else
-      String(*引数)
-    end
+    定義(:文字列) {|*引数|
+      if (引数.empty?) then
+        String
+      else
+        String(*引数)
+      end
+    }
   }
-  部の関数 :文字列
+  拡張 変換関数の日本語化
 }
+
+部(日本語化) {
+  拡張 核::変換関数の日本語化
+  付与 核::変換関数の日本語化
+}
+付加 核::変換関数の日本語化
 
 部(核) {
   別名 :__呼び出し先__,                   :__callee__
