@@ -321,8 +321,8 @@ require 'japanize/core'
   別名 :文字を出力,                       :putc
   別名 :行を出力,                         :puts
   別名 :乱数,                             :rand
-  別名 :行を読み取る,                     :readline
-  別名 :全行を読み取る,                   :readlines
+  別名 :行を読む,                         :readline
+  別名 :全行を読む,                       :readlines
   # 別名 :要求,                             :require
   # 別名 :相対位置で要求,                   :require_relative
   別名 :入出力を選択,                     :select
@@ -373,8 +373,8 @@ require 'japanize/core'
            :文字を出力,
            :行を出力,
            :乱数,
-           :行を読み取る,
-           :全行を読み取る,
+           :行を読む,
+           :全行を読む,
            :入出力を選択,
            :追跡関数を設定,
            :待機,
