@@ -4,6 +4,7 @@ require 'japanize/core'
 
 要求 'japanize/base'
 要求 'japanize/names'
+要求 'japanize/syntax'
 
 部(列挙できる) {
   別名 :全てにおいて成り立つか?,            :all?
@@ -74,6 +75,10 @@ require 'japanize/core'
   別名 :大きさ,                 :size
   別名 :順番付きで繰り返す,     :with_index
   別名 :覚え書き付きで繰り返す, :with_object
+
+  定義(:繰り返す) {|&塊|
+    制御命令.繰り返す(自分, &塊)
+  }
 
   組(等差数列) {
     別名 :初項,                  :begin
