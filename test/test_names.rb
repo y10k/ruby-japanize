@@ -107,7 +107,7 @@ require 'japanize/core'
         同一であることを確認(LocalJumpError,      局所的な跳躍に失敗)
         同一であることを確認(NameError,           名前解決に失敗)
         同一であることを確認(NoMethodError,       操作が無いため失敗)
-        同一であることを確認(RangeError,          定義域外のため失敗)
+        同一であることを確認(RangeError,          範囲外のため失敗)
         同一であることを確認(FloatDomainError,    浮動小数点の定義域外のため失敗)
         同一であることを確認(RegexpError,         正規表現の失敗)
         同一であることを確認(RuntimeError,        実行時の失敗)

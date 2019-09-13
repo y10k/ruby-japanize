@@ -119,7 +119,7 @@ alias $標準入力             $stdin
 日本語の定数 :局所的な跳躍に失敗,             LocalJumpError
 日本語の定数 :名前解決に失敗,                 NameError
 日本語の定数 :操作が無いため失敗,             NoMethodError
-日本語の定数 :定義域外のため失敗,             RangeError
+日本語の定数 :範囲外のため失敗,               RangeError
 日本語の定数 :浮動小数点の定義域外のため失敗, FloatDomainError
 日本語の定数 :正規表現の失敗,                 RegexpError
 日本語の定数 :実行時の失敗,                   RuntimeError
