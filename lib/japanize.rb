@@ -11,6 +11,7 @@ require 'japanize/core'
 要求 'japanize/string'
 要求 'japanize/syntax'
 要求 'japanize/sys'
+要求 'japanize/thread'
 要求 'japanize/time'
 要求 'japanize/version'
 
