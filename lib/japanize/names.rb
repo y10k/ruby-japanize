@@ -79,7 +79,7 @@ alias $標準入力             $stdin
 日本語の定数 :数学,         Math
 日本語の定数 :物の空間,     ObjectSpace
 日本語の定数 :プロセス,     Process
-日本語の定数 :シグナ,       Signal
+日本語の定数 :シグナル,     Signal
 
 
 # 最上位にある物の日本語名称を定義する。
