@@ -185,9 +185,9 @@ alias $標準入力             $stdin
 }
 
 部(プロセス) {
-  日本語の定数 :グループID,     Process::GID
-  日本語の定数 :システムコール, Process::Sys
-  日本語の定数 :ユーザID,       Process::UID
+  日本語の定数 :ユーザ識別番号,           Process::UID
+  日本語の定数 :グループ識別番号,         Process::GID
+  日本語の定数 :識別番号のシステムコール, Process::Sys
 }
 
 

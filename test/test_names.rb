@@ -140,9 +140,9 @@ require 'japanize/core'
         同一であることを確認(GC::Profiler,     ゴミ集め::統計情報)
         同一であることを確認(IO::WaitReadable, 入出力::読み込み待ちのため失敗)
         同一であることを確認(IO::WaitWritable, 入出力::書き込み待ちのため失敗)
-        同一であることを確認(Process::GID,     プロセス::グループID)
-        同一であることを確認(Process::Sys,     プロセス::システムコール)
-        同一であることを確認(Process::UID,     プロセス::ユーザID)
+        同一であることを確認(Process::UID,     プロセス::ユーザ識別番号)
+        同一であることを確認(Process::GID,     プロセス::グループ識別番号)
+        同一であることを確認(Process::Sys,     プロセス::識別番号のシステムコール)
 
         # 入れ子になった例外の日本語名称を確認する。
         同一であることを確認(Encoding::CompatibilityError,       文字符号化方式::互換性がないため失敗)
