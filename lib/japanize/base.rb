@@ -235,7 +235,7 @@ require 'japanize/core'
   別名 :汚染させる,                :taint
   別名 :汚染されているか?,         :tainted?
   別名 :蛇口,                      :tap
-  別名 :自分を渡す,                :yield_self
+  別名 :自分を委ねる,              :yield_self
   定義(:文字列に変換) {|*引数, &塊| to_s(*引数, &塊) }         # to_sを継承先で再定義するかもしれないので別名にしない
   別名 :汚染を除去する,            :untaint
 
