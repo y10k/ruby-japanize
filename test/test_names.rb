@@ -69,7 +69,7 @@ require 'japanize/core'
         同一であることを確認(FileTest,    ファイル検査)
         同一であることを確認(GC,          ゴミ集め)
         同一であることを確認(Kernel,      核)
-        同一であることを確認(Marshal,     変換)
+        同一であることを確認(Marshal,     直列化)
         同一であることを確認(Math,        数学)
         同一であることを確認(ObjectSpace, 物の空間)
         同一であることを確認(Process,     プロセス)
