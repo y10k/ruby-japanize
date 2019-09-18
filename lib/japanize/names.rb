@@ -31,7 +31,7 @@ alias $標準入力             $stdin
 #   - RubyVM
 
 日本語の定数 :物の土台,               BasicObject
-# 日本語の定数 :物,                     Object # japanize/coreで定義済み
+# 日本語の定数 :物,                   Object # japanize/coreで定義済み
 日本語の定数 :配列,                   Array
 日本語の定数 :束縛,                   Binding
 日本語の定数 :ディレクトリ,           Dir
@@ -44,8 +44,8 @@ alias $標準入力             $stdin
 日本語の定数 :ファイル,               File
 日本語の定数 :正規表現が一致した結果, MatchData
 日本語の定数 :操作,                   Method
-# 日本語の定数 :部,                     Module # japanize/coreで定義済み
-# 日本語の定数 :組,                     Class  # japanize/coreで定義済み
+# 日本語の定数 :部,                   Module # japanize/coreで定義済み
+# 日本語の定数 :組,                   Class  # japanize/coreで定義済み
 日本語の定数 :無値の組,               NilClass
 日本語の定数 :数値,                   Numeric
 日本語の定数 :複素数,                 Complex
@@ -56,9 +56,9 @@ alias $標準入力             $stdin
 日本語の定数 :疑似乱数生成器,         Random
 日本語の定数 :範囲,                   Range
 日本語の定数 :正規表現,               Regexp
-# 日本語の定数 :文字列,                 String # japanize/coreで定義済み
+# 日本語の定数 :文字列,               String # japanize/coreで定義済み
 日本語の定数 :構造体,                 Struct
-# 日本語の定数 :記号,                   Symbol # japanize/coreで定義済み
+# 日本語の定数 :記号,                 Symbol # japanize/coreで定義済み
 日本語の定数 :スレッド,               Thread
 日本語の定数 :スレッドの群れ,         ThreadGroup
 日本語の定数 :時刻,                   Time
@@ -75,7 +75,7 @@ alias $標準入力             $stdin
 日本語の定数 :列挙できる,   Enumerable
 日本語の定数 :ファイル検査, FileTest
 日本語の定数 :ゴミ集め,     GC
-# 日本語の定数 :核,           Kernel
+# 日本語の定数 :核,         Kernel
 日本語の定数 :直列化,       Marshal
 日本語の定数 :数学,         Math
 日本語の定数 :物の空間,     ObjectSpace
