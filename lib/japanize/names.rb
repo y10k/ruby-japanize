@@ -71,16 +71,16 @@ alias $標準入力             $stdin
 # 尚、以下の部は適切な日本語名称がないので定義しない。
 #   - Errno
 
-日本語の定数 :比較できる,   Comparable
-日本語の定数 :列挙できる,   Enumerable
-日本語の定数 :ファイル検査, FileTest
-日本語の定数 :ゴミ集め,     GC
-# 日本語の定数 :核,         Kernel
-日本語の定数 :直列化,       Marshal
-日本語の定数 :数学,         Math
-日本語の定数 :物の空間,     ObjectSpace
-日本語の定数 :プロセス,     Process
-日本語の定数 :シグナル,     Signal
+日本語の定数 :比較できる,     Comparable
+日本語の定数 :列挙できる,     Enumerable
+日本語の定数 :ファイルの検査, FileTest
+日本語の定数 :ゴミ集め,       GC
+# 日本語の定数 :核,           Kernel
+日本語の定数 :直列化,         Marshal
+日本語の定数 :数学,           Math
+日本語の定数 :物の空間,       ObjectSpace
+日本語の定数 :プロセス,       Process
+日本語の定数 :シグナル,       Signal
 
 
 # 最上位にある物の日本語名称を定義する。

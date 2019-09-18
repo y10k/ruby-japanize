@@ -66,7 +66,7 @@ require 'japanize/core'
         # 最上位にある部の日本語名称を確認する。
         同一であることを確認(Comparable,  比較できる)
         同一であることを確認(Enumerable,  列挙できる)
-        同一であることを確認(FileTest,    ファイル検査)
+        同一であることを確認(FileTest,    ファイルの検査)
         同一であることを確認(GC,          ゴミ集め)
         同一であることを確認(Kernel,      核)
         同一であることを確認(Marshal,     直列化)
