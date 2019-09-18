@@ -253,11 +253,11 @@ require 'japanize/core'
              %q{ 同一であることを確認(:my_symbol, :my_symbol) },
              %q{ 同一であることを確認(Object.new, Object.new) }
            ],
-           '送付して確認' => [
+           '送信して確認' => [
              %q{ assert_send([ [ 1, 2 ], :member?, 1 ]) },
              %q{ assert_send([ [ 1, 2 ], :member?, 4 ]) },
-             %q{ 送付して確認([ [ 1, 2 ], :member?, 1 ]) },
-             %q{ 送付して確認([ [ 1, 2 ], :member?, 4 ]) }
+             %q{ 送信して確認([ [ 1, 2 ], :member?, 1 ]) },
+             %q{ 送信して確認([ [ 1, 2 ], :member?, 4 ]) }
            ],
            '脱出することを確認' => [
              %q{ assert_throw(:done) { throw(:done) } },

@@ -8,9 +8,18 @@ require 'japanize/core'
   日本語の定数 :試験単位, Test::Unit
 
   部(試験単位) {
+    特異組{
+      別名 :終了時に実行, :at_exit
+      別名 :開始時に実行, :at_start
+    }
+
     日本語の定数 :確認手段, Test::Unit::Assertions
 
     部(確認手段) {
+      特異組{
+        別名 :目視点検を使う=, :use_pp=
+      }
+
       別名 :確認,                               :assert
       別名 :別名であることを確認,               :assert_alias_method
       別名 :手続きで確認,                       :assert_block
@@ -52,22 +61,34 @@ require 'japanize/core'
       別名 :発生した例外の伝文を確認,           :assert_raise_message
       別名 :応答することを確認,                 :assert_respond_to
       別名 :同一であることを確認,               :assert_same
-      別名 :送付して確認,                       :assert_send
+      別名 :送信して確認,                       :assert_send
       別名 :脱出することを確認,                 :assert_throw
       別名 :真値であることを確認,               :assert_true
       別名 :失敗させる,                         :flunk
     }
 
     組(:試験事例, 原型: Test::Unit::TestCase) {
+      特異組{
+        別名 :資料,               :data
+        別名 :試験,               :test
+        別名 :説明,               :description
+        別名 :細分化した試験事例, :sub_test_case
+        別名 :試験は定義済みか?,  :test_defined?
+        別名 :試験の順番,         :test_order
+        別名 :試験の順番=,        :test_order=
+
+        定義(:startup) { 起動 }
+        定義(:shutdown) { 停止 }
+        定義(:起動) {}
+        定義(:停止) {}
+      }
+
+      別名 :資料, :data
+
       定義(:setup) { 準備 }
       定義(:teardown) { 破棄 }
       定義(:準備) {}
       定義(:破棄) {}
-
-      特異組{
-        別名 :資料, :data
-        別名 :試験, :test
-      }
     }
   }
 }
