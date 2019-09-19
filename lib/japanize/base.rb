@@ -345,7 +345,7 @@ require 'japanize/core'
   別名 :束縛を取得,                       :binding
   別名 :操作に手続きが与えられているか?,  :block_given?
   別名 :呼び出し元,                       :caller
-  別名 :呼び出し元の実行履歴の場所の一覧, :caller_locations
+  別名 :呼び出し元の場所の一覧,           :caller_locations
   別名 :補足,                             :catch
   別名 :評価,                             :eval
   別名 :外部のプログラムを上書き実行する, :exec
@@ -398,7 +398,7 @@ require 'japanize/core'
            :束縛を取得,
            :操作に手続きが与えられているか?,
            :呼び出し元,
-           :呼び出し元の実行履歴の場所の一覧,
+           :呼び出し元の場所の一覧,
            :補足,
            :評価,
            :外部のプログラムを上書き実行する,
@@ -469,15 +469,15 @@ require 'japanize/core'
     別名 :例外を生成, :exception
   }
 
-  別名 :実行履歴,             :backtrace
-  別名 :実行履歴の場所の一覧, :backtrace_locations
-  別名 :起因,                 :cause
-  別名 :例外を生成,           :exception
-  別名 :完全な伝文,           :full_message
-  # 別名 :検査,               :inspect    # 物で定義済み
-  別名 :伝文,                 :message
-  # 別名 :文字列に変換,       :to_s       # 物で定義済み
-  別名 :実行履歴を設定,       :set_backtrace
+  別名 :呼び出し履歴,             :backtrace
+  別名 :呼び出し履歴の場所の一覧, :backtrace_locations
+  別名 :起因,                     :cause
+  別名 :例外を生成,               :exception
+  別名 :完全な伝文,               :full_message
+  # 別名 :検査,                   :inspect    # 物で定義済み
+  別名 :伝文,                     :message
+  # 別名 :文字列に変換,           :to_s       # 物で定義済み
+  別名 :呼び出し履歴を設定,       :set_backtrace
 }
 
 部(日本語化) {

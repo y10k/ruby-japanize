@@ -158,8 +158,8 @@ alias $標準入力             $stdin
 }
 
 組(スレッド) {
-  日本語の定数 :実行履歴,         Thread::Backtrace
-  組(実行履歴) {
+  日本語の定数 :呼び出し履歴,     Thread::Backtrace
+  組(呼び出し履歴) {
     日本語の定数 :場所,           Thread::Backtrace::Location
   }
   日本語の定数 :条件変数,         Thread::ConditionVariable
