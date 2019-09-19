@@ -97,40 +97,40 @@ alias $標準入力             $stdin
 
 # 最上位にある例外の日本語名称を定義する。
 
-日本語の定数 :例外,                           Exception
-日本語の定数 :記憶領域不足のため失敗,         NoMemoryError
-日本語の定数 :スクリプトの失敗,               ScriptError
-日本語の定数 :配置の失敗,                     LoadError
-日本語の定数 :未実装のため失敗,               NotImplementedError
-日本語の定数 :文法誤りのため失敗,             SyntaxError
-日本語の定数 :安全に違反するため失敗,         SecurityError
-日本語の定数 :シグナルの例外,                 SignalException
-日本語の定数 :割り込み,                       Interrupt
-日本語の定数 :標準的な失敗,                   StandardError
-日本語の定数 :引数が誤っているため失敗,       ArgumentError
-日本語の定数 :補足できないため失敗,           UncaughtThrowError
-日本語の定数 :文字符号化方式の失敗,           EncodingError
-日本語の定数 :ファイバーの失敗,               FiberError
-日本語の定数 :入出力の失敗,                   IOError
-日本語の定数 :ファイル終端のため失敗,         EOFError
-日本語の定数 :添字が範囲外のため失敗,         IndexError
-日本語の定数 :キーの照合に失敗,               KeyError
-日本語の定数 :繰り返しの停止,                 StopIteration
-日本語の定数 :待ち行列が閉鎖済みのため失敗,   ClosedQueueError
-日本語の定数 :局所的な跳躍に失敗,             LocalJumpError
-日本語の定数 :名前解決に失敗,                 NameError
-日本語の定数 :操作が無いため失敗,             NoMethodError
-日本語の定数 :範囲外のため失敗,               RangeError
-日本語の定数 :浮動小数点の定義域外のため失敗, FloatDomainError
-日本語の定数 :正規表現の失敗,                 RegexpError
-日本語の定数 :実行時の失敗,                   RuntimeError
-日本語の定数 :凍結済みのため失敗,             FrozenError
-日本語の定数 :システムコールの失敗,           SystemCallError
-日本語の定数 :スレッドの失敗,                 ThreadError
-日本語の定数 :型が合わないため失敗,           TypeError
-日本語の定数 :零除算のため失敗,               ZeroDivisionError
-日本語の定数 :システムの終了,                 SystemExit
-日本語の定数 :システムスタック超過のため失敗, SystemStackError
+日本語の定数 :例外,                                 Exception
+日本語の定数 :記憶領域不足のため失敗,               NoMemoryError
+日本語の定数 :スクリプトの失敗,                     ScriptError
+日本語の定数 :配置の失敗,                           LoadError
+日本語の定数 :未実装のため失敗,                     NotImplementedError
+日本語の定数 :文法誤りのため失敗,                   SyntaxError
+日本語の定数 :安全を侵害するため失敗,               SecurityError
+日本語の定数 :シグナルの例外,                       SignalException
+日本語の定数 :割り込み,                             Interrupt
+日本語の定数 :標準的な失敗,                         StandardError
+日本語の定数 :引数が誤っているため失敗,             ArgumentError
+日本語の定数 :脱出を補足できないため失敗,           UncaughtThrowError
+日本語の定数 :文字符号化方式の失敗,                 EncodingError
+日本語の定数 :ファイバーの失敗,                     FiberError
+日本語の定数 :入出力の失敗,                         IOError
+日本語の定数 :ファイル終端のため失敗,               EOFError
+日本語の定数 :添字が範囲外のため失敗,               IndexError
+日本語の定数 :キーの照合に失敗,                     KeyError
+日本語の定数 :繰り返しの停止,                       StopIteration
+日本語の定数 :待ち行列が閉鎖済みのため失敗,         ClosedQueueError
+日本語の定数 :局所的な跳躍に失敗,                   LocalJumpError
+日本語の定数 :名前解決に失敗,                       NameError
+日本語の定数 :操作が無いため失敗,                   NoMethodError
+日本語の定数 :範囲外のため失敗,                     RangeError
+日本語の定数 :浮動小数点の定義域外のため失敗,       FloatDomainError
+日本語の定数 :正規表現の失敗,                       RegexpError
+日本語の定数 :実行時の失敗,                         RuntimeError
+日本語の定数 :凍結済みのため失敗,                   FrozenError
+日本語の定数 :システムコールの失敗,                 SystemCallError
+日本語の定数 :スレッドの失敗,                       ThreadError
+日本語の定数 :型が合わないため失敗,                 TypeError
+日本語の定数 :零除算のため失敗,                     ZeroDivisionError
+日本語の定数 :システムの終了,                       SystemExit
+日本語の定数 :システムのスタックが超過したため失敗, SystemStackError
 
 
 # 入れ子になった組の日本語名称を定義する。

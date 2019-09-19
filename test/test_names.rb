@@ -91,12 +91,12 @@ require 'japanize/core'
         同一であることを確認(LoadError,           配置の失敗)
         同一であることを確認(NotImplementedError, 未実装のため失敗)
         同一であることを確認(SyntaxError,         文法誤りのため失敗)
-        同一であることを確認(SecurityError,       安全に違反するため失敗)
+        同一であることを確認(SecurityError,       安全を侵害するため失敗)
         同一であることを確認(SignalException,     シグナルの例外)
         同一であることを確認(Interrupt,           割り込み)
         同一であることを確認(StandardError,       標準的な失敗)
         同一であることを確認(ArgumentError,       引数が誤っているため失敗)
-        同一であることを確認(UncaughtThrowError,  補足できないため失敗)
+        同一であることを確認(UncaughtThrowError,  脱出を補足できないため失敗)
         同一であることを確認(EncodingError,       文字符号化方式の失敗)
         同一であることを確認(FiberError,          ファイバーの失敗)
         同一であることを確認(IOError,             入出力の失敗)
@@ -118,7 +118,7 @@ require 'japanize/core'
         同一であることを確認(TypeError,           型が合わないため失敗)
         同一であることを確認(ZeroDivisionError,   零除算のため失敗)
         同一であることを確認(SystemExit,          システムの終了)
-        同一であることを確認(SystemStackError,    システムスタック超過のため失敗)
+        同一であることを確認(SystemStackError,    システムのスタックが超過したため失敗)
 
         # 入れ子になった組の日本語名称を確認する。
         同一であることを確認(Encoding::Converter,            文字符号化方式::変換器)
