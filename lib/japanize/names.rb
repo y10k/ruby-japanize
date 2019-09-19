@@ -108,7 +108,7 @@ alias $標準入力             $stdin
 日本語の定数 :割り込み,                             Interrupt
 日本語の定数 :標準的な失敗,                         StandardError
 日本語の定数 :引数が誤っているため失敗,             ArgumentError
-日本語の定数 :脱出を補足できないため失敗,           UncaughtThrowError
+日本語の定数 :脱出を捕捉できないため失敗,           UncaughtThrowError
 日本語の定数 :文字符号化方式の失敗,                 EncodingError
 日本語の定数 :ファイバーの失敗,                     FiberError
 日本語の定数 :入出力の失敗,                         IOError

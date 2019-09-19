@@ -96,7 +96,7 @@ require 'japanize/core'
         同一であることを確認(Interrupt,           割り込み)
         同一であることを確認(StandardError,       標準的な失敗)
         同一であることを確認(ArgumentError,       引数が誤っているため失敗)
-        同一であることを確認(UncaughtThrowError,  脱出を補足できないため失敗)
+        同一であることを確認(UncaughtThrowError,  脱出を捕捉できないため失敗)
         同一であることを確認(EncodingError,       文字符号化方式の失敗)
         同一であることを確認(FiberError,          ファイバーの失敗)
         同一であることを確認(IOError,             入出力の失敗)

@@ -346,7 +346,7 @@ require 'japanize/core'
   別名 :操作に手続きが与えられているか?,  :block_given?
   別名 :呼び出し元,                       :caller
   別名 :呼び出し元の場所の一覧,           :caller_locations
-  別名 :補足,                             :catch
+  別名 :捕捉,                             :catch
   別名 :評価,                             :eval
   別名 :外部のプログラムを上書き実行する, :exec
   別名 :終了,                             :exit
@@ -384,7 +384,7 @@ require 'japanize/core'
   別名 :ファイルを検査,                   :test
   別名 :脱出,                             :throw
   別名 :大域変数を追跡,                   :trace_var
-  別名 :シグナルの補足,                   :trap
+  別名 :シグナルの捕捉,                   :trap
   別名 :大域変数の追跡を解除,             :untrace_var
   別名 :警告,                             :warn
 
@@ -399,7 +399,7 @@ require 'japanize/core'
            :操作に手続きが与えられているか?,
            :呼び出し元,
            :呼び出し元の場所の一覧,
-           :補足,
+           :捕捉,
            :評価,
            :外部のプログラムを上書き実行する,
            :終了,
@@ -435,7 +435,7 @@ require 'japanize/core'
            :ファイルを検査,
            :脱出,
            :大域変数を追跡,
-           :シグナルの補足,
+           :シグナルの捕捉,
            :大域変数の追跡を解除,
            :警告
 
