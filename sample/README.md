@@ -8,6 +8,7 @@ Rubyの[ソースコード](https://github.com/ruby/ruby)に含まれる[サン�
 日本語化したサンプルの一覧
 --------------------------
 
-- `fact.rb` : 階乗の計算 (factorial calculator)
-- `fib.rb`  : フィボナッチ数 (Fibonacci number)
-- `pi.rb`   : 円周率の計算 (calculate PI)
+- `fact.rb`  : 階乗の計算 (factorial calculator)
+- `fib.rb`   : フィボナッチ数 (Fibonacci number)
+- `pi.rb`    : 円周率の計算 (calculate PI)
+- `sieve.rb` : エラストテネスの篩 (sieve of Eratosthenes)
