@@ -10,12 +10,12 @@ Rake::TestTask.new do |task|
   end
 end
 
+rule '.html' => [ '.md' ] do |t|
+  sh "pandoc --from=markdown --to=html5 --standalone --self-contained --css=$HOME/.pandoc/github.css --output=#{t.name} #{t.source}"
+end
+
 desc 'Build README.html from markdown source'
 task :readme => %w[ README.html ]
-
-file 'README.html' => [ 'README.md' ] do
-  sh "pandoc --from=markdown --to=html5 --standalone --self-contained --css=$HOME/.pandoc/github.css --output=README.html README.md"
-end
 CLOBBER.include 'README.html'
 
 # Local Variables:
