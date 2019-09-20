@@ -134,6 +134,7 @@ module Japanize
       if (自分 == 日本語化 || 自分 == 日本語化::最上位) then
         if (日本語化.定数は定義済みか? 定数名) then
           ある部 = 日本語化.定数を取得(定数名)
+          ある部.instance_of? 部 or raise TypeError, "#{ある部} は #{部} ではありません"
         else
           ある部 = 部.new
           日本語化.定数を設定(定数名, ある部)
@@ -142,6 +143,7 @@ module Japanize
       else
         if (定数は定義済みか? 定数名) then
           ある部 = 定数を取得(定数名)
+          ある部.instance_of? 部 or raise TypeError, "#{ある部} は #{部} ではありません"
         else
           ある部 = 部.new
           定数を設定(定数名, ある部)
