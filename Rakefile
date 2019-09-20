@@ -18,6 +18,12 @@ desc 'Build README.html from markdown source'
 task :readme => %w[ README.html ]
 CLOBBER.include 'README.html'
 
+namespace :sample do
+  desc 'Build sample/README.html from markdown source'
+  task :readme => %w[ sample/README.html ]
+  CLOBBER.include 'sample/README.html'
+end
+
 # Local Variables:
 # mode: Ruby
 # indent-tabs-mode: nil
