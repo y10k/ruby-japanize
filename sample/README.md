@@ -8,3 +8,4 @@ Rubyの[ソースコード](https://github.com/ruby/ruby)に含まれる[サン�
 日本語化したサンプルの一覧
 --------------------------
 
+- `fact.rb` : 階乗の計算 (factorial calculator)
