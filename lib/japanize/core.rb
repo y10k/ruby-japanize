@@ -157,22 +157,31 @@ module Japanize
   }
   秘密 :部の定義
 
-  定義(:組の定義) {|ある組, 原型: 物, &塊|
+  定義(:組の定義) {|ある組, 原型: nil, &塊|
+    原型.instance_of? 組 or raise TypeError, "#{原型} は #{組} ではありせん" if 原型
     case (ある組)
     when 記号, 文字列
       名前 = ある組
       定数名 = "JA#{名前}".to_sym
       if (自分 == 日本語化 || 自分 == 日本語化::最上位) then
-        if ((日本語化.定数は定義済みか? 定数名) && ! 原型) then
+        if (日本語化.定数は定義済みか? 定数名) then
           ある組 = 日本語化.定数を取得(定数名)
+          ある組.instance_of? 組 or raise TypeError, "#{ある組} は #{組} ではありません"
+          if (原型 && 原型 != ある組.superclass) then
+            raise TypeError, "#{ある組} の原型として #{原型} は不適当です"
+          end
         else
           ある組 = 組.new(原型)
           日本語化.定数を設定(定数名, ある組)
           日本語化.定義(名前) { ある組 }
         end
       else
-        if ((定数は定義済みか? 定数名) && ! 原型) then
+        if (定数は定義済みか? 定数名) then
           ある組 = 定数を取得(定数名)
+          ある組.instance_of? 組 or raise TypeError, "#{ある組} は #{組} ではありません"
+          if (原型 && 原型 != ある組.superclass) then
+            raise TypeError, "#{ある組} の原型として #{原型} は不適当です"
+          end
         else
           ある組 = 組.new(原型 || 物)
           定数を設定(定数名, ある組)
