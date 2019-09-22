@@ -31,7 +31,7 @@ require 'japanize/core'
   # 別名 :定数を設定,                     :const_set
   別名 :定数の一覧,                       :constants
   # 別名 :定義,                           :define_method
-  別名 :凍結,                             :freeze
+  別名 :凍結する,                         :freeze
   別名 :付加,                             :include
   別名 :付加済みか?,                      :include?
   別名 :含まれる部の一覧,                 :included_modules

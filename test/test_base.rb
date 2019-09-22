@@ -32,7 +32,7 @@ require 'japanize/core'
            '組の変数の一覧'                   => [ :組の変数の一覧,                   :class_variables ],
            '定数の一覧'                       => [ :定数の一覧,                       :constants ],
            '定義'                             => [ :定義,                             :define_method ],
-           '凍結'                             => [ :凍結,                             :freeze ],
+           '凍結する'                         => [ :凍結する,                         :freeze ],
            '付加'                             => [ :付加,                             :include ],
            '付加済みか?'                      => [ :付加済みか?,                      :include? ],
            '含まれる部の一覧'                 => [ :含まれる部の一覧,                 :included_modules ],
