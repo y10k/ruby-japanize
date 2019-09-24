@@ -13,5 +13,6 @@ Rubyの[ソースコード](https://github.com/ruby/ruby)に含まれる[サン�
 - `export.rb` : メソッドの可視性の例 (method access example)
 - `fact.rb`   : 階乗の計算 (factorial calculator)
 - `fib.rb`    : フィボナッチ数 (Fibonacci number)
+- `freq.rb`   : 単語の出現回数を数える (count word occurrence)
 - `pi.rb`     : 円周率の計算 (calculate PI)
 - `sieve.rb`  : エラストテネスの篩 (sieve of Eratosthenes)
