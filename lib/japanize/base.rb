@@ -354,6 +354,7 @@ require 'japanize/core'
   別名 :例外を発生,                       :raise
   別名 :プロセスを分岐,                   :fork
   別名 :整形,                             :format
+  別名 :文字列に整形,                     :sprintf
   別名 :行を取得,                         :gets
   別名 :大域変数の一覧,                   :global_variables
   別名 :手続き,                           :proc
@@ -406,6 +407,7 @@ require 'japanize/core'
            :例外を発生,
            :プロセスを分岐,
            :整形,
+           :文字列に整形,
            :行を取得,
            :大域変数の一覧,
            :手続き,
