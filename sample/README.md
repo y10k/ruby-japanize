@@ -16,5 +16,6 @@ Rubyの[ソースコード](https://github.com/ruby/ruby)に含まれる[サン�
 - `freq.rb`     : 単語の出現回数を数える (count word occurrence)
 - `fullpath.rb` : ls -lRを完全なパスの形式に変換 (convert ls -lR to fullpath format)
 - `less.rb`     : lessの仲介 (front end for less)
+- `list.rb`     : 物の愚直な実装の例 (stupid object sample)
 - `pi.rb`       : 円周率の計算 (calculate PI)
 - `sieve.rb`    : エラストテネスの篩 (sieve of Eratosthenes)
