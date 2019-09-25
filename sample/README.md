@@ -19,5 +19,6 @@ Rubyの[ソースコード](https://github.com/ruby/ruby)に含まれる[サン�
 - `list.rb`     : 物の愚直な実装の例 (stupid object sample)
 - `list2.rb`    : 物の愚直な実装の例 (stupid object sample)
 - `list3.rb`    : 物の愚直な実装の例 (stupid object sample)
+- `mine.rb`     : 簡単な地雷処理ゲーム (simple mine sweeper)
 - `pi.rb`       : 円周率の計算 (calculate PI)
 - `sieve.rb`    : エラストテネスの篩 (sieve of Eratosthenes)
