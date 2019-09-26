@@ -21,5 +21,6 @@ Rubyの[ソースコード](https://github.com/ruby/ruby)に含まれる[サン�
 - `list3.rb`    : 物の愚直な実装の例 (stupid object sample)
 - `mine.rb`     : 簡単な地雷処理ゲーム (simple mine sweeper)
 - `mkproto.rb`  : C言語のソースコードからプロトタイプ宣言を抽出する (extract prototype from C)
+- `mpart.rb`    : ファイルを複数に分割する (split file into multi part)
 - `pi.rb`       : 円周率の計算 (calculate PI)
 - `sieve.rb`    : エラストテネスの篩 (sieve of Eratosthenes)
