@@ -24,5 +24,6 @@ Rubyの[ソースコード](https://github.com/ruby/ruby)に含まれる[サン�
 - `mpart.rb`    : ファイルを複数に分割する (split file into multi part)
 - `occur.rb`    : 単語の出現回数を数える (count word occurrence)
 - `occur2.rb`   : 単語の出現回数を数える (count word occurrence)
+- `philos.rb`   : 有名な食事する哲学者の問題 (famous dining philosophers)
 - `pi.rb`       : 円周率の計算 (calculate PI)
 - `sieve.rb`    : エラストテネスの篩 (sieve of Eratosthenes)
