@@ -376,7 +376,7 @@ require 'japanize/core'
   # 別名 :相対位置で要求,                 :require_relative
   別名 :入出力を選択,                     :select
   別名 :追跡関数を設定,                   :set_trace_func
-  別名 :待機,                             :sleep
+  別名 :休止,                             :sleep
   別名 :外部のプログラムを実行する,       :spawn
   別名 :乱数の種を設定,                   :srand
   別名 :システムコールを実行する,         :syscall
@@ -427,7 +427,7 @@ require 'japanize/core'
            :全行を読む,
            :入出力を選択,
            :追跡関数を設定,
-           :待機,
+           :休止,
            :外部のプログラムを実行する,
            :乱数の種を設定,
            :システムコールを実行する,
