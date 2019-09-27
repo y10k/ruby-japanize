@@ -91,8 +91,9 @@ module Japanize
 
   最上位.特異組{
     定義(:定義) {|名前, &塊|
-      define_method(名前, &塊)
-      private 名前
+      戻り値 = define_method(名前, &塊)
+      秘密 名前
+      戻り値
     }
 
     別名 :付加,           :include
