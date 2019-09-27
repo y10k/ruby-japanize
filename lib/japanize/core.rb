@@ -149,8 +149,6 @@ module Japanize
 
     ある部.instance_of? 部 or raise TypeError, "#{ある部} は #{部} ではありません"
     ある部.部で評価(&塊)
-
-    ある部
   }
   秘密 :部の定義
 
@@ -183,8 +181,6 @@ module Japanize
       raise TypeError, "#{ある組} の原型として #{原型} は不適当です"
     end
     ある組.組で評価(&塊)
-
-    ある組
   }
   秘密 :組の定義
 end
