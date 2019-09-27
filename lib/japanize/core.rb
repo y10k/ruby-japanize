@@ -97,6 +97,8 @@ module Japanize
     }
 
     別名 :付加,           :include
+    別名 :秘密,           :private
+    別名 :公開,           :public
     別名 :限定拡張を使用, :using
   }
 
