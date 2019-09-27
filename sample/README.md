@@ -29,3 +29,4 @@ Rubyの[ソースコード](https://github.com/ruby/ruby)に含まれる[サン�
 - `rcs.rb`      : ばらばらな文字で描く立体画像 (random character stereogram)
 - `sieve.rb`    : エラストテネスの篩 (sieve of Eratosthenes)
 - `time.rb`     : /usr/bin/timeの模倣 (/usr/bin/time clone)
+- `trojan.rb`   : トロイの木馬かもしれないファイルを見つける簡単な道具。 (simple tool to find file that may be trojan horse.)
