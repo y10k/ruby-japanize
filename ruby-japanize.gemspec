@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Rubyを日本語化する}
   spec.description   = <<-'EOF'
-    日本語のキーワードや構文を定義して、日本語でRubyを書けるようにする。
+    日本語のキーワードや構文を定義してRubyを日本語で書けるようにする。
   EOF
   spec.homepage      = 'https://github.com/y10k/ruby-japanize'
   spec.license       = 'MIT'
