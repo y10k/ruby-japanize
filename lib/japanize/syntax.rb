@@ -793,6 +793,12 @@ require 'japanize/core'
 }
 付加 制御命令
 
+組(列挙) {
+  定義(:繰り返す) {|&塊|
+    制御命令.繰り返す(自分, &塊)
+  }
+}
+
 # Local Variables:
 # mode: Ruby
 # indent-tabs-mode: nil
