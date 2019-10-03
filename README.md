@@ -71,6 +71,95 @@ Rubyは英語ベースなのでRubyが持つ語彙もすべて英語で表現さ
      - 述語メソッドがレシーバの状態を表すときは`〜が〜か?`とする。
      - 述語メソッドが引数の状態を表すときは`〜は〜か?`とする。
 
+日本語で書いたRubyスクリプトの例
+--------------------------------
+
+<https://www.ruby-lang.org/ja/about/>に掲載されているRubyスクリプトを
+日本語で書いてみた例を以下に掲載しています。またRubyのソースコードに付
+属するサンプルを日本語で書き直した例が
+[sample](https://github.com/y10k/ruby-japanize/tree/master/sample)にあ
+ります。
+
+### すべてがオブジェクト
+
+元のRubyスクリプトの例:
+
+```ruby
+5.times { print "We *love* Ruby -- it's outrageous!" }
+```
+
+日本語で書いたRubyスクリプトの例:
+
+```ruby
+5.回{ 印字 "みんなRubyが*大好き* -- Rubyはすごいぜ!" }
+```
+
+### Rubyの柔軟性
+
+元のRubyスクリプトの例:
+
+```ruby
+class Numeric
+  def plus(x)
+    self.+(x)
+  end
+end
+
+y = 5.plus 6
+# y は 11 になります
+```
+
+日本語で書いたRubyスクリプトの例:
+
+```ruby
+組(数値) {
+  定義(:足す) {|他の数|
+    自分.+(他の数)
+  }
+}
+
+ある数 = 5.足す 6
+# ある数 は 11 になります
+```
+
+### ブロック: 表現力豊かな機能
+
+元のRubyスクリプトの例:
+
+```ruby
+search_engines =
+  %w[Google Yahoo MSN].map do |engine|
+    "http://www." + engine.downcase + ".com"
+  end
+```
+
+日本語で書いたRubyスクリプトの例:
+
+```ruby
+検索エンジン =
+  %w[Google Yahoo MSN].対応させる{|エンジン|
+    "http://www." + エンジン.小文字にする + ".com"
+  }
+```
+
+### RubyとMixin
+
+元のRubyスクリプトの例:
+
+```ruby
+class MyArray
+  include Enumerable
+end
+```
+
+日本語で書いたRubyスクリプトの例:
+
+```ruby
+組(:私家版の配列) {
+  付加 列挙できる
+}
+```
+
 貢献方法
 --------
 
