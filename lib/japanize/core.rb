@@ -69,23 +69,21 @@ module Japanize
       値 = 引数[0]
     end
 
-    定数 = "JA#{名前}".to_sym
-    if (自分 == Japanize || 自分 ==  Japanize::最上位) then
-      if (塊) then
-        Japanize.定数を設定(定数, 塊)
-        Japanize.定義(名前, &塊)
-      else
-        Japanize.定数を設定(定数, 値)
-        Japanize.定義(名前) { 値 }
-      end
+    if (自分 == Japanize || 自分 == Japanize::最上位) then
+      定数の名前空間 = Japanize
+      操作の名前空間 = Japanize
     else
-      if (塊) then
-        定数を設定(定数, 塊)
-        特異組.定義(名前, &塊)
-      else
-        定数を設定(定数, 値)
-        特異組.定義(名前) { 値 }
-      end
+      定数の名前空間 = 自分
+      操作の名前空間 = 自分.特異組
+    end
+
+    定数 = "JA#{名前}".to_sym
+    if (塊) then
+      定数の名前空間.定数を設定(定数, 塊)
+      操作の名前空間.定義(名前, &塊)
+    else
+      定数の名前空間.定数を設定(定数, 値)
+      操作の名前空間.定義(名前) { 値 }
     end
 
     値
