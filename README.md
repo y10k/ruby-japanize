@@ -1206,6 +1206,194 @@ end
 - `__FILE__`
 - `__ENCODING__`
 
+補遺
+----
+
+### 組み込みライブラリの日本語対応表
+
+[base.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/base.rb
+[container.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/container.rb
+[core.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/core.rb
+[enum.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/enum.rb
+[errors.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/errors.rb
+[globals.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/globals.rb
+[io.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/io.rb
+[names.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/names.rb
+[num.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/num.rb
+[process.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/process.rb
+[string.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/string.rb
+[syntax.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/syntax.rb
+[sys.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/sys.rb
+[test_unit.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/test_unit.rb
+[thread.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/thread.rb
+[time.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/time.rb
+[version.rb]:https://github.com/y10k/ruby-japanize/blob/master/lib/japanize/version.rb
+
+#### 組み込みのグローバル変数(大域変数)の日本語対応表
+
+|グローバル変数(大域変数)の日本語名|グローバル変数(大域変数)の英語名|グローバル変数(大域変数)の定義     |
+|----------------------------------|--------------------------------|-----------------------------------|
+|`$配置された機能の一覧`           |`$LOADED_FEATURES`              |[`lib/japanize/names.rb`][names.rb]|
+|`$配置対象の探索経路`             |`$LOAD_PATH`                    |[`lib/japanize/names.rb`][names.rb]|
+|`$点検中`                         |`$DEBUG`                        |[`lib/japanize/names.rb`][names.rb]|
+|`$冗長`                           |`$VERBOSE`                      |[`lib/japanize/names.rb`][names.rb]|
+|`$プログラムの名前`               |`$PROGRAM_NAME`                 |[`lib/japanize/names.rb`][names.rb]|
+|`$ファイル名`                     |`$FILENAME`                     |[`lib/japanize/names.rb`][names.rb]|
+|`$安全度`                         |`$SAFE`                         |[`lib/japanize/names.rb`][names.rb]|
+|`$標準入力`                       |`$stdin`                        |[`lib/japanize/names.rb`][names.rb]|
+|`$標準出力`                       |`$stdout`                       |[`lib/japanize/names.rb`][names.rb]|
+|`$標準エラー出力`                 |`$stderr`                       |[`lib/japanize/names.rb`][names.rb]|
+
+#### 組み込みのオブジェクト(物)の日本語対応表
+
+|オブジェクト(物)の日本語名|オブジェクト(物)の英語名|オブジェクト(物)の定義                 |
+|--------------------------|------------------------|---------------------------------------|
+|`自分`                    |`self`                  |[`lib/japanize/core.rb`][core.rb]      |
+|`無値`                    |`nil`                   |[`lib/japanize/names.rb`][names.rb]    |
+|`真値`                    |`true`                  |[`lib/japanize/names.rb`][names.rb]    |
+|`偽値`                    |`false`                 |[`lib/japanize/names.rb`][names.rb]    |
+|`スクリプトの引数`        |`ARGV`                  |[`lib/japanize/names.rb`][names.rb]    |
+|`スクリプトの入力`        |`ARGF`                  |[`lib/japanize/globals.rb`][globals.rb]|
+|`スクリプトの資料`        |`DATA`                  |[`lib/japanize/names.rb`][names.rb]    |
+|`環境変数`                |`ENV`                   |[`lib/japanize/globals.rb`][globals.rb]|
+|`標準エラー出力`          |`STDERR`                |[`lib/japanize/names.rb`][names.rb]    |
+|`標準入力`                |`STDIN`                 |[`lib/japanize/names.rb`][names.rb]    |
+|`標準出力`                |`STDOUT`                |[`lib/japanize/names.rb`][names.rb]    |
+|`最上位の束縛`            |`TOPLEVEL_BINDING`      |[`lib/japanize/names.rb`][names.rb]    |
+
+#### 組み込みのクラス(組)の日本語対応表
+
+|クラス(組)の日本語名          |クラス(組)の英語名              |クラス(組)の定義                           |
+|------------------------------|--------------------------------|-------------------------------------------|
+|`物の土台`                    |`BasicObject`                   |[`lib/japanize/base.rb`][base.rb]          |
+|`物`                          |`Object`                        |[`lib/japanize/base.rb`][base.rb]          |
+|`配列`                        |`Array`                         |[`lib/japanize/container.rb`][container.rb]|
+|`束縛`                        |`Binding`                       |[`lib/japanize/sys.rb`][sys.rb]            |
+|`ディレクトリ`                |`Dir`                           |[`lib/japanize/io.rb`][io.rb]              |
+|`文字符号化方式`              |`Encoding`                      |[`lib/japanize/string.rb`][string.rb]      |
+|`文字符号化方式::変換器`      |`Encoding::Converter`           |[`lib/japanize/string.rb`][string.rb]      |
+|`列挙`                        |`Enumerator`                    |[`lib/japanize/enum.rb`][enum.rb]          |
+|`列挙::等差数列`              |`Enumerator::ArithmeticSequence`|[`lib/japanize/enum.rb`][enum.rb]          |
+|`列挙::遅延評価`              |`Enumerator::Lazy`              |[`lib/japanize/enum.rb`][enum.rb]          |
+|`偽値の組`                    |`FalseClass`                    |[`lib/japanize/base.rb`][base.rb]          |
+|`ファイバー`                  |`Fiber`                         |[`lib/japanize/thread.rb`][thread.rb]      |
+|`ファイル::状態`              |`File::Stat`                    |[`lib/japanize/io.rb`][io.rb]              |
+|`連想配列`                    |`Hash`                          |[`lib/japanize/container.rb`][container.rb]|
+|`入出力`                      |`IO`                            |[`lib/japanize/io.rb`][io.rb]              |
+|`ファイル`                    |`File`                          |[`lib/japanize/io.rb`][io.rb]              |
+|`正規表現が一致した結果`      |`MatchData`                     |[`lib/japanize/string.rb`][string.rb]      |
+|`操作`                        |`Method`                        |[`lib/japanize/sys.rb`][sys.rb]            |
+|`部`                          |`Module`                        |[`lib/japanize/base.rb`][base.rb]          |
+|`組`                          |`Class`                         |[`lib/japanize/base.rb`][base.rb]          |
+|`無値の組`                    |`NilClass`                      |[`lib/japanize/base.rb`][base.rb]          |
+|`数値`                        |`Numeric`                       |[`lib/japanize/num.rb`][num.rb]            |
+|`複素数`                      |`Complex`                       |[`lib/japanize/num.rb`][num.rb]            |
+|`浮動小数点`                  |`Float`                         |[`lib/japanize/num.rb`][num.rb]            |
+|`整数`                        |`Integer`                       |[`lib/japanize/num.rb`][num.rb]            |
+|`有理数`                      |`Rational`                      |[`lib/japanize/num.rb`][num.rb]            |
+|`物の空間::弱参照の連想配列`  |`ObjectSpace::WeakMap`          |[`lib/japanize/sys.rb`][sys.rb]            |
+|`手続き型`                    |`Proc`                          |[`lib/japanize/sys.rb`][sys.rb]            |
+|`プロセス::状態`              |`Process::Status`               |[`lib/japanize/process.rb`][process.rb]    |
+|`プロセス::積算時間`          |`Process::Tms`                  |[`lib/japanize/process.rb`][process.rb]    |
+|`疑似乱数生成器`              |`Random`                        |[`lib/japanize/num.rb`][num.rb]            |
+|`範囲`                        |`Range`                         |[`lib/japanize/container.rb`][container.rb]|
+|`正規表現`                    |`Regexp`                        |[`lib/japanize/string.rb`][string.rb]      |
+|`文字列`                      |`String`                        |[`lib/japanize/string.rb`][string.rb]      |
+|`構造体`                      |`Struct`                        |[`lib/japanize/container.rb`][container.rb]|
+|`記号`                        |`Symbol`                        |[`lib/japanize/string.rb`][string.rb]      |
+|`スレッド`                    |`Thread`                        |[`lib/japanize/thread.rb`][thread.rb]      |
+|`スレッド::呼び出し履歴::場所`|`Thread::Backtrace::Location`   |[`lib/japanize/thread.rb`][thread.rb]      |
+|`スレッド::条件変数`          |`Thread::ConditionVariable`     |[`lib/japanize/thread.rb`][thread.rb]      |
+|`スレッド::相互排他制御`      |`Thread::Mutex`                 |[`lib/japanize/thread.rb`][thread.rb]      |
+|`スレッド::待ち行列`          |`Thread::Queue`                 |[`lib/japanize/thread.rb`][thread.rb]      |
+|`スレッド::上限付き待ち行列`  |`Thread::SizedQueue`            |[`lib/japanize/thread.rb`][thread.rb]      |
+|`スレッドの群れ`              |`ThreadGroup`                   |[`lib/japanize/thread.rb`][thread.rb]      |
+|`時刻`                        |`Time`                          |[`lib/japanize/time.rb`][time.rb]          |
+|`発生事象の追跡`              |`TracePoint`                    |[`lib/japanize/sys.rb`][sys.rb]            |
+|`真値の組`                    |`TrueClass`                     |[`lib/japanize/base.rb`][base.rb]          |
+|`未束縛の操作`                |`UnboundMethod`                 |[`lib/japanize/sys.rb`][sys.rb]            |
+
+次のクラスは適切な日本語名称がないので定義していません。
+英語のままで使ってください
+
+- `RubyVM`
+
+#### 組み込みのモジュール(部)の日本語対応表
+
+|モジュール(部)の日本語名            |モジュール(部)の英語名|モジュール(部)の定義                   |
+|------------------------------------|----------------------|---------------------------------------|
+|`比較できる`                        |`Comparable`          |[`lib/japanize/num.rb`][num.rb]        |
+|`列挙できる`                        |`Enumerable`          |[`lib/japanize/enum.rb`][enum.rb]      |
+|`ファイル::定数`                    |`File::Constants`     |[`lib/japanize/io.rb`][io.rb]          |
+|`ファイルの検査`                    |`FileTest`            |[`lib/japanize/io.rb`][io.rb]          |
+|`ゴミ集め`                          |`GC`                  |[`lib/japanize/sys.rb`][sys.rb]        |
+|`ゴミ集め::統計情報`                |`GC::Profiler`        |[`lib/japanize/sys.rb`][sys.rb]        |
+|`入出力::読み込み待ちのため失敗`    |`IO::WaitReadable`    |[`lib/japanize/io.rb`][io.rb]          |
+|`入出力::書き込み待ちのため失敗`    |`IO::WaitWritable`    |[`lib/japanize/io.rb`][io.rb]          |
+|`核`                                |`Kernel`              |[`lib/japanize/base.rb`][base.rb]      |
+|`直列化`                            |`Marshal`             |[`lib/japanize/sys.rb`][sys.rb]        |
+|`数学`                              |`Math`                |[`lib/japanize/num.rb`][num.rb]        |
+|`物の空間`                          |`ObjectSpace`         |[`lib/japanize/sys.rb`][sys.rb]        |
+|`プロセス`                          |`Process`             |[`lib/japanize/process.rb`][process.rb]|
+|`プロセス::グループ識別番号`        |`Process::GID`        |[`lib/japanize/process.rb`][process.rb]|
+|`プロセス::識別番号のシステムコール`|`Process::Sys`        |[`lib/japanize/process.rb`][process.rb]|
+|`プロセス::ユーザ識別番号`          |`Process::UID`        |[`lib/japanize/process.rb`][process.rb]|
+|`シグナル`                          |`Signal`              |[`lib/japanize/process.rb`][process.rb]|
+
+次のモジュールは適切な日本語名称がないので定義していません。
+英語のままで使ってください
+
+- `Errno`
+
+#### 組み込みの例外の日本語対応表
+
+|例外の日本語名                                    |例外の英語名                        |例外の定義                           |
+|--------------------------------------------------|------------------------------------|-------------------------------------|
+|`例外`                                            |`Exception`                         |[`lib/japanize/base.rb`][base.rb]    |
+|`記憶領域不足のため失敗`                          |`NoMemoryError`                     |[`lib/japanize/names.rb`][names.rb]  |
+|`スクリプトの失敗`                                |`ScriptError`                       |[`lib/japanize/names.rb`][names.rb]  |
+|`配置の失敗`                                      |`LoadError`                         |[`lib/japanize/errors.rb`][errors.rb]|
+|`未実装のため失敗`                                |`NotImplementedError`               |[`lib/japanize/names.rb`][names.rb]  |
+|`文法誤りのため失敗`                              |`SyntaxError`                       |[`lib/japanize/names.rb`][names.rb]  |
+|`安全を侵害するため失敗`                          |`SecurityError`                     |[`lib/japanize/names.rb`][names.rb]  |
+|`シグナルの例外`                                  |`SignalException`                   |[`lib/japanize/errors.rb`][errors.rb]|
+|`割り込み`                                        |`Interrupt`                         |[`lib/japanize/names.rb`][names.rb]  |
+|`標準的な失敗`                                    |`StandardError`                     |[`lib/japanize/names.rb`][names.rb]  |
+|`引数が誤っているため失敗`                        |`ArgumentError`                     |[`lib/japanize/names.rb`][names.rb]  |
+|`脱出を捕捉できないため失敗`                      |`UncaughtThrowError`                |[`lib/japanize/errors.rb`][errors.rb]|
+|`文字符号化方式の失敗`                            |`EncodingError`                     |[`lib/japanize/names.rb`][names.rb]  |
+|`文字符号化方式::互換性がないため失敗`            |`Encoding::CompatibilityError`      |[`lib/japanize/names.rb`][names.rb]  |
+|`文字符号化方式::変換器が存在しないため失敗`      |`Encoding::ConverterNotFoundError`  |[`lib/japanize/names.rb`][names.rb]  |
+|`文字符号化方式::バイト列が不正なため失敗`        |`Encoding::InvalidByteSequenceError`|[`lib/japanize/errors.rb`][errors.rb]|
+|`文字符号化方式::変換後の文字が存在しないため失敗`|`Encoding::UndefinedConversionError`|[`lib/japanize/errors.rb`][errors.rb]|
+|`ファイバーの失敗`                                |`FiberError`                        |[`lib/japanize/names.rb`][names.rb]  |
+|`入出力の失敗`                                    |`IOError`                           |[`lib/japanize/names.rb`][names.rb]  |
+|`ファイル終端のため失敗`                          |`EOFError`                          |[`lib/japanize/names.rb`][names.rb]  |
+|`添字が範囲外のため失敗`                          |`IndexError`                        |[`lib/japanize/names.rb`][names.rb]  |
+|`キーの照合に失敗`                                |`KeyError`                          |[`lib/japanize/errors.rb`][errors.rb]|
+|`繰り返しの停止`                                  |`StopIteration`                     |[`lib/japanize/errors.rb`][errors.rb]|
+|`待ち行列が閉鎖済みのため失敗`                    |`ClosedQueueError`                  |[`lib/japanize/names.rb`][names.rb]  |
+|`局所的な跳躍に失敗`                              |`LocalJumpError`                    |[`lib/japanize/errors.rb`][errors.rb]|
+|`数学::定義域外のため失敗`                        |`Math::DomainError`                 |[`lib/japanize/names.rb`][names.rb]  |
+|`名前解決に失敗`                                  |`NameError`                         |[`lib/japanize/errors.rb`][errors.rb]|
+|`操作が無いため失敗`                              |`NoMethodError`                     |[`lib/japanize/errors.rb`][errors.rb]|
+|`範囲外のため失敗`                                |`RangeError`                        |[`lib/japanize/names.rb`][names.rb]  |
+|`浮動小数点の定義域外のため失敗`                  |`FloatDomainError`                  |[`lib/japanize/names.rb`][names.rb]  |
+|`正規表現の失敗`                                  |`RegexpError`                       |[`lib/japanize/names.rb`][names.rb]  |
+|`実行時の失敗`                                    |`RuntimeError`                      |[`lib/japanize/names.rb`][names.rb]  |
+|`凍結済みのため失敗`                              |`FrozenError`                       |[`lib/japanize/names.rb`][names.rb]  |
+|`システムコールの失敗`                            |`SystemCallError`                   |[`lib/japanize/errors.rb`][errors.rb]|
+|`スレッドの失敗`                                  |`ThreadError`                       |[`lib/japanize/names.rb`][names.rb]  |
+|`型が合わないため失敗`                            |`TypeError`                         |[`lib/japanize/names.rb`][names.rb]  |
+|`零除算のため失敗`                                |`ZeroDivisionError`                 |[`lib/japanize/names.rb`][names.rb]  |
+|`システムの終了`                                  |`SystemExit`                        |[`lib/japanize/errors.rb`][errors.rb]|
+|`システムのスタックが超過したため失敗`            |`SystemStackError`                  |[`lib/japanize/names.rb`][names.rb]  |
+
+次の例外は適切な日本語名称がないので定義していません。
+英語のままで使ってください
+
+- `Errno::*`
+
 貢献方法
 --------
 
