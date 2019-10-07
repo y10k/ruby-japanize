@@ -75,7 +75,7 @@ alias $標準入力             $stdin
 日本語の定数 :列挙できる,     Enumerable
 日本語の定数 :ファイルの検査, FileTest
 日本語の定数 :ゴミ集め,       GC
-# 日本語の定数 :核,           Kernel
+# 日本語の定数 :核,           Kernel # japanize/coreで定義済み
 日本語の定数 :直列化,         Marshal
 日本語の定数 :数学,           Math
 日本語の定数 :物の空間,       ObjectSpace
