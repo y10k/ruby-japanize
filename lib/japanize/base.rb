@@ -12,7 +12,7 @@ require 'japanize/core'
     別名 :使用中の部の一覧, :used_modules
   }
 
-  # 別名 :別名,                           :alias_method
+  # 別名 :別名,                           :alias_method      # japanize/coreで定義済み
   別名 :原型の一覧,                       :ancestors
   別名 :属性,                             :attr
   別名 :読み書き属性,                     :attr_accessor
@@ -20,17 +20,17 @@ require 'japanize/core'
   別名 :書き込み属性,                     :attr_writer
   別名 :自動配置,                         :autoload
   別名 :自動配置か?,                      :autoload?
-  # 別名 :部で評価,                       :module_eval
-  # 別名 :組で評価,                       :class_eval
+  # 別名 :部で評価,                       :module_eval       # japanize/coreで定義済み
+  # 別名 :組で評価,                       :class_eval        # japanize/coreで定義済み
   別名 :組の変数は定義済みか?,            :class_variable_defined?
   別名 :組の変数の一覧,                   :class_variables
-  # 別名 :定数は定義済みか?,              :const_defined?
-  # 別名 :定数を取得,                     :const_get
+  # 別名 :定数は定義済みか?,              :const_defined?    # japanize/coreで定義済み
+  # 別名 :定数を取得,                     :const_get         # japanize/coreで定義済み
   別名 :不明な定数,                       :const_missing
   定義(:const_missing) {|名前| 不明な定数(名前) }
-  # 別名 :定数を設定,                     :const_set
+  # 別名 :定数を設定,                     :const_set         # japanize/coreで定義済み
   別名 :定数の一覧,                       :constants
-  # 別名 :定義,                           :define_method
+  # 別名 :定義,                           :define_method     # japanize/coreで定義済み
   別名 :凍結する,                         :freeze
   別名 :付加,                             :include
   別名 :付加済みか?,                      :include?
@@ -70,11 +70,11 @@ require 'japanize/core'
   定義(:method_removed) {|名前| 操作が除去された時(名前) }
   別名 :操作が未定義にされた時, :method_undefined
   定義(:method_undefined) {|名前| 操作が未定義にされた時(名前) }
-  # 別名 :部の関数,             :module_function
+  # 別名 :部の関数,             :module_function    # japanize/coreで定義済み
   別名 :機能を付与する,         :prepend_features
   別名 :付与された時,           :prepended
   定義(:prepended) {|組または部| 付与された時(組または部) }
-  # 別名 :秘密,                 :private
+  # 別名 :秘密,                 :private            # japanize/coreで定義済み
   別名 :秘密の定数,             :private_constant
   別名 :保護,                   :protected
   別名 :公開,                   :public
@@ -229,7 +229,7 @@ require 'japanize/core'
   別名 :公開された範囲で送信,      :public_send
   別名 :生成物の変数を除去する,    :remove_instance_variable
   別名 :応答するか?,               :respond_to?
-  # 別名 :特異組,                  :singleton_class
+  # 別名 :特異組,                  :singleton_class            # japanize/coreで定義済み
   別名 :特異操作を取得,            :singleton_method
   別名 :特異操作の一覧,            :singleton_methods
   別名 :汚染させる,                :taint
@@ -372,8 +372,8 @@ require 'japanize/core'
   別名 :乱数,                             :rand
   別名 :行を読む,                         :readline
   別名 :全行を読む,                       :readlines
-  # 別名 :要求,                           :require
-  # 別名 :相対位置で要求,                 :require_relative
+  # 別名 :要求,                           :require             # japanize/coreで定義済み
+  # 別名 :相対位置で要求,                 :require_relative    # japanize/coreで定義済み
   別名 :入出力を選択,                     :select
   別名 :追跡関数を設定,                   :set_trace_func
   別名 :休止,                             :sleep
