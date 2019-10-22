@@ -181,6 +181,7 @@ require 'japanize/core'
   別名 :生成物で評価, :instance_eval
   別名 :生成物で実行, :instance_exec
 
+  別名 :初期化,                     :initialize
   別名 :不明な操作,                 :method_missing
   定義(:method_missing) {|名前, *引数, &塊| 不明な操作(名前, *引数, &塊) }
   別名 :特異操作が追加された時,     :singleton_method_added
@@ -190,7 +191,8 @@ require 'japanize/core'
   別名 :特異操作が未定義にされた時, :singleton_method_undefined
   定義(:singleton_method_undefined) {|名前| 特異操作が未定義にされた時(名前) }
 
-  秘密 :不明な操作, :method_missing,
+  秘密 :初期化,
+       :不明な操作, :method_missing,
        :特異操作が追加された時, :singleton_method_added,
        :特異操作が除去された時, :singleton_method_removed,
        :特異操作が未定義にされた時, :singleton_method_undefined
@@ -253,10 +255,6 @@ require 'japanize/core'
   定義(:ハッシュ値) { hash }                                   # hashを継承先で再定義するかもしれないので別名にしない
   定義(:検査) {|*引数, &塊| inspect(*引数, &塊) }              # inspectを継承先で再定義するかもしれないので別名にしない
   定義(:文字列に変換) {|*引数,     &塊| to_s(*引数, &塊) }     # to_sを継承先で再定義するかもしれないので別名にしない
-
-  別名 :初期化,        :initialize
-
-  秘密 :初期化
 }
 
 部(日本語化) {
