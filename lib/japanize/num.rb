@@ -162,7 +162,7 @@ require 'japanize/core'
   日本語の定数 :指数部の十進の最小値, Float::MIN_10_EXP
   日本語の定数 :指数部の最小値,       Float::MIN_EXP
   日本語の定数 :指数表現の基数,       Float::RADIX
-  日本語の定数 :丸め規則,             Float::ROUNDS
+  特異操作の定義(:丸め規則) { Float::ROUNDS } if (defined? Float::ROUNDS) # Ruby 2.7から非推奨
 }
 
 組(複素数) {
