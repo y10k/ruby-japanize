@@ -116,18 +116,18 @@ module Japanize
   JA組 = ::Class
 
   定義(:部) {|*引数, &塊|
-    if (塊) then
-      部の定義(*引数, &塊)
-    else
+    if (引数.empty? && ! 塊) then
       ::Module
+    else
+      部の定義(*引数, &塊)
     end
   }
 
   定義(:組) {|*引数, **名前付き引数, &塊|
-    if (塊) then
-      組の定義(*引数, **名前付き引数, &塊)
-    else
+    if (引数.empty? && 名前付き引数.empty? && ! 塊) then
       ::Class
+    else
+      組の定義(*引数, **名前付き引数, &塊)
     end
   }
 
