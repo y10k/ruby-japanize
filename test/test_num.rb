@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
 require 'japanize/core'
-require 'warning'
 
 要求 'japanize/num'
 要求 'japanize/test_unit'
+要求 'warning'
 
 部(日本語化) {
   部(:試験) {
