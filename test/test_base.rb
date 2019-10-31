@@ -4,6 +4,7 @@ require 'japanize/core'
 
 要求 'japanize/base'
 要求 'japanize/test_unit'
+要求 'warning'
 
 部(日本語化) {
   部(:試験) {
@@ -536,6 +537,10 @@ require 'japanize/core'
 
       試験('引数の移譲で名前付き引数と混同せずに連想配列を渡せることを確認') {
         空の連想配列 = {}
+
+        Warning.ignore(/: warning: The last argument is used as the keyword parameter\n\z/)
+        Warning.ignore(/: warning: for method defined here\n\z/)
+        Warning.ignore(/: warning: The keyword argument is passed as the last hash parameter\n\z/)
         ある物 = 組.新規(物) {|ある組|
           組(ある組) {
             定義(:初期化) {|甲|
@@ -544,6 +549,7 @@ require 'japanize/core'
             読み取り属性 :甲
           }
         }.新規(空の連想配列)
+        Warning.clear
 
         等しいことを確認(空の連想配列, ある物.甲)
       }
