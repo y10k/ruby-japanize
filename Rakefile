@@ -24,7 +24,7 @@ namespace :sample do
   CLOBBER.include 'sample/README.html'
 end
 
-namespace :list do
+namespace :words do
   word_count = lambda{|files, pattern|
     count_table = Hash.new(0)
     for f in files
