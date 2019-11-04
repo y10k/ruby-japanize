@@ -82,6 +82,22 @@ namespace :words do
   end
 end
 
+namespace :lib do
+  ruby_version_suffix = lambda{
+    RUBY_DESCRIPTION.split[1].tr('.', '_')
+  }
+
+  task :ruby_version_suffix do
+    puts ruby_version_suffix.call
+  end
+
+  desc 'Dump built-in libraries'
+  task :dump do
+    ruby "misc/dump_lib.rb >misc/lib_#{ruby_version_suffix.call}.yml"
+  end
+  CLOBBER.include "misc/lib_#{ruby_version_suffix.call}.yml"
+end
+
 # Local Variables:
 # mode: Ruby
 # indent-tabs-mode: nil
