@@ -96,6 +96,12 @@ namespace :lib do
     ruby "misc/dump_lib.rb >misc/lib_#{ruby_version_suffix.call}.yml"
   end
   CLOBBER.include "misc/lib_#{ruby_version_suffix.call}.yml"
+
+  desc 'Dump not japanized methods'
+  task :no_ja do
+    ruby "misc/dump_lib.rb --not-defined-ja >misc/lib_no_ja_#{ruby_version_suffix.call}.yml"
+  end
+  CLOBBER.include "misc/lib_no_ja_#{ruby_version_suffix.call}.yml"
 end
 
 # Local Variables:
