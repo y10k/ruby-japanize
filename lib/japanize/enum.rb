@@ -9,6 +9,7 @@ require 'japanize/core'
 部(列挙できる) {
   別名 :全てにおいて成り立つか?,            :all?
   別名 :何れかが成り立つか?,                :any?
+  別名 :接続,                               :chain
   別名 :連続した塊に分ける,                 :chunk
   別名 :この条件で連続した塊に分ける,       :chunk_while
   別名 :集める,                             :collect
@@ -66,6 +67,8 @@ require 'japanize/core'
 
 組(列挙) {
   別名 :個別に,                 :each
+  別名 :順番付きで個別に,       :each_with_index
+  別名 :覚え書き付きで個別に,   :each_with_object
   別名 :与える,                 :feed
   別名 :次の値,                 :next
   別名 :次の値の一覧,           :next_values
@@ -75,6 +78,21 @@ require 'japanize/core'
   別名 :大きさ,                 :size
   別名 :順番付きで繰り返す,     :with_index
   別名 :覚え書き付きで繰り返す, :with_object
+
+  組(継手) {
+    別名 :個別に,   :each
+    # 別名 :検査,   :inspect    # 物で定義済み
+    別名 :巻き戻す, :rewind
+    別名 :大きさ,   :size
+  }
+
+  組(生成器) {
+    別名 :個別に, :each
+  }
+
+  組(補給器) {
+    別名 :供給, :yield
+  }
 
   組(等差数列) {
     別名 :初項,                  :begin
