@@ -29,10 +29,15 @@ require 'japanize/core'
            '自動配置か?'                      => [ :自動配置か?,                      :autoload? ],
            '部で評価'                         => [ :部で評価,                         :module_eval ],
            '組で評価'                         => [ :組で評価,                         :class_eval ],
+           '部で実行'                         => [ :部で実行,                         :module_exec ],
+           '組で実行'                         => [ :組で実行,                         :class_exec ],
            '組の変数は定義済みか?'            => [ :組の変数は定義済みか?,            :class_variable_defined? ],
+           '組の変数を取得'                   => [ :組の変数を取得,                   :class_variable_get ],
+           '組の変数を設定'                   => [ :組の変数を設定,                   :class_variable_set ],
            '組の変数の一覧'                   => [ :組の変数の一覧,                   :class_variables ],
            '定数の一覧'                       => [ :定数の一覧,                       :constants ],
            '定義'                             => [ :定義,                             :define_method ],
+           '定数を非推奨にする'               => [ :定数を非推奨にする,               :deprecate_constant ],
            '付加'                             => [ :付加,                             :include ],
            '付加済みか?'                      => [ :付加済みか?,                      :include? ],
            '含まれる部の一覧'                 => [ :含まれる部の一覧,                 :included_modules ],
@@ -42,16 +47,19 @@ require 'japanize/core'
            '操作は定義済みか?'                => [ :操作は定義済みか?,                :method_defined? ],
            '付与'                             => [ :付与,                             :prepend ],
            '組が持つ操作を秘密にする'         => [ :組が持つ操作を秘密にする,         :private_class_method ],
+           '秘密の定数'                       => [ :秘密の定数,                       :private_constant ],
            '生成物が持つ秘密の操作の一覧'     => [ :生成物が持つ秘密の操作の一覧,     :private_instance_methods ],
            '秘密の操作は定義済みか?'          => [ :秘密の操作は定義済みか?,          :private_method_defined? ],
            '生成物が持つ保護された操作の一覧' => [ :生成物が持つ保護された操作の一覧, :protected_instance_methods ],
            '保護された操作は定義済みか?'      => [ :保護された操作は定義済みか?,      :protected_method_defined? ],
            '組が持つ操作を公開する'           => [ :組が持つ操作を公開する,           :public_class_method ],
+           '公開された定数'                   => [ :公開された定数,                   :public_constant ],
            '生成物が持つ公開された操作を取得' => [ :生成物が持つ公開された操作を取得, :public_instance_method ],
            '生成物が持つ公開された操作の一覧' => [ :生成物が持つ公開された操作の一覧, :public_instance_methods ],
            '公開された操作は定義済みか?'      => [ :公開された操作は定義済みか?,      :public_method_defined? ],
            '組の変数を除去する'               => [ :組の変数を除去する,               :remove_class_variable ],
            '操作を除去する'                   => [ :操作を除去する,                   :remove_method ],
+           '特異組か?'                        => [ :特異組か?,                        :singleton_class? ],
            '操作を未定義にする'               => [ :操作を未定義にする,               :undef_method ])
       試験('公開された操作の日本語の別名を確認') {|資料|
         日本語の別名, 元の名前 = 資料
@@ -60,22 +68,14 @@ require 'japanize/core'
       }
 
       資料('機能を付加する'     => [ :機能を付加する,     :append_features ],
-           '部で実行'           => [ :部で実行,           :module_exec ],
-           '組で実行'           => [ :組で実行,           :class_exec ],
-           '組の変数を取得'     => [ :組の変数を取得,     :class_variable_get ],
-           '組の変数を設定'     => [ :組の変数を設定,     :class_variable_set ],
-           '定数を非推奨にする' => [ :定数を非推奨にする, :deprecate_constant ],
            '物を拡張する'       => [ :物を拡張する,       :extend_object ],
            '部の関数'           => [ :部の関数,           :module_function ],
            '秘密'               => [ :秘密,               :private ],
            '機能を付与する'     => [ :機能を付与する,     :prepend_features ],
-           '秘密の定数'         => [ :秘密の定数,         :private_constant ],
            '保護'               => [ :保護,               :protected ],
            '公開'               => [ :公開,               :public ],
-           '公開された定数'     => [ :公開された定数,     :public_constant ],
            '限定拡張'           => [ :限定拡張,           :refine ],
            '定数を除去する'     => [ :定数を除去する,     :remove_const ],
-           '特異組か?'          => [ :特異組か?,          :singleton_class? ],
            '限定拡張を使用'     => [ :限定拡張を使用,     :using ])
       試験('秘密の操作の日本語の別名を確認') {|資料|
         日本語の別名, 元の名前 = 資料

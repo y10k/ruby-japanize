@@ -22,7 +22,11 @@ require 'japanize/core'
   別名 :自動配置か?,                      :autoload?
   # 別名 :部で評価,                       :module_eval       # japanize/coreで定義済み
   # 別名 :組で評価,                       :class_eval        # japanize/coreで定義済み
+  別名 :部で実行,                         :module_exec
+  別名 :組で実行,                         :class_exec
   別名 :組の変数は定義済みか?,            :class_variable_defined?
+  別名 :組の変数を取得,                   :class_variable_get
+  別名 :組の変数を設定,                   :class_variable_set
   別名 :組の変数の一覧,                   :class_variables
   # 別名 :定数は定義済みか?,              :const_defined?    # japanize/coreで定義済み
   # 別名 :定数を取得,                     :const_get         # japanize/coreで定義済み
@@ -31,6 +35,7 @@ require 'japanize/core'
   # 別名 :定数を設定,                     :const_set         # japanize/coreで定義済み
   別名 :定数の一覧,                       :constants
   # 別名 :定義,                           :define_method     # japanize/coreで定義済み
+  別名 :定数を非推奨にする,               :deprecate_constant
   別名 :付加,                             :include
   別名 :付加済みか?,                      :include?
   別名 :含まれる部の一覧,                 :included_modules
@@ -40,24 +45,22 @@ require 'japanize/core'
   別名 :操作は定義済みか?,                :method_defined?
   別名 :付与,                             :prepend
   別名 :組が持つ操作を秘密にする,         :private_class_method
+  別名 :秘密の定数,                       :private_constant
   別名 :生成物が持つ秘密の操作の一覧,     :private_instance_methods
   別名 :秘密の操作は定義済みか?,          :private_method_defined?
   別名 :生成物が持つ保護された操作の一覧, :protected_instance_methods
   別名 :保護された操作は定義済みか?,      :protected_method_defined?
   別名 :組が持つ操作を公開する,           :public_class_method
+  別名 :公開された定数,                   :public_constant
   別名 :生成物が持つ公開された操作を取得, :public_instance_method
   別名 :生成物が持つ公開された操作の一覧, :public_instance_methods
   別名 :公開された操作は定義済みか?,      :public_method_defined?
   別名 :組の変数を除去する,               :remove_class_variable
   別名 :操作を除去する,                   :remove_method
+  別名 :特異組か?,                        :singleton_class?
   別名 :操作を未定義にする,               :undef_method
 
   別名 :機能を付加する,         :append_features
-  別名 :部で実行,               :module_exec
-  別名 :組で実行,               :class_exec
-  別名 :組の変数を取得,         :class_variable_get
-  別名 :組の変数を設定,         :class_variable_set
-  別名 :定数を非推奨にする,     :deprecate_constant
   別名 :物を拡張する,           :extend_object
   別名 :拡張した時,             :extended
   定義(:extended) {|物| 拡張した時(物) }
@@ -74,21 +77,13 @@ require 'japanize/core'
   別名 :付与された時,           :prepended
   定義(:prepended) {|組または部| 付与された時(組または部) }
   # 別名 :秘密,                 :private            # japanize/coreで定義済み
-  別名 :秘密の定数,             :private_constant
   別名 :保護,                   :protected
   別名 :公開,                   :public
-  別名 :公開された定数,         :public_constant
   別名 :限定拡張,               :refine
   別名 :定数を除去する,         :remove_const
-  別名 :特異組か?,              :singleton_class?
   別名 :限定拡張を使用,         :using
 
   秘密 :機能を付加する,
-       :部で実行,
-       :組で実行,
-       :組の変数を取得,
-       :組の変数を設定,
-       :定数を非推奨にする,
        :物を拡張する,
        :拡張した時, :extended,
        :付加された時, :included,
@@ -97,13 +92,10 @@ require 'japanize/core'
        :操作が未定義にされた時, :method_undefined,
        :機能を付与する,
        :付与された時, :prepended,
-       :秘密の定数,
        :保護,
        :公開,
-       :公開された定数,
        :限定拡張,
        :定数を除去する,
-       :特異組か?,
        :限定拡張を使用
 
   定義(:日本語の定数を移譲) {|移譲先の部, 名前, *名前の一覧, 上書き: 偽値|
