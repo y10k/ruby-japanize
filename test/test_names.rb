@@ -74,6 +74,7 @@ require 'japanize/core'
         同一であることを確認(ObjectSpace, 物の空間)
         同一であることを確認(Process,     プロセス)
         同一であることを確認(Signal,      シグナル)
+        同一であることを確認(Warning,     警告)
 
         # 最上位にある物の日本語名称を確認する。
         同一であることを確認(ARGV,             スクリプトの引数)
@@ -122,6 +123,9 @@ require 'japanize/core'
 
         # 入れ子になった組の日本語名称を確認する。
         同一であることを確認(Encoding::Converter,            文字符号化方式::変換器)
+        同一であることを確認(Enumerator::Chain,              列挙::継手)
+        同一であることを確認(Enumerator::Generator,          列挙::生成器)
+        同一であることを確認(Enumerator::Yielder,            列挙::補給器)
         同一であることを確認(Enumerator::ArithmeticSequence, 列挙::等差数列)
         同一であることを確認(Enumerator::Lazy,               列挙::遅延評価)
         同一であることを確認(File::Stat,                     ファイル::状態)

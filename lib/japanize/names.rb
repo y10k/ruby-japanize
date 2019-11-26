@@ -81,6 +81,7 @@ alias $標準入力             $stdin
 日本語の定数 :物の空間,       ObjectSpace
 日本語の定数 :プロセス,       Process
 日本語の定数 :シグナル,       Signal
+日本語の定数 :警告,           Warning
 
 
 # 最上位にある物の日本語名称を定義する。
@@ -140,6 +141,9 @@ alias $標準入力             $stdin
 }
 
 組(列挙) {
+  日本語の定数 :継手,     Enumerator::Chain
+  日本語の定数 :生成器,   Enumerator::Generator
+  日本語の定数 :補給器,   Enumerator::Yielder
   日本語の定数 :等差数列, Enumerator::ArithmeticSequence
   日本語の定数 :遅延評価, Enumerator::Lazy
 }
