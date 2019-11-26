@@ -31,7 +31,6 @@ require 'japanize/core'
   # 別名 :定数を設定,                     :const_set         # japanize/coreで定義済み
   別名 :定数の一覧,                       :constants
   # 別名 :定義,                           :define_method     # japanize/coreで定義済み
-  別名 :凍結する,                         :freeze
   別名 :付加,                             :include
   別名 :付加済みか?,                      :include?
   別名 :含まれる部の一覧,                 :included_modules
@@ -222,7 +221,6 @@ require 'japanize/core'
   別名 :列挙する,                  :enum_for
   # 別名 :等しいか?,               :eql?                 # eql?を継承先で再定義するかもしれないので別名にしない
   別名 :拡張,                      :extend
-  別名 :凍結する,                  :freeze
   別名 :凍結済みか?,               :frozen?
   # 別名 :ハッシュ値,              :hash                 # hashを継承先で再定義するかもしれないので別名にしない
   # 別名 :検査,                    :inspect              # inspectを継承先で再定義するかもしれないので別名にしない
@@ -262,6 +260,7 @@ require 'japanize/core'
 
 組(物) {
   定義(:等しいか?) {|他の物| eql?(他の物) }                                                    # eql?を継承先で再定義するかもしれないので別名にしない
+  定義(:凍結する) { freeze }                                                                   # freezeを継承先で再定義するかもしれないので別名にしない
   定義(:ハッシュ値) { hash }                                                                   # hashを継承先で再定義するかもしれないので別名にしない
   if (_バージョンが2_7以上か?) then
     定義(:複写)         {|*引数, **名前付き引数, &塊|   clone(*引数, **名前付き引数, &塊) }    # cloneを継承先で再定義するかもしれないので別名にしない
