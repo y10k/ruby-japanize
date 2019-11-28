@@ -110,6 +110,7 @@ require 'japanize/core'
     別名 :可能なら変換, :try_convert
   }
 
+  別名 :何れかが成り立つか?,    :any?
   # 別名 :等しいか?,            :eql?       # 物で定義済み
   別名 :格納,                   :store
   別名 :連想取得,               :assoc
@@ -194,6 +195,8 @@ require 'japanize/core'
   別名 :最大,                  :max
   別名 :最小,                  :min
   別名 :大きさ,                :size
+  別名 :配列に変換,            :to_a
+  別名 :要素の一覧,            :entries
   # 別名 :文字列に変換,        :to_s       # 物で定義済み
 }
 
