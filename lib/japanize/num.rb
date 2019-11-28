@@ -120,6 +120,7 @@ require 'japanize/core'
 }
 
 組(浮動小数点) {
+  別名 :商,               :quo
   別名 :剰余,             :modulo
   別名 :絶対値,           :abs
   別名 :絶対的な大きさ,   :magnitude
@@ -131,6 +132,7 @@ require 'japanize/core'
   別名 :分母,             :denominator
   別名 :除算,             :divmod
   # 別名 :等しいか?,      :eql?       # 物で定義済み
+  別名 :浮動小数点の除法, :fdiv
   別名 :有限か?,          :finite?
   別名 :切り下げ,         :floor
   # 別名 :ハッシュ値,     :hash       # 物で定義済み
@@ -234,6 +236,11 @@ require 'japanize/core'
   別名 :乱数の種, :seed
 
   日本語の定数 :既定の乱数生成器, Random::DEFAULT
+
+  部(書式) {
+    別名 :乱数,       :rand
+    別名 :乱数を取得, :random_number
+  }
 }
 
 部(比較できる) {
