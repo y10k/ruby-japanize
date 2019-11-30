@@ -88,6 +88,7 @@ require 'japanize/core'
     別名 :キーか?,    :key?
     別名 :含むか?,    :include?
     別名 :一員か?,    :member?
+    別名 :個別に,     :each
     別名 :キー毎に,   :each_key
     別名 :値毎に,     :each_value
     別名 :対毎に,     :each_pair
@@ -101,32 +102,38 @@ require 'japanize/core'
     別名 :追跡,       :trace
   }
 
-  別名 :束縛を取得,         :binding
-  別名 :呼び出し先の識別子, :callee_id
-  別名 :定義されている組,   :defined_class
-  別名 :無効にする,         :disable
-  別名 :有効にする,         :enable
-  別名 :有効か?,            :enabled?
-  別名 :事象,               :event
-  # 別名 :検査,             :inspect    # 物で定義済み
-  別名 :行番号,             :lineno
-  別名 :操作の識別子,       :method_id
-  別名 :ファイルへの経路,   :path
-  別名 :発生した例外,       :raised_exception
-  別名 :戻り値,             :return_value
-  別名 :参照を取得,         :self
+  別名 :__有効にする,         :__enable
+  別名 :束縛を取得,           :binding
+  別名 :呼び出し先の識別子,   :callee_id
+  別名 :定義されている組,     :defined_class
+  別名 :無効にする,           :disable
+  別名 :有効にする,           :enable
+  別名 :有効か?,              :enabled?
+  別名 :スクリプトを評価する, :eval_script
+  別名 :事象,                 :event
+  # 別名 :検査,               :inspect    # 物で定義済み
+  別名 :命令の連なり,         :instruction_sequence
+  別名 :行番号,               :lineno
+  別名 :操作の識別子,         :method_id
+  別名 :引数の一覧,           :parameters
+  別名 :ファイルへの経路,     :path
+  別名 :発生した例外,         :raised_exception
+  別名 :戻り値,               :return_value
+  別名 :参照を取得,           :self
 }
 
 部(ゴミ集め) {
   特異組{
-    別名 :実行した回数,         :count
-    別名 :無効にする,           :disable
-    別名 :有効にする,           :enable
-    別名 :最新のゴミ集めの情報, :latest_gc_info
-    別名 :開始,                 :start
-    別名 :統計情報を取得,       :stat
-    別名 :頻繁に実施,           :stress
-    別名 :頻繁に実施=,          :stress=
+    別名 :実行した回数,                               :count
+    別名 :無効にする,                                 :disable
+    別名 :有効にする,                                 :enable
+    別名 :最新のゴミ集めの情報,                       :latest_gc_info
+    別名 :開始,                                       :start
+    別名 :統計情報を取得,                             :stat
+    別名 :頻繁に実施,                                 :stress
+    別名 :頻繁に実施=,                                :stress=
+    別名 :内部の一貫性を検証する,                     :verify_internal_consistency
+    別名 :一時的なヒープ領域の内部の一貫性を検証する, :verify_transient_heap_internal_consistency
   }
 
   別名 :ゴミを集める, :garbage_collect
@@ -166,6 +173,14 @@ require 'japanize/core'
 
   日本語の定数を付加できること :主改訂版数,
                                :副改訂版数
+}
+
+部(警告の出力) {
+  別名 :警告を出力する, :warn
+
+  定義(:warn) {|文言|
+    警告を出力する(文言)
+  }
 }
 
 # Local Variables:
