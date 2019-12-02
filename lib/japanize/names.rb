@@ -81,7 +81,7 @@ alias $標準入力             $stdin
 日本語の定数 :物の空間,       ObjectSpace
 日本語の定数 :プロセス,       Process
 日本語の定数 :シグナル,       Signal
-日本語の定数 :警告,           Warning
+日本語の定数 :警告の出力,     Warning
 
 
 # 最上位にある物の日本語名称を定義する。

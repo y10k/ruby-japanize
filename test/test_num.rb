@@ -185,9 +185,9 @@ require 'japanize/core'
            '指数部の十進の最小値' => [ 浮動小数点::指数部の十進の最小値, Float::MIN_10_EXP ],
            '指数部の最小値'       => [ 浮動小数点::指数部の最小値,       Float::MIN_EXP ],
            '指数表現の基数'       => [ 浮動小数点::指数表現の基数,       Float::RADIX ])
-      警告.ignore(/: warning: constant Float::ROUNDS is deprecated\n\z/)
+      警告の出力.ignore(/: warning: constant Float::ROUNDS is deprecated\n\z/)
       資料('丸め規則',               [ 浮動小数点::丸め規則,             Float::ROUNDS ]) if (defined? Float::ROUNDS)
-      警告.clear
+      警告の出力.clear
       試験('日本語の定数を確認') {|資料|
         日本語の定数の値, 元の定数の値 = 資料
         同一であることを確認(元の定数の値, 日本語の定数の値)
