@@ -560,7 +560,8 @@ require 'japanize/core'
 
 組(例外) {
   特異組{
-    別名 :例外を生成, :exception
+    別名 :例外を生成,            :exception
+    別名 :端末に向かっているか?, :to_tty?
   }
 
   別名 :呼び出し履歴,             :backtrace
@@ -571,6 +572,7 @@ require 'japanize/core'
   # 別名 :検査,                   :inspect    # 物で定義済み
   別名 :伝文,                     :message
   # 別名 :文字列に変換,           :to_s       # 物で定義済み
+  別名 :応答するか?,              :respond_to?
   別名 :呼び出し履歴を設定,       :set_backtrace
 }
 
