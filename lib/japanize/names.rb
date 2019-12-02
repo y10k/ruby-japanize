@@ -157,8 +157,9 @@ alias $標準入力             $stdin
 }
 
 部(プロセス) {
-  日本語の定数 :状態,     Process::Status
-  日本語の定数 :積算時間, Process::Tms
+  日本語の定数 :状態,                   Process::Status
+  日本語の定数 :積算時間,               Process::Tms
+  日本語の定数 :子プロセスの終了の待機, Process::Waiter
 }
 
 組(スレッド) {

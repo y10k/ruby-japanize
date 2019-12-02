@@ -132,6 +132,7 @@ require 'japanize/core'
         同一であることを確認(ObjectSpace::WeakMap,           物の空間::弱参照の連想配列)
         同一であることを確認(Process::Status,                プロセス::状態)
         同一であることを確認(Process::Tms,                   プロセス::積算時間)
+        同一であることを確認(Process::Waiter,                プロセス::子プロセスの終了の待機)
         同一であることを確認(Thread::Backtrace,              スレッド::呼び出し履歴)
         同一であることを確認(Thread::Backtrace::Location,    スレッド::呼び出し履歴::場所)
         同一であることを確認(Thread::ConditionVariable,      スレッド::条件変数)
