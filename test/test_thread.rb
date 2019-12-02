@@ -110,6 +110,7 @@ require 'japanize/core'
            'スレッド変数は存在するか?'   => [ :スレッド変数は存在するか?,   :thread_variable? ],
            'スレッド変数を取得'          => [ :スレッド変数を取得,          :thread_variable_get ],
            'スレッド変数を設定'          => [ :スレッド変数を設定,          :thread_variable_set ],
+           'スレッド変数の一覧'          => [ :スレッド変数の一覧,          :thread_variables ],
            '結果'                        => [ :結果,                        :value ],
            '休止を解除'                  => [ :休止を解除,                  :wakeup ])
       試験('公開された操作の日本語の別名を確認') {|資料|

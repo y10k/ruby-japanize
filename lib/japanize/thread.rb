@@ -75,6 +75,7 @@ require 'japanize/core'
   別名 :スレッド変数は存在するか?,   :thread_variable?
   別名 :スレッド変数を取得,          :thread_variable_get
   別名 :スレッド変数を設定,          :thread_variable_set
+  別名 :スレッド変数の一覧,          :thread_variables
   別名 :結果,                        :value
   別名 :休止を解除,                  :wakeup
 
