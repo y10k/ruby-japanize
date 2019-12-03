@@ -1263,55 +1263,60 @@ end
 
 #### 組み込みのクラス(組)の日本語対応表
 
-|クラス(組)の日本語名          |クラス(組)の英語名              |クラス(組)の定義                           |
-|------------------------------|--------------------------------|-------------------------------------------|
-|`物の土台`                    |`BasicObject`                   |[`lib/japanize/base.rb`][base.rb]          |
-|`物`                          |`Object`                        |[`lib/japanize/base.rb`][base.rb]          |
-|`配列`                        |`Array`                         |[`lib/japanize/container.rb`][container.rb]|
-|`束縛`                        |`Binding`                       |[`lib/japanize/sys.rb`][sys.rb]            |
-|`ディレクトリ`                |`Dir`                           |[`lib/japanize/io.rb`][io.rb]              |
-|`文字符号化方式`              |`Encoding`                      |[`lib/japanize/string.rb`][string.rb]      |
-|`文字符号化方式::変換器`      |`Encoding::Converter`           |[`lib/japanize/string.rb`][string.rb]      |
-|`列挙`                        |`Enumerator`                    |[`lib/japanize/enum.rb`][enum.rb]          |
-|`列挙::等差数列`              |`Enumerator::ArithmeticSequence`|[`lib/japanize/enum.rb`][enum.rb]          |
-|`列挙::遅延評価`              |`Enumerator::Lazy`              |[`lib/japanize/enum.rb`][enum.rb]          |
-|`偽値の組`                    |`FalseClass`                    |[`lib/japanize/base.rb`][base.rb]          |
-|`ファイバー`                  |`Fiber`                         |[`lib/japanize/thread.rb`][thread.rb]      |
-|`ファイル::状態`              |`File::Stat`                    |[`lib/japanize/io.rb`][io.rb]              |
-|`連想配列`                    |`Hash`                          |[`lib/japanize/container.rb`][container.rb]|
-|`入出力`                      |`IO`                            |[`lib/japanize/io.rb`][io.rb]              |
-|`ファイル`                    |`File`                          |[`lib/japanize/io.rb`][io.rb]              |
-|`正規表現が一致した結果`      |`MatchData`                     |[`lib/japanize/string.rb`][string.rb]      |
-|`操作`                        |`Method`                        |[`lib/japanize/sys.rb`][sys.rb]            |
-|`部`                          |`Module`                        |[`lib/japanize/base.rb`][base.rb]          |
-|`組`                          |`Class`                         |[`lib/japanize/base.rb`][base.rb]          |
-|`無値の組`                    |`NilClass`                      |[`lib/japanize/base.rb`][base.rb]          |
-|`数値`                        |`Numeric`                       |[`lib/japanize/num.rb`][num.rb]            |
-|`複素数`                      |`Complex`                       |[`lib/japanize/num.rb`][num.rb]            |
-|`浮動小数点`                  |`Float`                         |[`lib/japanize/num.rb`][num.rb]            |
-|`整数`                        |`Integer`                       |[`lib/japanize/num.rb`][num.rb]            |
-|`有理数`                      |`Rational`                      |[`lib/japanize/num.rb`][num.rb]            |
-|`物の空間::弱参照の連想配列`  |`ObjectSpace::WeakMap`          |[`lib/japanize/sys.rb`][sys.rb]            |
-|`手続き型`                    |`Proc`                          |[`lib/japanize/sys.rb`][sys.rb]            |
-|`プロセス::状態`              |`Process::Status`               |[`lib/japanize/process.rb`][process.rb]    |
-|`プロセス::積算時間`          |`Process::Tms`                  |[`lib/japanize/process.rb`][process.rb]    |
-|`疑似乱数生成器`              |`Random`                        |[`lib/japanize/num.rb`][num.rb]            |
-|`範囲`                        |`Range`                         |[`lib/japanize/container.rb`][container.rb]|
-|`正規表現`                    |`Regexp`                        |[`lib/japanize/string.rb`][string.rb]      |
-|`文字列`                      |`String`                        |[`lib/japanize/string.rb`][string.rb]      |
-|`構造体`                      |`Struct`                        |[`lib/japanize/container.rb`][container.rb]|
-|`記号`                        |`Symbol`                        |[`lib/japanize/string.rb`][string.rb]      |
-|`スレッド`                    |`Thread`                        |[`lib/japanize/thread.rb`][thread.rb]      |
-|`スレッド::呼び出し履歴::場所`|`Thread::Backtrace::Location`   |[`lib/japanize/thread.rb`][thread.rb]      |
-|`スレッド::条件変数`          |`Thread::ConditionVariable`     |[`lib/japanize/thread.rb`][thread.rb]      |
-|`スレッド::相互排他制御`      |`Thread::Mutex`                 |[`lib/japanize/thread.rb`][thread.rb]      |
-|`スレッド::待ち行列`          |`Thread::Queue`                 |[`lib/japanize/thread.rb`][thread.rb]      |
-|`スレッド::上限付き待ち行列`  |`Thread::SizedQueue`            |[`lib/japanize/thread.rb`][thread.rb]      |
-|`スレッドの群れ`              |`ThreadGroup`                   |[`lib/japanize/thread.rb`][thread.rb]      |
-|`時刻`                        |`Time`                          |[`lib/japanize/time.rb`][time.rb]          |
-|`発生事象の追跡`              |`TracePoint`                    |[`lib/japanize/sys.rb`][sys.rb]            |
-|`真値の組`                    |`TrueClass`                     |[`lib/japanize/base.rb`][base.rb]          |
-|`未束縛の操作`                |`UnboundMethod`                 |[`lib/japanize/sys.rb`][sys.rb]            |
+|クラス(組)の日本語名              |クラス(組)の英語名              |クラス(組)の定義                           |
+|----------------------------------|--------------------------------|-------------------------------------------|
+|`物の土台`                        |`BasicObject`                   |[`lib/japanize/base.rb`][base.rb]          |
+|`物`                              |`Object`                        |[`lib/japanize/base.rb`][base.rb]          |
+|`配列`                            |`Array`                         |[`lib/japanize/container.rb`][container.rb]|
+|`束縛`                            |`Binding`                       |[`lib/japanize/sys.rb`][sys.rb]            |
+|`ディレクトリ`                    |`Dir`                           |[`lib/japanize/io.rb`][io.rb]              |
+|`文字符号化方式`                  |`Encoding`                      |[`lib/japanize/string.rb`][string.rb]      |
+|`文字符号化方式::変換器`          |`Encoding::Converter`           |[`lib/japanize/string.rb`][string.rb]      |
+|`列挙`                            |`Enumerator`                    |[`lib/japanize/enum.rb`][enum.rb]          |
+|`列挙::継手`                      |`Enumerator::Chain`             |[`lib/japanize/enum.rb`][enum.rb]          |
+|`列挙::生成器`                    |`Enumerator::Generator`         |[`lib/japanize/enum.rb`][enum.rb]          |
+|`列挙::補給器`                    |`Enumerator::Yielder`           |[`lib/japanize/enum.rb`][enum.rb]          |
+|`列挙::等差数列`                  |`Enumerator::ArithmeticSequence`|[`lib/japanize/enum.rb`][enum.rb]          |
+|`列挙::遅延評価`                  |`Enumerator::Lazy`              |[`lib/japanize/enum.rb`][enum.rb]          |
+|`偽値の組`                        |`FalseClass`                    |[`lib/japanize/base.rb`][base.rb]          |
+|`ファイバー`                      |`Fiber`                         |[`lib/japanize/thread.rb`][thread.rb]      |
+|`ファイル::状態`                  |`File::Stat`                    |[`lib/japanize/io.rb`][io.rb]              |
+|`連想配列`                        |`Hash`                          |[`lib/japanize/container.rb`][container.rb]|
+|`入出力`                          |`IO`                            |[`lib/japanize/io.rb`][io.rb]              |
+|`ファイル`                        |`File`                          |[`lib/japanize/io.rb`][io.rb]              |
+|`正規表現が一致した結果`          |`MatchData`                     |[`lib/japanize/string.rb`][string.rb]      |
+|`操作`                            |`Method`                        |[`lib/japanize/sys.rb`][sys.rb]            |
+|`部`                              |`Module`                        |[`lib/japanize/base.rb`][base.rb]          |
+|`組`                              |`Class`                         |[`lib/japanize/base.rb`][base.rb]          |
+|`無値の組`                        |`NilClass`                      |[`lib/japanize/base.rb`][base.rb]          |
+|`数値`                            |`Numeric`                       |[`lib/japanize/num.rb`][num.rb]            |
+|`複素数`                          |`Complex`                       |[`lib/japanize/num.rb`][num.rb]            |
+|`浮動小数点`                      |`Float`                         |[`lib/japanize/num.rb`][num.rb]            |
+|`整数`                            |`Integer`                       |[`lib/japanize/num.rb`][num.rb]            |
+|`有理数`                          |`Rational`                      |[`lib/japanize/num.rb`][num.rb]            |
+|`物の空間::弱参照の連想配列`      |`ObjectSpace::WeakMap`          |[`lib/japanize/sys.rb`][sys.rb]            |
+|`手続き型`                        |`Proc`                          |[`lib/japanize/sys.rb`][sys.rb]            |
+|`プロセス::状態`                  |`Process::Status`               |[`lib/japanize/process.rb`][process.rb]    |
+|`プロセス::積算時間`              |`Process::Tms`                  |[`lib/japanize/process.rb`][process.rb]    |
+|`プロセス::子プロセスの終了の待機`|`Process::Waiter`               |[`lib/japanize/process.rb`][process.rb]    |
+|`疑似乱数生成器`                  |`Random`                        |[`lib/japanize/num.rb`][num.rb]            |
+|`疑似乱数生成器::書式`            |`Random::Formatter`             |[`lib/japanize/num.rb`][num.rb]            |
+|`範囲`                            |`Range`                         |[`lib/japanize/container.rb`][container.rb]|
+|`正規表現`                        |`Regexp`                        |[`lib/japanize/string.rb`][string.rb]      |
+|`文字列`                          |`String`                        |[`lib/japanize/string.rb`][string.rb]      |
+|`構造体`                          |`Struct`                        |[`lib/japanize/container.rb`][container.rb]|
+|`記号`                            |`Symbol`                        |[`lib/japanize/string.rb`][string.rb]      |
+|`スレッド`                        |`Thread`                        |[`lib/japanize/thread.rb`][thread.rb]      |
+|`スレッド::呼び出し履歴::場所`    |`Thread::Backtrace::Location`   |[`lib/japanize/thread.rb`][thread.rb]      |
+|`スレッド::条件変数`              |`Thread::ConditionVariable`     |[`lib/japanize/thread.rb`][thread.rb]      |
+|`スレッド::相互排他制御`          |`Thread::Mutex`                 |[`lib/japanize/thread.rb`][thread.rb]      |
+|`スレッド::待ち行列`              |`Thread::Queue`                 |[`lib/japanize/thread.rb`][thread.rb]      |
+|`スレッド::上限付き待ち行列`      |`Thread::SizedQueue`            |[`lib/japanize/thread.rb`][thread.rb]      |
+|`スレッドの群れ`                  |`ThreadGroup`                   |[`lib/japanize/thread.rb`][thread.rb]      |
+|`時刻`                            |`Time`                          |[`lib/japanize/time.rb`][time.rb]          |
+|`発生事象の追跡`                  |`TracePoint`                    |[`lib/japanize/sys.rb`][sys.rb]            |
+|`真値の組`                        |`TrueClass`                     |[`lib/japanize/base.rb`][base.rb]          |
+|`未束縛の操作`                    |`UnboundMethod`                 |[`lib/japanize/sys.rb`][sys.rb]            |
 
 次のクラスは適切な日本語名称がないので定義していません。
 英語のままで使ってください
@@ -1339,6 +1344,7 @@ end
 |`プロセス::識別番号のシステムコール`|`Process::Sys`        |[`lib/japanize/process.rb`][process.rb]|
 |`プロセス::ユーザ識別番号`          |`Process::UID`        |[`lib/japanize/process.rb`][process.rb]|
 |`シグナル`                          |`Signal`              |[`lib/japanize/process.rb`][process.rb]|
+|`警告の出力`                        |`Warning`             |[`lib/japanize/sys.rb`][sys.rb]        |
 
 次のモジュールは適切な日本語名称がないので定義していません。
 英語のままで使ってください
