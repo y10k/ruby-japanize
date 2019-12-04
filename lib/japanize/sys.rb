@@ -102,7 +102,6 @@ require 'japanize/core'
     別名 :追跡,       :trace
   }
 
-  別名 :__有効にする,         :__enable
   別名 :束縛を取得,           :binding
   別名 :呼び出し先の識別子,   :callee_id
   別名 :定義されている組,     :defined_class
