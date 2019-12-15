@@ -568,9 +568,9 @@ require 'japanize/core'
              1 + 2i,
              Complex
            ],
-           '不動小数点' => [
+           '浮動小数点' => [
              :Float,
-             :不動小数点,
+             :浮動小数点,
              '123.456',
              123.456,
              Float

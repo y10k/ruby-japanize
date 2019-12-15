@@ -330,7 +330,7 @@ require 'japanize/core'
     end
 
     if (_バージョンが2_7以上か?) then
-      定義(:不動小数点) {|*引数, **名前付き引数, &塊|
+      定義(:浮動小数点) {|*引数, **名前付き引数, &塊|
         if (引数.empty? && 名前付き引数.empty? && ! 塊) then
           Float
         else
@@ -338,7 +338,7 @@ require 'japanize/core'
         end
       }
     else
-      定義(:不動小数点) {|*引数, &塊|
+      定義(:浮動小数点) {|*引数, &塊|
         if (引数.empty? && ! 塊) then
           Float
         else
