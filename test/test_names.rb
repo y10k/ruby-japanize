@@ -21,7 +21,9 @@ require 'japanize/core'
         同一であることを確認($VERBOSE,         $冗長)
         同一であることを確認($PROGRAM_NAME,    $プログラムの名前)
         同一であることを確認($stdout,          $標準出力)
+        警告の出力.ignore(/: warning: \$SAFE will become a normal global variable in Ruby 3\.0\n\z/)
         同一であることを確認($SAFE,            $安全度)
+        警告の出力.clear
         同一であることを確認($stderr,          $標準エラー出力)
         同一であることを確認($stdin,           $標準入力)
         等しいことを確認($FILENAME, $ファイル名)
