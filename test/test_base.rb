@@ -533,7 +533,7 @@ require 'japanize/core'
         等しいことを確認([ :甲, :乙 ], 呼び出し履歴)
       }
 
-      試験('引数の移譲で名前付き引数と混同せずに連想配列を渡せることを確認') {
+      試験('引数の転送で名前付き引数と混同せずに連想配列を渡せることを確認') {
         空の連想配列 = {}
 
         警告の出力.ignore(/: warning: The last argument is used as the keyword parameter\n\z/)
