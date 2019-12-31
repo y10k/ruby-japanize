@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+require 'anytick'
+
 class Module
   alias 別名 alias_method
 
@@ -194,7 +196,53 @@ module Japanize
   バージョンが2_7以上 = (RUBY_VERSION.split('.').map(&:to_i) <=> [ 2, 7 ]) >= 0
   定義(:_バージョンが2_7以上か?) { バージョンが2_7以上 }
   部の関数 :_バージョンが2_7以上か?
+
+  組(:日本語で操作を定義する規則, 原型: Anytick::RuleMaker) {
+    定義(:match?) {|式|
+      (式.encoding == __ENCODING__) && (/\A \s* 定義 \s+/x.match? 式)
+    }
+
+    定義(:最初の行を取得) {|式|
+      式.lstrip.each_line.first
+    }
+    秘密 :最初の行を取得
+
+    if (バージョンが2_7以上) then
+      定義(:引数の転送) {|式|
+        最初の行 = 最初の行を取得(式)
+        if (最初の行.include? '[...]') then
+          式.gsub('[...]', '*__引数__, **__名前付き引数__, &__塊__')
+        else
+          式
+        end
+      }
+    else
+      定義(:引数の転送) {|式|
+        最初の行 = 最初の行を取得(式)
+        if (最初の行.include? '[...]') then
+          式.gsub('[...]', '*__引数__, &__塊__')
+        elsif (最初の行.include? '(...)') then
+          式.gsub('(...)', '(*__引数__, &__塊__)')
+        else
+          式
+        end
+      }
+    end
+    秘密 :引数の転送
+
+    定義(:execute) {|名前空間, 式, _一致した結果|
+      場所 = backtick_caller
+      操作の定義 = 引数の転送(式.sub('定義', 'def') << "\n" << 'end')
+      if (名前空間.respond_to? :module_eval) then
+        名前空間.module_eval(操作の定義, 場所.path, 場所.lineno)
+      else
+        名前空間.class_eval(操作の定義, 場所.path, 場所.lineno)
+      end
+    }
+  }
 end
+
+include Anytick.rule(Japanize::日本語で操作を定義する規則)
 
 # Local Variables:
 # mode: Ruby
