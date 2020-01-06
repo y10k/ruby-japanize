@@ -19,6 +19,7 @@ require 'japanize'
 
 名前の付いた組や部に一致する正規表現 = /\A [A-Z]/x
 組み込みではない組や部に一致する正規表現の一覧 = [
+  'Anytick',
   'Bundler',
   'CGI',
   'Delegator',
