@@ -4,6 +4,7 @@ require 'japanize/core'
 
 要求 'japanize/names'
 要求 'japanize/test_unit'
+要求 'warning'
 
 部(日本語化) {
   部(:試験) {
