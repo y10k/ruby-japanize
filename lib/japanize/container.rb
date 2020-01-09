@@ -32,6 +32,7 @@ require 'japanize/core'
   別名 :詰める!,                 :compact!
   別名 :連結,                    :concat
   別名 :循環させる,              :cycle
+  別名 :分解,                    :deconstruct if (公開された操作は定義済みか? :deconstruct, 偽値)
   別名 :削除,                    :delete
   別名 :位置で削除,              :delete_at
   別名 :条件で削除,              :delete_if
@@ -50,6 +51,7 @@ require 'japanize/core'
   別名 :選択する!,               :select!
   別名 :見つけたら位置を返す,    :find_index
   別名 :位置を取得,              :index
+  別名 :交叉,                    :intersection if (公開された操作は定義済みか? :intersection, 偽値)
   別名 :先頭,                    :first
   別名 :平らにする,              :flatten
   別名 :平らにする!,             :flatten!
@@ -65,6 +67,7 @@ require 'japanize/core'
   別名 :大きさ,                  :size
   別名 :最大,                    :max
   別名 :最小,                    :min
+  別名 :最小と最大,              :minmax if (公開された操作は定義済みか? :minmax, 偽値)
   別名 :何れも成り立たないか?,   :none?
   別名 :一つだけ成り立つか?,     :one?
   別名 :情報を梱包,              :pack
@@ -121,6 +124,7 @@ require 'japanize/core'
   別名 :詰める!,                :compact!
   別名 :同一性で比較する,       :compare_by_identity
   別名 :同一性で比較するか?,    :compare_by_identity?
+  別名 :キーで分解,             :deconstruct_keys if (公開された操作は定義済みか? :deconstruct_keys, 偽値)
   別名 :既定値,                 :default
   別名 :既定値=,                :default=
   別名 :既定値の手続き,         :default_proc
@@ -180,6 +184,7 @@ require 'japanize/core'
 組(範囲) {
   別名 :間を進む,              :step
   別名 :包含するか?,           :cover?
+  別名 :数える,                :count if (公開された操作は定義済みか? :count, 偽値)
   別名 :始端,                  :begin
   別名 :先頭,                  :first
   別名 :二分探索する,          :bsearch
@@ -194,6 +199,7 @@ require 'japanize/core'
   # 別名 :検査,                :inspect    # 物で定義済み
   別名 :最大,                  :max
   別名 :最小,                  :min
+  別名 :最小と最大,            :minmax if (公開された操作は定義済みか? :minmax, 偽値)
   別名 :大きさ,                :size
   別名 :配列に変換,            :to_a
   別名 :要素の一覧,            :entries
@@ -205,6 +211,8 @@ require 'japanize/core'
     定義(:項目の一覧) { self.members }    # membersは継承先で定義されるためここでは未定義なので別名にしない
   }
 
+  別名 :分解,                 :deconstruct if (公開された操作は定義済みか? :deconstruct, 偽値)
+  別名 :キーで分解,           :deconstruct_keys if (公開された操作は定義済みか? :deconstruct_keys, 偽値)
   別名 :探り当てる,           :dig
   別名 :個別に,               :each
   別名 :対毎に,               :each_pair
