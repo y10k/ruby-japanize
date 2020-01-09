@@ -23,75 +23,76 @@ require 'japanize/core'
     別名 :書く,                                 :write
   }
 
-  別名 :助言,                     :advise
-  別名 :自動的に閉じる=,          :autoclose=
-  別名 :自動的に閉じるか?,        :autoclose?
-  別名 :バイナリ形式,             :binmode
-  別名 :バイナリ形式か?,          :binmode?
-  # 別名 :複写,                   :clone   # 物で定義済み
-  # 別名 :複製,                   :dup     # 物で定義済み
-  別名 :閉じる,                   :close
-  別名 :上書き実行時に閉じる=,    :close_on_exec=
-  別名 :上書き実行時に閉じるか?,  :close_on_exec?
-  別名 :読み込み口を閉じる,       :close_read
-  別名 :書き込み口を閉じる,       :close_write
-  別名 :閉じたか?,                :closed?
-  別名 :個別に,                   :each
-  別名 :行毎に,                   :each_line
-  別名 :バイト値毎に,             :each_byte
-  別名 :文字毎に,                 :each_char
-  別名 :符号点毎に,               :each_codepoint
-  別名 :終端,                     :eof
-  別名 :終端か?,                  :eof?
-  別名 :外部文字符号化方式,       :external_encoding
-  別名 :ファイルの制御,           :fcntl
-  別名 :ファイルの内容を同期する, :fdatasync
-  別名 :ファイル記述子,           :fileno
-  別名 :整数に変換,               :to_i
-  別名 :書き込む,                 :flush
-  別名 :ファイルを同期する,       :fsync
-  別名 :バイト値を取得,           :getbyte
-  別名 :文字を取得,               :getc
-  別名 :行を取得,                 :gets
-  別名 :内部文字符号化方式,       :internal_encoding
-  別名 :入出力を制御,             :ioctl
-  別名 :端末装置の一種,           :isatty
-  別名 :端末装置か?,              :tty?
-  別名 :行番号,                   :lineno
-  別名 :行番号=,                  :lineno=
-  別名 :行の一覧,                 :lines
-  別名 :プロセスの識別番号,       :pid
-  別名 :位置を告げよ,             :tell
-  別名 :位置,                     :pos
-  別名 :位置=,                    :pos=
-  別名 :この位置で読む,           :pread
-  別名 :印字,                     :print
-  別名 :整形して印字,             :printf
-  別名 :文字を出力,               :putc
-  別名 :行を出力,                 :puts
-  別名 :この位置で書く,           :pwrite
-  別名 :読む,                     :read
-  別名 :遮られずに読む,           :read_nonblock
-  別名 :バイト値を読む,           :readbyte
-  別名 :文字を読む,               :readchar
-  別名 :行を読む,                 :readline
-  別名 :全行を読む,               :readlines
-  別名 :準備された分だけ読む,     :readpartial
-  別名 :開き直す,                 :reopen
-  別名 :巻き戻す,                 :rewind
-  別名 :移動,                     :seek
-  別名 :文字符号化方式を設定,     :set_encoding
-  別名 :状態を取得,               :stat
-  別名 :同期,                     :sync
-  別名 :同期=,                    :sync=
-  別名 :システムコールで読む,     :sysread
-  別名 :システムコールで移動,     :sysseek
-  別名 :システムコールで書く,     :syswrite
-  別名 :入出力に変換,             :to_io
-  別名 :バイト値を戻す,           :ungetbyte
-  別名 :文字を戻す,               :ungetc
-  別名 :書く,                     :write
-  別名 :遮られずに書く,           :write_nonblock
+  別名 :助言,                                     :advise
+  別名 :自動的に閉じる=,                          :autoclose=
+  別名 :自動的に閉じるか?,                        :autoclose?
+  別名 :バイナリ形式,                             :binmode
+  別名 :バイナリ形式か?,                          :binmode?
+  # 別名 :複写,                                   :clone   # 物で定義済み
+  # 別名 :複製,                                   :dup     # 物で定義済み
+  別名 :閉じる,                                   :close
+  別名 :上書き実行時に閉じる=,                    :close_on_exec=
+  別名 :上書き実行時に閉じるか?,                  :close_on_exec?
+  別名 :読み込み口を閉じる,                       :close_read
+  別名 :書き込み口を閉じる,                       :close_write
+  別名 :閉じたか?,                                :closed?
+  別名 :個別に,                                   :each
+  別名 :行毎に,                                   :each_line
+  別名 :バイト値毎に,                             :each_byte
+  別名 :文字毎に,                                 :each_char
+  別名 :符号点毎に,                               :each_codepoint
+  別名 :終端,                                     :eof
+  別名 :終端か?,                                  :eof?
+  別名 :外部文字符号化方式,                       :external_encoding
+  別名 :ファイルの制御,                           :fcntl
+  別名 :ファイルの内容を同期する,                 :fdatasync
+  別名 :ファイル記述子,                           :fileno
+  別名 :整数に変換,                               :to_i
+  別名 :書き込む,                                 :flush
+  別名 :ファイルを同期する,                       :fsync
+  別名 :バイト値を取得,                           :getbyte
+  別名 :文字を取得,                               :getc
+  別名 :行を取得,                                 :gets
+  別名 :内部文字符号化方式,                       :internal_encoding
+  別名 :入出力を制御,                             :ioctl
+  別名 :端末装置の一種,                           :isatty
+  別名 :端末装置か?,                              :tty?
+  別名 :行番号,                                   :lineno
+  別名 :行番号=,                                  :lineno=
+  別名 :行の一覧,                                 :lines
+  別名 :プロセスの識別番号,                       :pid
+  別名 :位置を告げよ,                             :tell
+  別名 :位置,                                     :pos
+  別名 :位置=,                                    :pos=
+  別名 :この位置で読む,                           :pread
+  別名 :印字,                                     :print
+  別名 :整形して印字,                             :printf
+  別名 :文字を出力,                               :putc
+  別名 :行を出力,                                 :puts
+  別名 :この位置で書く,                           :pwrite
+  別名 :読む,                                     :read
+  別名 :遮られずに読む,                           :read_nonblock
+  別名 :バイト値を読む,                           :readbyte
+  別名 :文字を読む,                               :readchar
+  別名 :行を読む,                                 :readline
+  別名 :全行を読む,                               :readlines
+  別名 :準備された分だけ読む,                     :readpartial
+  別名 :開き直す,                                 :reopen
+  別名 :巻き戻す,                                 :rewind
+  別名 :移動,                                     :seek
+  別名 :文字符号化方式を設定,                     :set_encoding
+  別名 :バイト順序の標識から文字符号化方式を設定, :set_encoding_by_bom if (公開された操作は定義済みか? :set_encoding_by_bom)
+  別名 :状態を取得,                               :stat
+  別名 :同期,                                     :sync
+  別名 :同期=,                                    :sync=
+  別名 :システムコールで読む,                     :sysread
+  別名 :システムコールで移動,                     :sysseek
+  別名 :システムコールで書く,                     :syswrite
+  別名 :入出力に変換,                             :to_io
+  別名 :バイト値を戻す,                           :ungetbyte
+  別名 :文字を戻す,                               :ungetc
+  別名 :書く,                                     :write
+  別名 :遮られずに書く,                           :write_nonblock
 
   日本語の定数 :先頭から移動,       IO::SEEK_SET
   日本語の定数 :現在の位置から移動, IO::SEEK_CUR
@@ -103,6 +104,7 @@ require 'japanize/core'
 組(ファイル) {
   特異組{
     別名 :ファイルへの絶対的な経路,                 :absolute_path
+    別名 :ファイルへの絶対的な経路か?,              :absolute_path? if (公開された操作は定義済みか? :absolute_path?)
     別名 :最終利用時刻,                             :atime
     別名 :ファイル名を取得,                         :basename
     別名 :作成時刻,                                 :birthtime
