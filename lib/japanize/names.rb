@@ -126,6 +126,7 @@ alias $標準入力             $stdin
 日本語の定数 :正規表現の失敗,                       RegexpError
 日本語の定数 :実行時の失敗,                         RuntimeError
 日本語の定数 :凍結済みのため失敗,                   FrozenError
+日本語の定数 :適合する類型が無いため失敗,           NoMatchingPatternError if (defined? NoMatchingPatternError)
 日本語の定数 :システムコールの失敗,                 SystemCallError
 日本語の定数 :スレッドの失敗,                       ThreadError
 日本語の定数 :型が合わないため失敗,                 TypeError
@@ -144,6 +145,7 @@ alias $標準入力             $stdin
   日本語の定数 :継手,     Enumerator::Chain
   日本語の定数 :生成器,   Enumerator::Generator
   日本語の定数 :補給器,   Enumerator::Yielder
+  日本語の定数 :生産器,   Enumerator::Producer if (defined? Enumerator::Producer)
   日本語の定数 :等差数列, Enumerator::ArithmeticSequence
   日本語の定数 :遅延評価, Enumerator::Lazy
 }
