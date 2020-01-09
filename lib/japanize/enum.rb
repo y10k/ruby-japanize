@@ -31,6 +31,7 @@ require 'japanize/core'
   別名 :全て見つける,                       :find_all
   別名 :選択する,                           :select
   別名 :抽出する,                           :filter
+  別名 :抽出して対応させる,                 :filter_map if (公開された操作は定義済みか? :filter_map, 偽値)
   別名 :見つけたら位置を返す,               :find_index
   別名 :先頭,                               :first
   別名 :検索,                               :grep
@@ -60,12 +61,17 @@ require 'japanize/core'
   別名 :合計,                               :sum
   別名 :引き出す,                           :take
   別名 :この条件で引き出す,                 :take_while
+  別名 :集計,                               :tally if (公開された操作は定義済みか? :tally, 偽値)
   別名 :連想配列に変換,                     :to_h
   別名 :重複を削除,                         :uniq
   別名 :より合わせる,                       :zip
 }
 
 組(列挙) {
+  特異組{
+    別名 :生産, :produce if (公開された操作は定義済みか? :produce, 偽値)
+  }
+
   別名 :個別に,                 :each
   別名 :順番付きで個別に,       :each_with_index
   別名 :覚え書き付きで個別に,   :each_with_object
@@ -94,6 +100,12 @@ require 'japanize/core'
     別名 :供給, :yield
   }
 
+  if (defined? Enumerator::Producer) then
+    組(生産器) {
+      別名 :個別に, :each
+    }
+  end
+
   組(等差数列) {
     別名 :初項,                  :begin
     別名 :始端,                  :begin        # 範囲#始端 との互換のため定義する
@@ -119,11 +131,13 @@ require 'japanize/core'
     別名 :集めて連結する,                     :collect_concat
     別名 :捨てる,                             :drop
     別名 :この条件で捨てる,                   :drop_while
+    別名 :所望,                               :eager if (公開された操作は定義済みか? :eager, 偽値)
     別名 :列挙に変換,                         :to_enum
     別名 :列挙する,                           :enum_for
     別名 :選択する,                           :select
     別名 :全て見つける,                       :find_all
     別名 :抽出する,                           :filter
+    別名 :抽出して対応させる,                 :filter_map if (公開された操作は定義済みか? :filter_map, 偽値)
     別名 :直ちに評価する,                     :force
     別名 :検索,                               :grep
     別名 :対象外を検索,                       :grep_v
@@ -135,6 +149,7 @@ require 'japanize/core'
     別名 :引き出す,                           :take
     別名 :この条件で引き出す,                 :take_while
     別名 :重複を削除,                         :uniq
+    別名 :順番付きで繰り返す,                 :with_index
     別名 :より合わせる,                       :zip
   }
 }
