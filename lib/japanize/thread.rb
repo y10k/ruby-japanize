@@ -10,7 +10,8 @@ require 'japanize/core'
     別名 :委ねる, :yield
   }
 
-  別名 :続ける, :resume
+  別名 :例外を発生, :raise if (公開された操作は定義済みか? :raise, 偽値)
+  別名 :続ける,     :resume
 
   # fiberライブラリのための定義
   # fiberライブラリが配置されるまで未定義なので別名にしない。
