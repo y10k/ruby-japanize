@@ -138,6 +138,7 @@ require 'japanize/core'
   別名 :小文字にする,                        :downcase
   別名 :空か?,                               :empty?
   別名 :文字符号化方式,                      :encoding
+  別名 :末尾が一致するか?,                   :end_with? if (公開された操作は定義済みか? :end_with?, 偽値)
   別名 :識別番号を名前に変換,                :id2name
   # 別名 :文字列に変換,                      :to_s       # 物で定義済み
   # 別名 :検査,                              :inspect    # 物で定義済み
@@ -145,6 +146,7 @@ require 'japanize/core'
   別名 :記号に変換,                          :to_sym
   別名 :長さ,                                :length
   別名 :大きさ,                              :size
+  別名 :先頭が一致するか?,                   :start_with? if (公開された操作は定義済みか? :start_with?, 偽値)
   別名 :一致,                                :match
   別名 :一致するか?,                         :match?
   別名 :一つ後,                              :succ
