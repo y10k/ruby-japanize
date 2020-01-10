@@ -12,7 +12,7 @@ require 'japanize/core'
           [ [ :ファイルへの経路, :path ] ]
         ],
         [ 'シグナルの例外', [ 1 ],
-          [ [ :シグナルの名前, :signm, true ],
+          [ [ :シグナルの名前, :signm, 真値 ],
             [ :シグナルの番号, :signo ]
           ]
         ],
@@ -22,8 +22,8 @@ require 'japanize/core'
           ]
         ],
         [ 'キーの照合に失敗', [],
-          [ [ :キー,   :key,      true ],
-            [ :受信先, :receiver, true ]
+          [ [ :キー,   :key,      真値 ],
+            [ :受信先, :receiver, 真値 ]
           ]
         ],
         [ '繰り返しの停止', [],
@@ -35,9 +35,9 @@ require 'japanize/core'
           ]
         ],
         [ '名前解決に失敗', [],
-          [ [ :局所変数の一覧, :local_variables, true ],
-            [ :名前,           :name,            true ],
-            [ :受信先,         :receiver,        true ]
+          [ [ :局所変数の一覧, :local_variables, 真値 ],
+            [ :名前,           :name,            真値 ],
+            [ :受信先,         :receiver,        真値 ]
           ]
         ],
         [ '操作が無いため失敗', [],
