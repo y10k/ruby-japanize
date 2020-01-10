@@ -17,17 +17,18 @@ require 'japanize/core'
 }
 
 組(手続き型) {
-  別名 :呼ぶ,           :call
-  別名 :委ねる,         :yield
-  別名 :項数,           :arity
-  別名 :束縛を取得,     :binding
-  別名 :カリー化,       :curry
-  # 別名 :ハッシュ値,   :hash    # 物で定義済み
-  # 別名 :文字列に変換, :to_s    # 物で定義済み
-  # 別名 :検査,         :inspect # 物で定義済み
-  別名 :λか?,          :lambda?
-  別名 :引数の一覧,     :parameters
-  別名 :定義された場所, :source_location
+  別名 :呼ぶ,                    :call
+  別名 :委ねる,                  :yield
+  別名 :項数,                    :arity
+  別名 :束縛を取得,              :binding
+  別名 :カリー化,                :curry
+  # 別名 :ハッシュ値,            :hash    # 物で定義済み
+  # 別名 :文字列に変換,          :to_s    # 物で定義済み
+  # 別名 :検査,                  :inspect # 物で定義済み
+  別名 :λか?,                   :lambda?
+  別名 :引数の一覧,              :parameters
+  別名 :ruby2互換の名前付き引数, :ruby2_keywords if (公開された操作は定義済みか? :ruby2_keywords, 偽値)
+  別名 :定義された場所,          :source_location
 }
 
 組(操作) {
@@ -53,6 +54,7 @@ require 'japanize/core'
   # 別名 :等しいか?,    :eql?    # 物で定義済み
   別名 :項数,           :arity
   別名 :束縛,           :bind
+  別名 :束縛して呼ぶ,   :bind_call if (公開された操作は定義済みか? :bind_call, 偽値)
   # 別名 :複写,         :clone   # 物で定義済み
   # 別名 :ハッシュ値,   :hash    # 物で定義済み
   # 別名 :検査,         :inspect # 物で定義済み
@@ -123,6 +125,7 @@ require 'japanize/core'
 
 部(ゴミ集め) {
   特異組{
+    別名 :圧搾,                                       :compact if (公開された操作は定義済みか? :compact, 偽値)
     別名 :実行した回数,                               :count
     別名 :無効にする,                                 :disable
     別名 :有効にする,                                 :enable
@@ -131,6 +134,7 @@ require 'japanize/core'
     別名 :統計情報を取得,                             :stat
     別名 :頻繁に実施,                                 :stress
     別名 :頻繁に実施=,                                :stress=
+    別名 :圧搾した物への参照を検証する,               :verify_compaction_references if (公開された操作は定義済みか? :verify_compaction_references, 偽値)
     別名 :内部の一貫性を検証する,                     :verify_internal_consistency
     別名 :一時的なヒープ領域の内部の一貫性を検証する, :verify_transient_heap_internal_consistency
   }
