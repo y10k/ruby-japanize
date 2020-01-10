@@ -17,9 +17,11 @@ require 'japanize/core'
   }
 
   別名 :アスキー形式に変換,       :asctime
+  別名 :切り上げ,                 :ceil if (公開された操作は定義済みか? :ceil, 偽値)
   別名 :日,                       :day
   別名 :夏時間か?,                :dst?
   # 別名 :等しいか?,              :eql?    # 物で定義済み
+  別名 :切り下げ,                 :floor if (公開された操作は定義済みか? :floor, 偽値)
   別名 :金曜日か?,                :friday?
   別名 :グリニッジ標準時を取得,   :getgm
   別名 :協定世界時を取得,         :getutc
