@@ -33,6 +33,7 @@ require 'japanize/core'
   別名 :不明な定数,                       :const_missing
   定義(:const_missing) {|名前| 不明な定数(名前) }
   # 別名 :定数を設定,                     :const_set         # japanize/coreで定義済み
+  別名 :定数が定義された場所,             :const_source_location if (method_defined? :const_source_location, 偽値)
   別名 :定数の一覧,                       :constants
   # 別名 :定義,                           :define_method     # japanize/coreで定義済み
   別名 :定数を非推奨にする,               :deprecate_constant
@@ -60,28 +61,29 @@ require 'japanize/core'
   別名 :特異組か?,                        :singleton_class?
   別名 :操作を未定義にする,               :undef_method
 
-  別名 :機能を付加する,         :append_features
-  別名 :物を拡張する,           :extend_object
-  別名 :拡張した時,             :extended
+  別名 :機能を付加する,          :append_features
+  別名 :物を拡張する,            :extend_object
+  別名 :拡張した時,              :extended
   定義(:extended) {|物| 拡張した時(物) }
-  別名 :付加された時,           :included
+  別名 :付加された時,            :included
   定義(:included) {|組または部| 付加された時(組または部) }
-  別名 :操作が追加された時,     :method_added
+  別名 :操作が追加された時,      :method_added
   定義(:method_added) {|名前| 操作が追加された時(名前) }
-  別名 :操作が除去された時,     :method_removed
+  別名 :操作が除去された時,      :method_removed
   定義(:method_removed) {|名前| 操作が除去された時(名前) }
-  別名 :操作が未定義にされた時, :method_undefined
+  別名 :操作が未定義にされた時,  :method_undefined
   定義(:method_undefined) {|名前| 操作が未定義にされた時(名前) }
-  # 別名 :部の関数,             :module_function    # japanize/coreで定義済み
-  別名 :機能を付与する,         :prepend_features
-  別名 :付与された時,           :prepended
+  # 別名 :部の関数,              :module_function    # japanize/coreで定義済み
+  別名 :機能を付与する,          :prepend_features
+  別名 :付与された時,            :prepended
   定義(:prepended) {|組または部| 付与された時(組または部) }
-  # 別名 :秘密,                 :private            # japanize/coreで定義済み
-  別名 :保護,                   :protected
-  別名 :公開,                   :public
-  別名 :限定拡張,               :refine
-  別名 :定数を除去する,         :remove_const
-  別名 :限定拡張を使用,         :using
+  # 別名 :秘密,                  :private            # japanize/coreで定義済み
+  別名 :保護,                    :protected
+  別名 :公開,                    :public
+  別名 :限定拡張,                :refine
+  別名 :定数を除去する,          :remove_const
+  別名 :ruby2互換の名前付き引数, :ruby2_keywords if (秘密の操作は定義済みか? :ruby2_keywords, 偽値)
+  別名 :限定拡張を使用,          :using
 
   秘密 :機能を付加する,
        :物を拡張する,
@@ -97,6 +99,8 @@ require 'japanize/core'
        :限定拡張,
        :定数を除去する,
        :限定拡張を使用
+
+  秘密 :ruby2互換の名前付き引数 if (秘密の操作は定義済みか? :ruby2_keywords, 偽値)
 
   定義(:日本語の定数を移譲) {|移譲先の部, 名前, *名前の一覧, 上書き: 偽値|
     名前の一覧 = [ 名前 ] + 名前の一覧
