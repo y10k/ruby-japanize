@@ -5,6 +5,10 @@ require 'japanize/core'
 要求 'japanize/base'
 要求 'japanize/names'
 
+$配置対象の探索経路.特異組{
+  別名 :機能への経路を解決する, :resolve_feature_path if (公開された操作は定義済みか? :resolve_feature_path, 偽値)
+}
+
 組(スクリプトの入力.生成元) {
   別名 :スクリプトの引数,         :argv
   別名 :バイナリ形式,             :binmode
@@ -64,6 +68,7 @@ require 'japanize/core'
   別名 :消去する,               :clear
   別名 :削除,                   :delete
   別名 :条件で削除,             :delete_if
+  # 別名 :凍結する,             :freeze     # 物で定義済み
   別名 :除く!,                  :reject!
   別名 :個別に,                 :each
   別名 :対毎に,                 :each_pair
@@ -80,6 +85,7 @@ require 'japanize/core'
   別名 :含むか?,                :include?
   別名 :キーか?,                :key?
   別名 :一員か?,                :member?
+  別名 :併合!,                  :merge! if (公開された操作は定義済みか? :merge!, 偽値)
   別名 :値を持つか?,            :has_value?
   別名 :値か?,                  :value?
   別名 :キーを取得,             :key
