@@ -46,6 +46,10 @@ require 'japanize/core'
   別名 :秘密の形式で呼ばれたか?, :private_call?
 }
 
+組(凍結済みのため失敗) {
+  別名 :受信先, :receiver if (公開された操作は定義済みか? :receiver, 偽値)
+}
+
 組(システムコールの失敗) {
   別名 :失敗の種類を表す番号, :errno
 }
