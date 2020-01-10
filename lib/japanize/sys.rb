@@ -13,7 +13,7 @@ require 'japanize/core'
   別名 :局所変数を設定,        :local_variable_set
   別名 :局所変数の一覧,        :local_variables
   別名 :受信先,                :receiver
-  別名 :元の場所,              :source_location
+  別名 :定義された場所,        :source_location
 }
 
 組(手続き型) {
@@ -27,7 +27,7 @@ require 'japanize/core'
   # 別名 :検査,         :inspect # 物で定義済み
   別名 :λか?,          :lambda?
   別名 :引数の一覧,     :parameters
-  別名 :元の場所,       :source_location
+  別名 :定義された場所, :source_location
 }
 
 組(操作) {
@@ -44,7 +44,7 @@ require 'japanize/core'
   別名 :所属,               :owner
   別名 :引数の一覧,         :parameters
   別名 :受信先,             :receiver
-  別名 :元の場所,           :source_location
+  別名 :定義された場所,     :source_location
   別名 :原型の操作,         :super_method
   別名 :未束縛の操作を取得, :unbind
 }
@@ -61,7 +61,7 @@ require 'japanize/core'
   別名 :元の名前,       :original_name
   別名 :所属,           :owner
   別名 :引数の一覧,     :parameters
-  別名 :元の場所,       :source_location
+  別名 :定義された場所, :source_location
   別名 :原型の操作,     :super_method
 }
 
