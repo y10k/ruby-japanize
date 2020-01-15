@@ -97,8 +97,8 @@ require 'japanize/core'
   日本語の定数 :先頭から移動,       IO::SEEK_SET
   日本語の定数 :現在の位置から移動, IO::SEEK_CUR
   日本語の定数 :末尾から移動,       IO::SEEK_END
-  日本語の定数(:次の内容へ移動) { IO::SEEK_DATA } # Linux 3.1以降で利用可能なため、未定義の場合もあるので遅延アクセスする
-  日本語の定数(:次の空隙へ移動) { IO::SEEK_HOLE } # Linux 3.1以降で利用可能なため、未定義の場合もあるので遅延アクセスする
+  日本語の定数 :次の内容へ移動,     IO::SEEK_DATA if (defined? IO::SEEK_DATA) # Linux 3.1以降で利用可能
+  日本語の定数 :次の空隙へ移動,     IO::SEEK_HOLE if (defined? IO::SEEK_HOLE) # Linux 3.1以降で利用可能
 }
 
 組(ファイル) {
@@ -208,8 +208,8 @@ require 'japanize/core'
     日本語の定数 :常に無効な装置,                               File::Constants::NULL
     日本語の定数 :読み込み専用,                                 File::Constants::RDONLY
     日本語の定数 :読み書き両用,                                 File::Constants::RDWR
-    日本語の定数(:読み込みを同期) { File::Constants::RSYNC }    # O_RSYNCが指定できる時だけ定義されるので、実行時まで接触を遅延させる
-    日本語の定数(:削除を共有) { File::Constants::SHARE_DELETE } # O_SHARE_DELETEが指定できる時だけ定義されるので、実行時まで接触を遅延させる
+    日本語の定数 :読み込みを同期,                               File::Constants::RSYNC        if (defined? File::Constants::RSYNC)        # O_RSYNCが指定できる時だけ定義される
+    日本語の定数 :削除を共有,                                   File::Constants::SHARE_DELETE if (defined? File::Constants::SHARE_DELETE) # O_SHARE_DELETEが指定できる時だけ定義される
     日本語の定数 :同期,                                         File::Constants::SYNC
     日本語の定数 :一時ファイル,                                 File::Constants::TMPFILE
     日本語の定数 :切り捨て,                                     File::Constants::TRUNC
