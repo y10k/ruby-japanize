@@ -17,8 +17,8 @@ require 'japanize/core'
   }
 
   別名 :スクリプトの名前,                  :argv0
-  別名 :同期信号に基いて時刻を取得,        :clock_gettime
-  別名 :同期信号に基いて時間分解能を取得,  :clock_getres
+  別名 :時計から時刻を取得,                :clock_gettime
+  別名 :時計から時間分解能を取得,          :clock_getres
   別名 :裏方に回る,                        :daemon
   別名 :切り離す,                          :detach
   別名 :実効グループの識別番号,            :egid
@@ -56,8 +56,8 @@ require 'japanize/core'
   別名 :識別番号の子プロセスの終了を待機2, :waitpid2
 
   部の関数 :スクリプトの名前,
-           :同期信号に基いて時刻を取得,
-           :同期信号に基いて時間分解能を取得,
+           :時計から時刻を取得,
+           :時計から時間分解能を取得,
            :裏方に回る,
            :切り離す,
            :実効グループの識別番号,
@@ -94,29 +94,29 @@ require 'japanize/core'
            :識別番号の子プロセスの終了を待機,
            :識別番号の子プロセスの終了を待機2
 
-  日本語の定数 :同期信号に基く実時間,                                   Process::CLOCK_REALTIME             if (defined? Process::CLOCK_REALTIME)
-  日本語の定数 :同期信号に基く単調増加の経過時間,                       Process::CLOCK_MONOTONIC            if (defined? Process::CLOCK_MONOTONIC)
-  日本語の定数 :同期信号に基くプロセス単位のCPU時間,                    Process::CLOCK_PROCESS_CPUTIME_ID   if (defined? Process::CLOCK_PROCESS_CPUTIME_ID)
-  日本語の定数 :同期信号に基くスレッド単位のCPU時間,                    Process::CLOCK_THREAD_CPUTIME_ID    if (defined? Process::CLOCK_THREAD_CPUTIME_ID)
-  日本語の定数 :同期信号に基く仮想の経過時間,                           Process::CLOCK_VIRTUAL              if (defined? Process::CLOCK_VIRTUAL)
-  日本語の定数 :同期信号に基く性能解析用の経過時間,                     Process::CLOCK_PROF                 if (defined? Process::CLOCK_PROF)
-  日本語の定数 :同期信号に基く高速な実時間,                             Process::CLOCK_REALTIME_FAST        if (defined? Process::CLOCK_REALTIME_FAST)
-  日本語の定数 :同期信号に基く精密な実時間,                             Process::CLOCK_REALTIME_PRECISE     if (defined? Process::CLOCK_REALTIME_PRECISE)
-  日本語の定数 :同期信号に基く概略の実時間,                             Process::CLOCK_REALTIME_COARSE      if (defined? Process::CLOCK_REALTIME_COARSE)
-  日本語の定数 :同期信号に基くシステムの復帰を伴う実時間,               Process::CLOCK_REALTIME_ALARM       if (defined? Process::CLOCK_REALTIME_ALARM)
-  日本語の定数 :同期信号に基く高速で単調増加の経過時間,                 Process::CLOCK_MONOTONIC_FAST       if (defined? Process::CLOCK_MONOTONIC_FAST)
-  日本語の定数 :同期信号に基く精密で単調増加の経過時間,                 Process::CLOCK_MONOTONIC_PRECISE    if (defined? Process::CLOCK_MONOTONIC_PRECISE)
-  日本語の定数 :同期信号に基く概略で単調増加の経過時間,                 Process::CLOCK_MONOTONIC_COARSE     if (defined? Process::CLOCK_MONOTONIC_COARSE)
-  日本語の定数 :同期信号に基く未加工で単調増加の経過時間,               Process::CLOCK_MONOTONIC_RAW        if (defined? Process::CLOCK_MONOTONIC_RAW)
-  日本語の定数 :同期信号に基く近似的で未加工な単調増加の経過時間,       Process::CLOCK_MONOTONIC_RAW_APPROX if (defined? Process::CLOCK_MONOTONIC_RAW_APPROX)
-  日本語の定数 :同期信号に基く起動時からの経過時間,                     Process::CLOCK_BOOTTIME             if (defined? Process::CLOCK_BOOTTIME)
-  日本語の定数 :同期信号に基くシステムの復帰を伴う起動時からの経過時間, Process::CLOCK_BOOTTIME_ALARM       if (defined? Process::CLOCK_BOOTTIME_ALARM)
-  日本語の定数 :同期信号に基く連続稼動時間,                             Process::CLOCK_UPTIME               if (defined? Process::CLOCK_UPTIME)
-  日本語の定数 :同期信号に基く高速な連続稼動時間,                       Process::CLOCK_UPTIME_FAST          if (defined? Process::CLOCK_UPTIME_FAST)
-  日本語の定数 :同期信号に基く精密な連続稼動時間,                       Process::CLOCK_UPTIME_PRECISE       if (defined? Process::CLOCK_UPTIME_PRECISE)
-  日本語の定数 :同期信号に基く未加工な連続稼動時間,                     Process::CLOCK_UPTIME_RAW           if (defined? Process::CLOCK_UPTIME_RAW)
-  日本語の定数 :同期信号に基く近似的で未加工な連続稼動時間,             Process::CLOCK_UPTIME_RAW_APPROX    if (defined? Process::CLOCK_UPTIME_RAW_APPROX)
-  日本語の定数 :同期信号に基く秒数,                                     Process::CLOCK_SECOND               if (defined? Process::CLOCK_SECOND)
+  日本語の定数 :時計_実時間,                                   Process::CLOCK_REALTIME             if (defined? Process::CLOCK_REALTIME)
+  日本語の定数 :時計_単調増加の経過時間,                       Process::CLOCK_MONOTONIC            if (defined? Process::CLOCK_MONOTONIC)
+  日本語の定数 :時計_プロセス単位のCPU時間,                    Process::CLOCK_PROCESS_CPUTIME_ID   if (defined? Process::CLOCK_PROCESS_CPUTIME_ID)
+  日本語の定数 :時計_スレッド単位のCPU時間,                    Process::CLOCK_THREAD_CPUTIME_ID    if (defined? Process::CLOCK_THREAD_CPUTIME_ID)
+  日本語の定数 :時計_仮想の経過時間,                           Process::CLOCK_VIRTUAL              if (defined? Process::CLOCK_VIRTUAL)
+  日本語の定数 :時計_性能解析用の経過時間,                     Process::CLOCK_PROF                 if (defined? Process::CLOCK_PROF)
+  日本語の定数 :時計_高速な実時間,                             Process::CLOCK_REALTIME_FAST        if (defined? Process::CLOCK_REALTIME_FAST)
+  日本語の定数 :時計_精密な実時間,                             Process::CLOCK_REALTIME_PRECISE     if (defined? Process::CLOCK_REALTIME_PRECISE)
+  日本語の定数 :時計_概略の実時間,                             Process::CLOCK_REALTIME_COARSE      if (defined? Process::CLOCK_REALTIME_COARSE)
+  日本語の定数 :時計_システムの復帰を伴う実時間,               Process::CLOCK_REALTIME_ALARM       if (defined? Process::CLOCK_REALTIME_ALARM)
+  日本語の定数 :時計_高速で単調増加の経過時間,                 Process::CLOCK_MONOTONIC_FAST       if (defined? Process::CLOCK_MONOTONIC_FAST)
+  日本語の定数 :時計_精密で単調増加の経過時間,                 Process::CLOCK_MONOTONIC_PRECISE    if (defined? Process::CLOCK_MONOTONIC_PRECISE)
+  日本語の定数 :時計_概略で単調増加の経過時間,                 Process::CLOCK_MONOTONIC_COARSE     if (defined? Process::CLOCK_MONOTONIC_COARSE)
+  日本語の定数 :時計_未加工で単調増加の経過時間,               Process::CLOCK_MONOTONIC_RAW        if (defined? Process::CLOCK_MONOTONIC_RAW)
+  日本語の定数 :時計_近似的で未加工な単調増加の経過時間,       Process::CLOCK_MONOTONIC_RAW_APPROX if (defined? Process::CLOCK_MONOTONIC_RAW_APPROX)
+  日本語の定数 :時計_起動時からの経過時間,                     Process::CLOCK_BOOTTIME             if (defined? Process::CLOCK_BOOTTIME)
+  日本語の定数 :時計_システムの復帰を伴う起動時からの経過時間, Process::CLOCK_BOOTTIME_ALARM       if (defined? Process::CLOCK_BOOTTIME_ALARM)
+  日本語の定数 :時計_連続稼動時間,                             Process::CLOCK_UPTIME               if (defined? Process::CLOCK_UPTIME)
+  日本語の定数 :時計_高速な連続稼動時間,                       Process::CLOCK_UPTIME_FAST          if (defined? Process::CLOCK_UPTIME_FAST)
+  日本語の定数 :時計_精密な連続稼動時間,                       Process::CLOCK_UPTIME_PRECISE       if (defined? Process::CLOCK_UPTIME_PRECISE)
+  日本語の定数 :時計_未加工な連続稼動時間,                     Process::CLOCK_UPTIME_RAW           if (defined? Process::CLOCK_UPTIME_RAW)
+  日本語の定数 :時計_近似的で未加工な連続稼動時間,             Process::CLOCK_UPTIME_RAW_APPROX    if (defined? Process::CLOCK_UPTIME_RAW_APPROX)
+  日本語の定数 :時計_秒数,                                     Process::CLOCK_SECOND               if (defined? Process::CLOCK_SECOND)
 
   日本語の定数 :資源の制限値における中断ファイルの大きさ,       Process::RLIMIT_CORE    if (defined? Process::RLIMIT_CORE)
   日本語の定数 :資源の制限値におけるCPU時間,                    Process::RLIMIT_CPU     if (defined? Process::RLIMIT_CPU)
@@ -257,29 +257,29 @@ require 'japanize/core'
              :実_実効_保存グループの識別番号を設定
   }
 
-  日本語の定数を付加できること :同期信号に基く実時間                                   if (defined? Process::CLOCK_REALTIME)
-  日本語の定数を付加できること :同期信号に基く単調増加の経過時間                       if (defined? Process::CLOCK_MONOTONIC)
-  日本語の定数を付加できること :同期信号に基くプロセス単位のCPU時間                    if (defined? Process::CLOCK_PROCESS_CPUTIME_ID)
-  日本語の定数を付加できること :同期信号に基くスレッド単位のCPU時間                    if (defined? Process::CLOCK_THREAD_CPUTIME_ID)
-  日本語の定数を付加できること :同期信号に基く仮想の経過時間                           if (defined? Process::CLOCK_VIRTUAL)
-  日本語の定数を付加できること :同期信号に基く性能解析用の経過時間                     if (defined? Process::CLOCK_PROF)
-  日本語の定数を付加できること :同期信号に基く高速な実時間                             if (defined? Process::CLOCK_REALTIME_FAST)
-  日本語の定数を付加できること :同期信号に基く精密な実時間                             if (defined? Process::CLOCK_REALTIME_PRECISE)
-  日本語の定数を付加できること :同期信号に基く概略の実時間                             if (defined? Process::CLOCK_REALTIME_COARSE)
-  日本語の定数を付加できること :同期信号に基くシステムの復帰を伴う実時間               if (defined? Process::CLOCK_REALTIME_ALARM)
-  日本語の定数を付加できること :同期信号に基く高速で単調増加の経過時間                 if (defined? Process::CLOCK_MONOTONIC_FAST)
-  日本語の定数を付加できること :同期信号に基く精密で単調増加の経過時間                 if (defined? Process::CLOCK_MONOTONIC_PRECISE)
-  日本語の定数を付加できること :同期信号に基く概略で単調増加の経過時間                 if (defined? Process::CLOCK_MONOTONIC_COARSE)
-  日本語の定数を付加できること :同期信号に基く未加工で単調増加の経過時間               if (defined? Process::CLOCK_MONOTONIC_RAW)
-  日本語の定数を付加できること :同期信号に基く近似的で未加工な単調増加の経過時間       if (defined? Process::CLOCK_MONOTONIC_RAW_APPROX)
-  日本語の定数を付加できること :同期信号に基く起動時からの経過時間                     if (defined? Process::CLOCK_BOOTTIME)
-  日本語の定数を付加できること :同期信号に基くシステムの復帰を伴う起動時からの経過時間 if (defined? Process::CLOCK_BOOTTIME_ALARM)
-  日本語の定数を付加できること :同期信号に基く連続稼動時間                             if (defined? Process::CLOCK_UPTIME)
-  日本語の定数を付加できること :同期信号に基く高速な連続稼動時間                       if (defined? Process::CLOCK_UPTIME_FAST)
-  日本語の定数を付加できること :同期信号に基く精密な連続稼動時間                       if (defined? Process::CLOCK_UPTIME_PRECISE)
-  日本語の定数を付加できること :同期信号に基く未加工な連続稼動時間                     if (defined? Process::CLOCK_UPTIME_RAW)
-  日本語の定数を付加できること :同期信号に基く近似的で未加工な連続稼動時間             if (defined? Process::CLOCK_UPTIME_RAW_APPROX)
-  日本語の定数を付加できること :同期信号に基く秒数                                     if (defined? Process::CLOCK_SECOND)
+  日本語の定数を付加できること :時計_実時間                                   if (defined? Process::CLOCK_REALTIME)
+  日本語の定数を付加できること :時計_単調増加の経過時間                       if (defined? Process::CLOCK_MONOTONIC)
+  日本語の定数を付加できること :時計_プロセス単位のCPU時間                    if (defined? Process::CLOCK_PROCESS_CPUTIME_ID)
+  日本語の定数を付加できること :時計_スレッド単位のCPU時間                    if (defined? Process::CLOCK_THREAD_CPUTIME_ID)
+  日本語の定数を付加できること :時計_仮想の経過時間                           if (defined? Process::CLOCK_VIRTUAL)
+  日本語の定数を付加できること :時計_性能解析用の経過時間                     if (defined? Process::CLOCK_PROF)
+  日本語の定数を付加できること :時計_高速な実時間                             if (defined? Process::CLOCK_REALTIME_FAST)
+  日本語の定数を付加できること :時計_精密な実時間                             if (defined? Process::CLOCK_REALTIME_PRECISE)
+  日本語の定数を付加できること :時計_概略の実時間                             if (defined? Process::CLOCK_REALTIME_COARSE)
+  日本語の定数を付加できること :時計_システムの復帰を伴う実時間               if (defined? Process::CLOCK_REALTIME_ALARM)
+  日本語の定数を付加できること :時計_高速で単調増加の経過時間                 if (defined? Process::CLOCK_MONOTONIC_FAST)
+  日本語の定数を付加できること :時計_精密で単調増加の経過時間                 if (defined? Process::CLOCK_MONOTONIC_PRECISE)
+  日本語の定数を付加できること :時計_概略で単調増加の経過時間                 if (defined? Process::CLOCK_MONOTONIC_COARSE)
+  日本語の定数を付加できること :時計_未加工で単調増加の経過時間               if (defined? Process::CLOCK_MONOTONIC_RAW)
+  日本語の定数を付加できること :時計_近似的で未加工な単調増加の経過時間       if (defined? Process::CLOCK_MONOTONIC_RAW_APPROX)
+  日本語の定数を付加できること :時計_起動時からの経過時間                     if (defined? Process::CLOCK_BOOTTIME)
+  日本語の定数を付加できること :時計_システムの復帰を伴う起動時からの経過時間 if (defined? Process::CLOCK_BOOTTIME_ALARM)
+  日本語の定数を付加できること :時計_連続稼動時間                             if (defined? Process::CLOCK_UPTIME)
+  日本語の定数を付加できること :時計_高速な連続稼動時間                       if (defined? Process::CLOCK_UPTIME_FAST)
+  日本語の定数を付加できること :時計_精密な連続稼動時間                       if (defined? Process::CLOCK_UPTIME_PRECISE)
+  日本語の定数を付加できること :時計_未加工な連続稼動時間                     if (defined? Process::CLOCK_UPTIME_RAW)
+  日本語の定数を付加できること :時計_近似的で未加工な連続稼動時間             if (defined? Process::CLOCK_UPTIME_RAW_APPROX)
+  日本語の定数を付加できること :時計_秒数                                     if (defined? Process::CLOCK_SECOND)
 
   日本語の定数を付加できること :資源の制限値における中断ファイルの大きさ       if (defined? Process::RLIMIT_CORE)
   日本語の定数を付加できること :資源の制限値におけるCPU時間                    if (defined? Process::RLIMIT_CPU)
