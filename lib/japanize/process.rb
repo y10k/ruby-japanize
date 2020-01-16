@@ -117,6 +117,7 @@ require 'japanize/core'
   日本語の定数 :時計_未加工な連続稼動時間,                     Process::CLOCK_UPTIME_RAW           if (defined? Process::CLOCK_UPTIME_RAW)
   日本語の定数 :時計_近似的で未加工な連続稼動時間,             Process::CLOCK_UPTIME_RAW_APPROX    if (defined? Process::CLOCK_UPTIME_RAW_APPROX)
   日本語の定数 :時計_秒数,                                     Process::CLOCK_SECOND               if (defined? Process::CLOCK_SECOND)
+  日本語の定数 :時計_国際原子時,                               Process::CLOCK_TAI                  if (defined? Process::CLOCK_TAI)
 
   日本語の定数 :資源の制限値_中断ファイルの大きさ,       Process::RLIMIT_CORE    if (defined? Process::RLIMIT_CORE)
   日本語の定数 :資源の制限値_CPU時間,                    Process::RLIMIT_CPU     if (defined? Process::RLIMIT_CPU)
@@ -280,6 +281,7 @@ require 'japanize/core'
   日本語の定数を付加できること :時計_未加工な連続稼動時間                     if (defined? Process::CLOCK_UPTIME_RAW)
   日本語の定数を付加できること :時計_近似的で未加工な連続稼動時間             if (defined? Process::CLOCK_UPTIME_RAW_APPROX)
   日本語の定数を付加できること :時計_秒数                                     if (defined? Process::CLOCK_SECOND)
+  日本語の定数を付加できること :時計_国際原子時                               if (defined? Process::CLOCK_TAI)
 
   日本語の定数を付加できること :資源の制限値_中断ファイルの大きさ       if (defined? Process::RLIMIT_CORE)
   日本語の定数を付加できること :資源の制限値_CPU時間                    if (defined? Process::RLIMIT_CPU)
