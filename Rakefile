@@ -18,6 +18,10 @@ desc 'Build README.html from markdown source'
 task :readme => %w[ README.html ]
 CLOBBER.include 'README.html'
 
+desc 'Build CHANGELOT.html from markdown source'
+task :changelog => %w[ CHANGELOG.html ]
+CLOBBER.include 'CHANGELOG.html'
+
 namespace :sample do
   desc 'Build sample/README.html from markdown source'
   task :readme => %w[ sample/README.html ]
