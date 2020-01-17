@@ -1271,6 +1271,62 @@ end
 }
 ```
 
+### オブジェクト(物)の初期化
+
+`new`の代わりに`新規`を呼ぶことで新しいオブジェクト(物)を作成し、
+`initialize`の代わりに`初期化`を定義することでオブジェクトを初期化でき
+ます。
+
+元のRubyスクリプトの例:
+
+```ruby
+class Foo
+  def initialize(name)
+    puts "initialize Foo"
+    @name = name
+  end
+end
+
+class Bar < Foo
+  def initialize(name, pass)
+    puts "initialize Bar"
+    super(name)
+    @pass = pass
+  end
+end
+
+it = Bar.new('myname', '0500')
+p it
+#=> initialize Bar
+#   initialize Foo
+#   #<Bar:0x2b68f08 @name="myname", @pass="0500">
+```
+
+日本語で書いたRubyスクリプトの例:
+
+```ruby
+組(:甲) {
+  定義(:初期化) {|名前|
+    行を出力 "甲を初期化"
+    @名前 = 名前
+  }
+}
+
+組(:乙, 原型: 甲) {
+  定義(:初期化) {|名前, 符丁|
+    行を出力 "乙を初期化"
+    super(名前)
+    @符丁 = 符丁
+  }
+}
+
+ある物 = 乙.新規('自分の名前', '0500')
+点検 ある物
+#=> 乙を初期化
+#   甲を初期化
+#   #<JA::JA乙:0x2b68f08 @名前="自分の名前", @符丁="0500">
+```
+
 ### 日本語で書けない機能
 
 次の予約語はメソッド(操作)による代替が困難なため日本語で書けません。
