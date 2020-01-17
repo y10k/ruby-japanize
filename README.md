@@ -1355,6 +1355,7 @@ end
 |`列挙::継手`                      |`Enumerator::Chain`             |[`lib/japanize/enum.rb`][enum.rb]          |
 |`列挙::生成器`                    |`Enumerator::Generator`         |[`lib/japanize/enum.rb`][enum.rb]          |
 |`列挙::補給器`                    |`Enumerator::Yielder`           |[`lib/japanize/enum.rb`][enum.rb]          |
+|`列挙::生産器`                    |`Enumerator::Producer`          |[`lib/japanize/enum.rb`][enum.rb]          |
 |`列挙::等差数列`                  |`Enumerator::ArithmeticSequence`|[`lib/japanize/enum.rb`][enum.rb]          |
 |`列挙::遅延評価`                  |`Enumerator::Lazy`              |[`lib/japanize/enum.rb`][enum.rb]          |
 |`偽値の組`                        |`FalseClass`                    |[`lib/japanize/base.rb`][base.rb]          |
@@ -1467,6 +1468,7 @@ end
 |`正規表現の失敗`                                  |`RegexpError`                       |[`lib/japanize/names.rb`][names.rb]  |
 |`実行時の失敗`                                    |`RuntimeError`                      |[`lib/japanize/names.rb`][names.rb]  |
 |`凍結済みのため失敗`                              |`FrozenError`                       |[`lib/japanize/names.rb`][names.rb]  |
+|`適合する類型が無いため失敗`                      |`NoMatchingPatternError`            |[`lib/japanize/names.rb`][names.rb]  |
 |`システムコールの失敗`                            |`SystemCallError`                   |[`lib/japanize/errors.rb`][errors.rb]|
 |`スレッドの失敗`                                  |`ThreadError`                       |[`lib/japanize/names.rb`][names.rb]  |
 |`型が合わないため失敗`                            |`TypeError`                         |[`lib/japanize/names.rb`][names.rb]  |
