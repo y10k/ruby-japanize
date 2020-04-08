@@ -110,7 +110,9 @@ require 'japanize/core'
 
 組(連想配列) {
   特異組{
-    別名 :可能なら変換, :try_convert
+    別名 :可能なら変換,                    :try_convert
+    別名 :ruby2互換の名前付き引数とみなす, :ruby2_keywords_hash if (公開された操作は定義済みか? :ruby2_keywords_hash, 偽値)
+    別名 :ruby2互換の名前付き引数か?,      :ruby2_keywords_hash? if (公開された操作は定義済みか? :ruby2_keywords_hash?, 偽値)
   }
 
   別名 :何れかが成り立つか?,    :any?
